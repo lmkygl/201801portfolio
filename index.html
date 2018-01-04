@@ -4,41 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="grid1200.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/grid1200.css">
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
     <title>odense</title>
 </head>
 <body>
     <div class="wrap">
-        <div id="header" class="header">
-            <div class="nav_bar">
+        <header  id="header" class="header">
+            <div class="navbar">
                 <div class="left_gnb">
                     <div class="mobile_menu ">Menu</div>
-                    <ul>
-                        <li class="gnb_Product">
-                            <a href="#" title="Product">Product ∨</a>
-                        </li>
-                        <li>
-                            <a href="#" title="About us">About us</a>
-                        </li>
-                        <li>
-                            <a href="#" title="plating Recipe">plating Recipe</a>
-                        </li>
-                    </ul>
+                    <nav>
+                        <a href="#" title="Product">Product ∨</a>
+                        <a href="#" title="About us">About us</a>
+                        <a href="#" title="plating Recipe">plating Recipe</a>
+                    </nav>
                 </div>
                 <div class="logoArea">
                     <h1><a href="#" title="odense"><img src="img/logo.png"/></a></h1>
                 </div>
                 <div class="right_gnb">
-                    <ul>
-                        <li><a href="#" title="Cooking Book">Cooking Book</a></li>
-                        <li><a href="#" title="News">News</a></li>
-                        <li><a href="#" title="On TV">On TV</a></li>
-                        <li><a href="#" title="Store">Store</a></li> 
-                    </ul>
+                    <nav>
+                        <a href="#" title="Cooking Book">Cooking Book</a>
+                        <a href="#" title="News">News</a>
+                        <a href="#" title="On TV">On TV</a>
+                        <a href="#" title="Store">Store</a>
+                    </nav>
                 </div>
                 <div class="side_menu">
                     <ul class="">
@@ -50,22 +44,22 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </header>
         <div class="container">
             <div class="container_15">
                 <div class="inner_padding">
-                    <div class="grid_4 push_1 " style=" background-color:rgb(105, 130, 201); height:200px; z-index:2;"></div>
-                    <div class="grid_9" style="background-color:rgb(226, 140, 226); height:551px;"></div>
-                    <div class="grid_6" style=" background-color:rgb(143, 80, 36); height:350px;"></div>
+                    <div class="grid_4 " style=" background-color:rgb(105, 130, 201); height:200px;"></div>
+                    <div class="grid_10" style="background-color:rgb(226, 140, 226); height:500px;"></div>
+                    <div class="grid_5" style=" background-color:rgb(143, 80, 36); height:350px;"></div>
                 </div>
                 <div class="inner_padding">
-                    <div class="grid_5"  style=" background-color:springgreen; height:505px;"></div>
-                    <div class="grid_9"  style=" background-color:salmon; height:650px;"></div>
-                    <div class="grid_5"  style=" background-color:violet; height:380px;"></div>
+                    <div class="grid_5"  style=" background-color:rgb(59, 95, 129); height:505px;"></div>
+                    <div class="grid_9"  style=" background-color:rgb(189, 115, 107); height:650px;"></div>
+                    <div class="grid_5"  style=" background-color:rgb(82, 50, 63); height:380px;"></div>
                 </div>
             </div>
         </div>
-        <div id="footer" class="footer">
+        <footer id="footer" class="footer">
             <div class="container_15">
                 <h2><img src="img/logo_footer.png" alt="footer_logo"/></h2>
                 <div>
@@ -87,7 +81,7 @@
                    
                 </div>
             </div>
-        </div>
+        </footer>
     </div>
 </body>
 </html>
