@@ -13,20 +13,58 @@ a{
 }
 
 .wrap{
-    margin:0 auto;
+    margin:0 auto;  
+}
+.underline{
+    border-bottom:1px solid #0D364C
+}
+
+.container{
+    width:100%;
+    overflow:hidden;
+    padding-bottom:64px;
+}
+.inner_padding{
+    padding-top:60px;
+    padding-bottom:150px;
+    overflow:hidden;
+    position:relative;
+}
+.full_width{
+    width:100%;
+}
+.main_product, .main_name_price{
+    width:90%;
+    margin:20px auto;
+    overflow:hidden;
+}
+.main_name{
+    font-weight:bold;
+    font-size:25px;
+    width:80%;
+    float:left;
+    
+}
+.main_price{
+    font-size:14px;
+    text-align:right;
+    width:20%;
+    float:left;
    
 }
+
+/* header */
 #header{
     width:100%;
     position:relative;
     top:40px;
 }
-.navbar{
+.nav_bar{
     padding:48px 68px;
     margin:0 auto;
     width:1180px;
 }
-.navbar::after{
+.nav_bar::after{
     clear:both;
     display:block;
     content:'';
@@ -36,12 +74,12 @@ a{
     display:none;
 }
 
-.logoArea{
+.logo_Area{
     width:20%;
     float:left;
     text-align:center;
 }
-.logoArea img{
+.logo_Area img{
     vertical-align: top;
 }
 nav{
@@ -59,8 +97,10 @@ nav{
     width:25%; 
     display:inline-block;
 }
+/* 클릭시 맨상위에 있어야 하기 때문에 사이드메뉴에 z-index:1 사용 */
 .side_menu{
     display:none;
+   z-index: 1;
     height:100%;
     left:0;
     top:0;
@@ -78,15 +118,14 @@ nav{
     font-weight: 400;
     height: 50px;
     font-size:20px;
-
     text-align:center;
 }
 .side_menu ul{
-    margin-left:180px;
     width:50%;
+    margin:0 auto;
 }
 .side_menu li a{
-    padding:10px 40px;
+    padding:10px 30px;
 }
 .side_backBtn{
     position: absolute;
@@ -97,26 +136,8 @@ nav{
     cursor: pointer;
     font-weight:bold;
 }
-.underline{
-    border-bottom:1px solid #0D364C
-}
 
-.container{
-    width:100%;
-    overflow:hidden;
-    padding-bottom:64px;
-   
-}
-.inner_padding{
-    padding-top:60px;
-    overflow:hidden;
-    position:relative;
-}
-.full_width{
-    width:100%;
-}
-
-
+/* footer */
 .footer{
     height: 309px;
     background-color: #fafafa;
