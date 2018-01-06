@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp"
   },
   "repository": {
     "type": "git",
@@ -17,12 +17,13 @@
   "homepage": "https://github.com/lmkygl/201801portfolio#readme",
   "dependencies": {
     "gsap": "^1.20.3",
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "html5shiv": "^3.7.3"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-sass": "^3.1.0",
-    "html5shiv": "^3.7.3"
+    "gulp-sourcemaps": "^2.6.3"
   },
   "description": ""
 }
