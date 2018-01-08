@@ -1,82 +1,127 @@
-.center_box{
-    height:500px;
-    background-color:rgb(63, 150, 150);
-}
-.center_box2{
-    height:700px;
-    background-color:rgb(34, 139, 143);        
-}
 
 /**z-index:2 container Area에 content 겹침***/
 .section1{
     .box{
-      //  position: absolute;
+         position: absolute;
         left:0;
         height:300px;
         margin-top:100px;  
         z-index:2;
         background-color:rgb(95, 161, 161);
+        background-image: url("../img/main_side_jante.jpg");
+        background-size:cover;
+        background-position:right;
+    }
+    .center_box{
+        height:500px;
+        background-color:rgb(63, 150, 150);
+        background-image: url("../img/main_side_jante2.jpg");
+        background-size:cover;
+        background-position:bottom;
     }
     .box2{
-       // position: absolute;
+        position: absolute;
         right:0;
         height:450px; 
         background-color:rgb(36, 107, 107);
+        background-image: url("../img/main_jante.jpg");
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position:45%;;
     }
 }
 
 .section2{
 
     .box{
-       // position: absolute;
+        position: absolute;
         left:0;
         height:400px; 
         background-color:rgb(56, 160, 163); 
         margin-top:130px;
+        background-image: url("../img/main_atelier.jpg");
+        background-size:cover;
+        background-position:right;
+    }
+    .center_box2{
+        height:700px;
+        background-color:rgb(34, 139, 143);        
+        background-image: url("../img/main_atelier.jpg");
+        background-size:cover;
+        background-position:top;
     }
     .box2{
-       // position: absolute;
+        position: absolute;
         right:0;
         height:250px; 
         z-index:2;
         background-color:rgb(20, 82, 82); 
-        top:-40px;
+        background-image: url("../img/main_side_atelier2.jpg");
+        background-size:cover;
+        background-position:center;
     }
 }
 
 .section3{
 
     .box{
-        //position: absolute;
+        position: absolute;
         left:0;
         height:200px;
         margin-top:200px;
         z-index:2;  
         background-color:rgb(95, 161, 161);
+        background-image: url("../img/main_side_hygge2.jpg");
+        background-size:cover;
+        background-position:left;
+    }
+    .center_box{
+        height:500px;
+        background-color:rgb(63, 150, 150);
+        background-image: url("../img/main_side_hygge.jpg");
+        background-size:cover;
+        background-position:left;
     }
     .box2{
-       // position: absolute;
+        position: absolute;
         right:0;
         height:430px; 
         background-color:rgb(36, 107, 107);
+        background-image: url("../img/main_side_hygge2.jpg");
+        background-size:cover;
+        background-position:left;
     }
 }
 
 .section4{
 
     .box{
-        //position: absolute;
+        position: absolute;
         left:0;
         margin-top:100px;
-        height:500px;  
-        background-color:rgb(56, 160, 163); 
+        height:300px;  
+        background-color:rgb(56, 160, 163);
+        background-image: url("../img/main_side_platingcook2.jpg");
+        background-size:cover;
+        background-position:bottom; 
+    }
+    .center_box2{
+        height:700px;
+        background-color:rgb(34, 139, 143);       
+        background-image: url("../img/main_platingcook.jpg");
+        background-size:cover;
+        background-position:60%; 
     }
     .box2{
-        //position: absolute;
-        right:0;
-        height:279px; 
+        position: absolute;
+        right:40px;
+        top:500px;
+        height:270px; 
         z-index:2;
-        background-color:rgb(20, 82, 82); 
+        background-color:rgb(20, 82, 82);
+        background-image: url("../img/main_side_platingcook.jpg");
+        background-size:cover;
+        background-position:center;
         
     }
 }
