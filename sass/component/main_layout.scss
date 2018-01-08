@@ -1,6 +1,7 @@
 
 /**z-index:2 container Area에 content 겹침***/
 .section1{
+    overflow:hidden;
     .box{
          position: absolute;
         left:0;
@@ -13,11 +14,43 @@
         background-position:right;
     }
     .center_box{
-        height:500px;
-        background-color:rgb(63, 150, 150);
-        background-image: url("../img/main_side_jante2.jpg");
-        background-size:cover;
-        background-position:bottom;
+       
+        .main_imgArea{
+            height:500px;
+            background-color:rgb(63, 150, 150);
+            background-image: url("../img/main_side_jante2.jpg");
+            background-size:cover;
+            background-position:bottom;
+        }
+        .main_name_price{
+            width:95%;
+            margin:30px auto 0;
+            .main_name{
+                width:70%;
+                float:left;
+                h3{
+                    font-size:35px;
+                    font-weight:bold;
+                    line-height:60px;
+                }
+                p{
+                    font-size:14px;
+                    line-height:30px;
+                }
+            }
+            .main_price{
+                width:30%;
+                height:90px;
+                line-height:90px;
+                float:left;
+                text-align:right;
+                font-size:14px;
+                .monetaryUnit{
+                    font-size:15px;
+                    font-weight:bold;
+                }
+            }
+        }
     }
     .box2{
         position: absolute;
@@ -39,24 +72,57 @@
         height:400px; 
         background-color:rgb(56, 160, 163); 
         margin-top:130px;
-        background-image: url("../img/main_atelier.jpg");
+        background-image: url("../img/main_side_atelier.jpg");
         background-size:cover;
         background-position:right;
     }
     .center_box2{
-        height:700px;
-        background-color:rgb(34, 139, 143);        
-        background-image: url("../img/main_atelier.jpg");
-        background-size:cover;
-        background-position:top;
+        .main_imgArea{
+            height:700px;
+            background-color:rgb(34, 139, 143);        
+            background-image: url("../img/main_side_atelier2.jpg");
+            background-size:cover;
+            background-position:center;
+            z-index:2;
+        }
+        .main_name_price{
+            width:95%;
+            margin:30px auto 0;
+            .main_name{
+                width:70%;
+                float:left;
+                h3{
+                    font-size:35px;
+                    font-weight:bold;
+                    line-height:60px;
+                }
+                p{
+                    font-size:14px;
+                    line-height:30px;
+                }
+            }
+            .main_price{
+                width:30%;
+                height:90px;
+                line-height:90px;
+                float:left;
+                text-align:right;
+                font-size:14px;
+                .monetaryUnit{
+                    font-size:15px;
+                    font-weight:bold;
+                }
+            }
+        }
+       
     }
     .box2{
         position: absolute;
         right:0;
+        margin-top:350px;
         height:250px; 
-        z-index:2;
         background-color:rgb(20, 82, 82); 
-        background-image: url("../img/main_side_atelier2.jpg");
+        background-image: url("../img/main_atelier.jpg");
         background-size:cover;
         background-position:center;
     }
@@ -76,18 +142,50 @@
         background-position:left;
     }
     .center_box{
-        height:500px;
-        background-color:rgb(63, 150, 150);
-        background-image: url("../img/main_side_hygge.jpg");
-        background-size:cover;
-        background-position:left;
+        .main_imgArea{
+            height:500px;
+            background-color:rgb(63, 150, 150);
+            background-image: url("../img/main_hygge.jpg");
+            background-size:cover;
+            background-position:left;
+        }
+        .main_name_price{
+            width:95%;
+            margin:30px auto 0;
+            .main_name{
+                width:70%;
+                float:left;
+                h3{
+                    font-size:35px;
+                    font-weight:bold;
+                    line-height:60px;
+                }
+                p{
+                    font-size:14px;
+                    line-height:30px;
+                }
+            }
+            .main_price{
+                width:30%;
+                height:90px;
+                line-height:90px;
+                float:left;
+                text-align:right;
+                font-size:14px;
+                .monetaryUnit{
+                    font-size:15px;
+                    font-weight:bold;
+                }
+            }
+        }
+        
     }
     .box2{
         position: absolute;
         right:0;
         height:430px; 
         background-color:rgb(36, 107, 107);
-        background-image: url("../img/main_side_hygge2.jpg");
+        background-image: url("../img/main_side_hygge4.jpg");
         background-size:cover;
         background-position:left;
     }
@@ -103,14 +201,46 @@
         background-color:rgb(56, 160, 163);
         background-image: url("../img/main_side_platingcook2.jpg");
         background-size:cover;
-        background-position:bottom; 
+        background-position:center; 
     }
     .center_box2{
-        height:700px;
-        background-color:rgb(34, 139, 143);       
-        background-image: url("../img/main_platingcook.jpg");
-        background-size:cover;
-        background-position:60%; 
+        .main_imgArea{
+            height:700px;
+            background-color:rgb(34, 139, 143);       
+            background-image: url("../img/main_platingcook.jpg");
+            background-size:cover;
+            background-position:35%;
+        }
+        .main_name_price{
+            width:95%;
+            margin:30px auto 0;
+            .main_name{
+                width:70%;
+                float:left;
+                h3{
+                    font-size:35px;
+                    font-weight:bold;
+                    line-height:60px;
+                }
+                p{
+                    font-size:14px;
+                    line-height:30px;
+                }
+            }
+            .main_price{
+                width:30%;
+                height:90px;
+                line-height:90px;
+                float:left;
+                text-align:right;
+                font-size:14px;
+                .monetaryUnit{
+                    font-size:15px;
+                    font-weight:bold;
+                }
+            }
+        }
+         
     }
     .box2{
         position: absolute;
