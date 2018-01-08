@@ -1,0 +1,83 @@
+/* header */
+#header{
+    width:100%;
+    position:relative;
+    top:40px;
+}
+.nav_bar{
+    padding:48px 68px;
+    margin:0 auto;
+    width:1180px;
+}
+.nav_bar::after{
+    clear:both;
+    display:block;
+    content:'';
+}
+.mobile_menu{
+    position: absolute;
+    display:none;
+}
+
+.logo_Area{
+    width:20%;
+    float:left;
+    text-align:center;
+}
+.logo_Area img{
+    vertical-align: top;
+}
+nav{
+    width:40%;
+    float:left;
+    text-align:center; 
+}
+.left_gnb nav a{
+    float:left;
+    width:33%;
+    display:inline-block;
+}
+.right_gnb  nav a{
+    float:left;
+    width:25%; 
+    display:inline-block;
+}
+/* 클릭시 맨상위에 있어야 하기 때문에 사이드메뉴에 z-index:1 사용 */
+.side_menu{
+    display:none;
+   z-index: 1;
+    height:100%;
+    left:0;
+    top:0;
+    background-color:#fff;
+    position: fixed;
+    width:25%;
+    padding-top: 220px!important;
+    box-shadow:2px 2px 5px rgb(224, 232, 236);
+}
+.side_menu li{
+    width:100%;
+    margin:0 auto;
+    margin-bottom: 40px;
+    cursor: pointer;
+    font-weight: 400;
+    height: 50px;
+    font-size:20px;
+    text-align:center;
+}
+.side_menu ul{
+    width:50%;
+    margin:0 auto;
+}
+.side_menu li a{
+    padding:10px 30px;
+}
+.side_backBtn{
+    position: absolute;
+    top: 25px;
+    right:35px;
+    padding-left: 1em;
+    font-size:15px;
+    cursor: pointer;
+    font-weight:bold;
+}

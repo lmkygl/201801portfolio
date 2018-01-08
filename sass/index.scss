@@ -1,6 +1,9 @@
-@import './component/grid.scss';
+@import './module/reset.scss';
+@import './module/common.scss';
+@import './module/header.scss';
+@import './module/footer.scss';
+@import './module/grid.scss';
 
-body {
-    background-color:#ccc;
-    font-size: 32px;
-}
+@import './component/main_layout.scss';
+
+
