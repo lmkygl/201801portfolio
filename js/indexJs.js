@@ -1,6 +1,0 @@
-(function(){
-//header js
-
-
-
-}());
