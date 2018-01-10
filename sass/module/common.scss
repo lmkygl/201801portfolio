@@ -7,7 +7,6 @@ body,html{
 a{
     color: #425866;
     text-decoration: none;
-    transition: .4s color ease;
     font-size:15px;
 }
 
@@ -16,7 +15,9 @@ a{
 }
 
 .underline{
-    border-bottom:1px solid #0D364C
+    width: 1px;
+    height:1px;
+    border-bottom:1px solid #0D364C;
 }
 .container{
     overflow:hidden;
