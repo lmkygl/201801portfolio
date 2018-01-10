@@ -8,23 +8,22 @@
     var sideMenu_back = $('[data-ui=sidemenu_back]');
     
     productLink.click(function(){
-        TweenMax.to(side_menu, .3, {left:0});
+        TweenMax.to(side_menu, .4, {left:0});
     });
-    
-    sideMenu_back.click(function(){
-        TweenMax.to(side_menu, .3, {left:-500});
-    });
-    
-    
-    
-    //사이드 메뉴 링크 마우스 오버시 밑줄
-    var side_menu_link = $("[data-ui=side_menu] a");
 
-    side_menu_link.mouseover(function() {
-        $(this).children('span').addClass('test');
+    sideMenu_back.click(function(){
+        TweenMax.to(side_menu, .4, {left:-500});
+    });
+    
+    
+    // navi a 마우스 오버시 밑줄 생성 
+    var navi_link =$('nav a');
+    
+    navi_link.mouseover(function() {
+         $(this).children('span').addClass('underline');
     })
     .mouseout(function() {
-        $(this).children('span').removeClass('test');
+        $(this).children('span').removeClass('underline');
        
     });
 

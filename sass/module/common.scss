@@ -14,14 +14,10 @@ a{
     margin:0 auto;  
 }
 
-.underline{
-    width: 1px;
-    height:1px;
-    border-bottom:1px solid #0D364C;
-}
 .container{
     overflow:hidden;
     padding:40px 60px;
+    position: relative;
 }
 .inner_padding{
     padding-top:200px;
@@ -31,4 +27,7 @@ a{
 }
 .full_width{
     width:100%;
+}
+.fontbold{
+    font-weight:bold;
 }
