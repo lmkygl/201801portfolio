@@ -71,10 +71,10 @@ nav{
 
 /* product 클릭시 맨상위에 있어야 하기 때문에 사이드메뉴에 z-index:1 사용 */
 .side_menu{
-   //display:none;
-   z-index:3;
+   display:block;
+    z-index:3;
     height:100%;
-    left:-500px;
+    left:0;
     top:0;
     background-color:#fff;
     position: fixed;
@@ -96,11 +96,66 @@ nav{
             transition:all .3s ease;
             display:inline-block;
           // background-color:greenyellow;
+          // float:left;
             
         }
        
     }
+   
+
 }
+.side_menu_detail{
+    
+   display:none;
+    padding-top: 250px!important;
+   //width: 100%; 
+    background-color:#fff;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    height: 100%;
+    text-align: left;
+    .side_menu_inner_detail{
+        z-index:-1;
+        width:100%;
+        //padding-left:10px;
+        .jantproduct{
+            padding-left:10px;
+            display: block;
+            width:90%;
+            height:360px;
+            background-color:rgb(63, 150, 150);
+            background-image: url("../img/main_side_jante3.jpg");
+            background-size:cover;
+            background-position:bottom;
+        }
+        .side_menu_product_name{
+            width:100%;
+            height:40px;
+            margin-top:40px;
+            padding-left:10px;
+           
+            a{
+                display:inline;
+                font-size:35px;
+                font-weight:bold;
+                line-height:20px;
+            }
+        }
+        .side_menu_product_price{
+            text-align: right;
+            width:90%;
+            a{
+                font-size:14px;
+                .monetaryUnit{
+                    font-size:15px;
+                    font-weight:bold;
+                }
+            }
+
+        }
+    }
+ }
 
 
 .side_backBtn{
