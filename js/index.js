@@ -31,29 +31,27 @@
 
     // navi a 마우스 오버시 밑줄 생성 
    
-    var naviLink = $('[data-ui="naviLink"]');
+    var navi_Link_Event = $('[data-ui="naviLink"]');
 
-    function naviEffect(e){
-       var naviEvnet_target =$(e.target);
-       var naviEvnet_type = e.type
-       var naviEvent_line = naviEvnet_target.find('.underline');
-       var naviEvent_line_width = naviEvent_line.width();
+    function navi_Effect(e){
+        var naviEvnet_target =$(e.target);
+        var naviEvnet_type = e.type;
+        var naviEvent_line = naviEvnet_target.find('.underline');
+        var naviEvent_line_width = naviEvent_line.width();
         
-     //  console.log(naviEvnet_target);
-     //  console.log(naviEvnet_type);
-       console.log(naviEvent_line_width);
-       if( naviEvnet_type === 'mouseenter' ){
+        // console.log(naviEvnet_target);
+        // console.log(naviEvnet_type);
+        // console.log(naviEvent_line_width);
        
-            naviEvent_line.animate({width:"100%", backgroundColor:'#0D364C'}, .3 );
+        if( naviEvnet_type === 'mouseenter' ){
+           naviEvent_line.animate({width:"100%", backgroundColor:'#0D364C'}, .3 );
         }
        else if(naviEvnet_type === 'mouseleave' ){
-            
-            naviEvent_line.animate({width:0}, .3 ); 
-       }
-      
+           naviEvent_line.animate({width:0}, .3 ); 
+       }    
     
     }
 
-    naviLink.on('mouseenter mouseleave', naviEffect);
+    navi_Link_Event.on('mouseenter mouseleave', navi_Effect);
 
 }());
