@@ -7,17 +7,17 @@
         var naviEvnet_target =$(e.target);
         var naviEvnet_type = e.type;
         var naviEvent_line = naviEvnet_target.find('.underline');
-       // var naviEvent_line_width = naviEvent_line.width();
+        //  var naviEvent_line_width = naviEvent_line.width();
         
-        // console.log(naviEvnet_target);
-        // console.log(naviEvnet_type);
-        // console.log(naviEvent_line_width);
+        //  console.log(naviEvnet_target);
+        //  console.log(naviEvnet_type);
+        //  console.log(naviEvent_line_width);
        
         if( naviEvnet_type === 'mouseenter' ){
-           naviEvent_line.animate({width:"100%"}, .3 );
+            naviEvent_line.animate({width:"100%"}, .3);
         }
-       else if(naviEvnet_type === 'mouseleave' ){
-           naviEvent_line.animate({width:0}, .3 ); 
+        else if(naviEvnet_type === 'mouseleave' ){
+           naviEvent_line.animate({width:0}, .3); 
        }    
     
     }
@@ -31,28 +31,15 @@
         TweenMax.to(side_menu, .4, {left:0});
     }
 
+    function sideMenuClose_Effect(){
+        TweenMax.to(side_menu, .4, {left:"-500px"});
+    }
+
 
     navi_Link_Event.on('mouseenter mouseleave', navi_Effect);
     product_Link.on('click', productClick_Effect);
+    side_menu_close.on('click', sideMenuClose_Effect);
 
-
-
-
-     // product 클릭시
-    //  var productLink = $('[data-ui-side="productLink"]');
-    //  var side_menu = $('[data-ui="side_menu"]');
-    //  var sideMenu_back = $('[data-ui=sidemenu_back]');
-     
-    //  productLink.click(function(){
-    //      TweenMax.to(side_menu, .4, {left:0, onComplete: function() {
-    //         // console.log(11)
-    //      }});
-    //  });
- 
-    //  sideMenu_back.click(function(){
-    //      TweenMax.to(side_menu, .4, {left:"-1000px"});
-    //  });
-     
 
    
 
