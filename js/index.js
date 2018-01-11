@@ -1,22 +1,23 @@
 (function(){
 
-/*
 
     // product 클릭시
     var productLink = $("[data-ui=productLink]");
-    var side_menu = $("[data-ui=side_menu]");
+    var side_menu = $('[data-ui="side_menu"]');
     var sideMenu_back = $('[data-ui=sidemenu_back]');
     
     productLink.click(function(){
-        TweenMax.to(side_menu, .4, {left:0});
+        TweenMax.to(side_menu, .4, {left:0, onComplete: function() {
+           // console.log(11)
+        }});
     });
 
     sideMenu_back.click(function(){
-        TweenMax.to(side_menu, .4, {left:-500});
+        TweenMax.to(side_menu, .4, {left:"-1000px"});
     });
     
-*/
-    var side_menu = $("[data-ui=side_nav] a");
+
+  //  var side_menu = $("[data-ui=side_nav] a");
     var sideMenu_detail = $("[data-ui=sideMenu_detail]");
     side_menu.mouseover(function() {
         sideMenu_detail.show();
@@ -24,21 +25,35 @@
     })
     .mouseout(function() { 
         //sideMenu_detail.hide();
-       TweenMax.to(sideMenu_detail, 1, {width:"0%"})
+       TweenMax.to(sideMenu_detail, 1, {})
        
     });
 
     // navi a 마우스 오버시 밑줄 생성 
-    var navi_link =$('nav a');
-    
-    navi_link.mouseover(function() {
-         $(this).children('span').addClass('underline');
-    })
-    .mouseout(function() {
-        $(this).children('span').removeClass('underline');
+   
+    var naviLink = $('[data-ui="naviLink"]');
+
+    function naviEffect(e){
+       var naviEvnet_target =$(e.target);
+       var naviEvnet_type = e.type
+       var naviEvent_line = naviEvnet_target.find('.underline');
+       var naviEvent_line_width = naviEvent_line.width();
+        
+     //  console.log(naviEvnet_target);
+     //  console.log(naviEvnet_type);
+       console.log(naviEvent_line_width);
+       if( naviEvnet_type === 'mouseenter' ){
        
-    });
+            naviEvent_line.animate({width:"100%", backgroundColor:'#0D364C'}, .3 );
+        }
+       else if(naviEvnet_type === 'mouseleave' ){
+            
+            naviEvent_line.animate({width:0}, .3 ); 
+       }
+      
+    
+    }
 
+    naviLink.on('mouseenter mouseleave', naviEffect);
 
-
-}())
+}());
