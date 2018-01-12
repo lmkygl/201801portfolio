@@ -39,6 +39,7 @@
     function SideMenuDetailImg_Effect(e){
         
         var sideMenu_Detail_target = $(e.target);
+        var sideMenu_Detail_target_line = sideMenu_Detail_target.find('.underline');
         var sideMenu_Detail_type = e.type;
         var sideMenu_Detail_target_Index = sideMenu_Detail_target.index();
         var sidenav_width = $('[data-side-ui="side_nav"]');
@@ -59,6 +60,7 @@
                 targetNode = e.target;
 
                 if(sideMenu_Detail_target_Index == 0) {
+                    sideMenu_Detail_target_line.animate({width:"100%"}, .3);
                     TweenMax.to(datil_layout0, .5, {right:0, opacity:1});
                 }
                 else{
@@ -66,6 +68,7 @@
                 }
         
                 if(sideMenu_Detail_target_Index == 1) {
+                    sideMenu_Detail_target_line.animate({width:"100%"}, .3);
                     TweenMax.to(datil_layout1, .5, {right:0, opacity:1});
                 }
                 else{
@@ -73,12 +76,14 @@
                 }
 
                 if(sideMenu_Detail_target_Index == 2) {
+                    sideMenu_Detail_target_line.animate({width:"100%"}, .3);
                     TweenMax.to(datil_layout2, .5, {right:0, opacity:1});
                 }
                 else{
                     TweenMax.to(datil_layout2, .3, {left:0, opacity:0});
                 }
                 if(sideMenu_Detail_target_Index == 3) {
+                    sideMenu_Detail_target_line.animate({width:"100%"}, .3);
                     TweenMax.to(datil_layout3, .5, {right:0, opacity:1});
                 }
                 else{
@@ -93,8 +98,9 @@
           
         }
         else if(sideMenu_Detail_type === 'mouseout'){
+            sideMenu_Detail_target_line.animate({width:0}, .3); 
             // TweenMax.to(side_menu_detail, 1, {width:0});
-            // TweenMax.to(datil_all, .3, {left:0, opacity:0});
+            // tTweenMax.to(datil_all, .3, {left:0, opacity:0});
            
         }
 
