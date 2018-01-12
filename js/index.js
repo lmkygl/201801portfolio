@@ -1,6 +1,7 @@
 (function(){
 
     // navi a 밑줄 효과
+    
     var navi_Link_Event = $('[data-ui="navi_Link"]');
 
     function navi_Effect(e){
@@ -13,16 +14,17 @@
         //  console.log(naviEvnet_type);
         //  console.log(naviEvent_line_width);
        
-        if( naviEvnet_type === 'mouseenter' ){
+        if(naviEvnet_type === 'mouseenter'){
             naviEvent_line.animate({width:"100%"}, .3);
         }
-        else if(naviEvnet_type === 'mouseleave' ){
+        else if(naviEvnet_type === 'mouseleave'){
            naviEvent_line.animate({width:0}, .3); 
        }    
     
     }
-
-   // product 클릭시 
+    
+    // product 클릭시 
+    
     var product_Link = $('[data-ui-side="product_Link"]');
     var side_menu = $('[data-ui-side="side_menu"]');
     var side_menu_close = $('[data-ui="sidemenu_close"]');
@@ -32,30 +34,98 @@
     }
 
     function sideMenuClose_Effect(){
-        TweenMax.to(side_menu, .4, {left:"-500px"});
+        TweenMax.to(side_menu, .4, {left:"-800px"});
     }
+    
+    // sidemenu a 마우스오버시 디테일 상품 보여줌
+
+    var sideMenu_detail = $('[data-side-ui="side_menu_detail_product"]'); //side의 a
+    var side_menu_detail = $('[data-side-ui="side_menu_area"]');// a마우스오버시 넓어질 영역
+
+    function sideMenuDetail_Effect(e){
+        
+
+        var sideMenu_detail_target =$(e.target);
+        var sideMenu_detail_type = e.type;        
+       // var side_menu_inner_detail = $('[data-side-ui="side_menu_area"]');
+       
+       //  console.log(sideMenu_detail_target);
+       //  console.log(sideMenu_detail_type);
+       
+        if(sideMenu_detail_type === 'mouseenter'){
+            TweenMax.to(side_menu_detail, .5, {width:'100%'});
+        }
+        else if(sideMenu_detail_type === 'mouseleave'){
+            TweenMax.to(side_menu_detail, 1, {width:0,});
+       }    
+    }
+    
+    var sideMenu_Index = $('[data-side-ui="findDetail"]');
+
+    function SideMenuDetailImg_Effect(e){
+        
+        var sideMenu_Detail_target = $(e.target);
+        var sideMenu_Detail_type = e.type;
+        var sideMenu_target_Index = sideMenu_Detail_target.index();
+        var datil_layout0 = $('.datail_layout0');
+        var datil_layout1 = $('.datail_layout1');
+        var datil_layout2 = $('.datail_layout2');
+        var datil_layout3 = $('.datail_layout3');
+        var datil_layout4 = $('.datail_layout4');
+        var datil_all = $('.side_menu_inner_detail');
+
+        
+        if(sideMenu_Detail_type === 'mouseover'){
+           
+            if(sideMenu_target_Index == 0){
+                TweenMax.to(datil_layout0, .5, {opacity:1});
+            }
+            else if(sideMenu_target_Index == 1){
+                TweenMax.to(datil_layout1, .5, {opacity:1});
+            }
+            else if(sideMenu_target_Index == 2){
+                TweenMax.to(datil_layout2, .5, {opacity:1});
+            }
+            else if(sideMenu_target_Index == 3){
+                TweenMax.to(datil_layout3, .5, {opacity:1});
+            }
+            else if(sideMenu_target_Index == 4){
+                TweenMax.to(datil_layout4, .5, {opacity:1});
+            }
+            else{
+                TweenMax.to(datil_all, .5, {opacity:0});
+            }
+        }
+        else if(sideMenu_Detail_type === 'mouseout'){
+            TweenMax.to(datil_all, .5, {opacity:0});
+        }
+
+    }
+    sideMenu_Index.on('mouseover mouseout', SideMenuDetailImg_Effect);
+
+
+    // function findindex_i(e){
+    //     var findindextraget = $(e.target);
+    //     var findIndexsEvent = $(e.currentTarget);
+    //     var findInd = findindextraget.index();
+    //     console.log(findInd);
+
+    //     //var sideMenu_detail_num = findIndexs.index();
+    //     //var side_menu_detail_num = $('.side_menu_detail').index();
+       
+    // }
+    // findIndexs.on('click', findindex_i);
 
 
     navi_Link_Event.on('mouseenter mouseleave', navi_Effect);
     product_Link.on('click', productClick_Effect);
     side_menu_close.on('click', sideMenuClose_Effect);
+    sideMenu_detail.on('mouseenter mouseleave', sideMenuDetail_Effect);
 
 
    
 
-//   //  var side_menu = $("[data-ui=side_nav] a");
-//     var sideMenu_detail = $("[data-ui=sideMenu_detail]");
-//     side_menu.mouseover(function() {
-//         sideMenu_detail.show();
-//         TweenMax.to(sideMenu_detail, 1, {width:"100%"})
-//     })
-//     .mouseout(function() { 
-//         //sideMenu_detail.hide();
-//        TweenMax.to(sideMenu_detail, 1, {})
-       
-//     });
 
-    // navi a 마우스 오버시 밑줄 생성 
    
 
 }());
