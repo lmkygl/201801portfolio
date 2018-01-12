@@ -106,7 +106,7 @@
     }
 
 
-    // back 누르고 다시 product버튼 클릭시 사이드메뉴 디테일 없어짐 구현
+    // back 누르고 다시 product버튼 클릭시 사이드메뉴 디테일 없어짐 구현 <- 마우스아웃 기능 아직 미구현으로 구현함
 
     var backBtn = $('[data-side-ui="beginAfresh"]');
     
@@ -119,8 +119,8 @@
             sideMenu_detail_Area.animate({width:0,opacity: 0}, .3);
         }
     }
-
     backBtn.on('click', backBtn_Effect);
+   
 
 
 
@@ -145,7 +145,7 @@
     navi_Link_Event.on('mouseenter mouseleave', navi_Effect);
     product_Link.on('click', productClick_Effect);
     side_menu_close.on('click', sideMenuClose_Effect);
-  
+    
   
   
   
