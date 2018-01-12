@@ -122,8 +122,8 @@
     backBtn.on('click', backBtn_Effect);
    
 
-
-
+    // 사이드 메뉴 영역 벗어나면 디테일 영역 없어짐 
+    
     var sidenav_width = $('[data-ui-side="side_menu"]');
     
     function sidenavArea_Effect(e){
