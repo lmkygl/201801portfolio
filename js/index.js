@@ -39,10 +39,10 @@
     function SideMenuDetailImg_Effect(e){
         
         var sideMenu_Detail_target = $(e.target);
-        var sideMenu_Detail_target_line = sideMenu_Detail_target.find('.underline');
         var sideMenu_Detail_type = e.type;
+        var side_menu_detail = $('[data-side-ui="side_menu_area"]');
+        var sideMenu_Detail_target_line = sideMenu_Detail_target.find('.underline');
         var sideMenu_Detail_target_Index = sideMenu_Detail_target.index();
-        var sidenav_width = $('[data-side-ui="side_nav"]');
 
         var datil_layout0 = $('.datail_layout0');
         var datil_layout1 = $('.datail_layout1');
@@ -50,8 +50,8 @@
         var datil_layout3 = $('.datail_layout3');
         var datil_all = $('.side_menu_inner_detail');
 
-        console.log(sideMenu_Detail_target);
-        console.log(sideMenu_Detail_target_Index);
+    //   console.log(sideMenu_Detail_target);
+    //   console.log(sideMenu_Detail_target_Index);
         
         if(sideMenu_Detail_type === 'mouseover'){
             TweenMax.to(side_menu_detail, .5, {width:'100%'});
@@ -98,15 +98,30 @@
           
         }
         else if(sideMenu_Detail_type === 'mouseout'){
-            sideMenu_Detail_target_line.animate({width:0}, .3); 
-            // TweenMax.to(side_menu_detail, 1, {width:0});
-            // tTweenMax.to(datil_all, .3, {left:0, opacity:0});
-           
+            sideMenu_Detail_target_line.animate({width:0}, .3);
+            TweenMax.to(side_menu_detail, .5, {width:0});
+            TweenMax.to(datil_all, .3, {left:0, opacity:0});
         }
 
     }
     
+   // var sidenav_width = $('[data-side-ui="findDetail"]');
     
+    function sidenavArea_Effect(e){
+        var sidenav_width_taget = $(e.target);
+        var sidenav_width_taget_type = e.type;
+       // console.log(sidenav_width_taget);
+       sidenav_width_taget.css('background-color','gray');
+        var side_menu_detail_area = $('[data-side-ui="side_menu_area"]');
+
+        if(sidenav_width_taget_type === 'mouseout'){
+            side_menu_detail_area.animate({width:0}, .3); 
+        }
+    
+    }
+
+
+   // sidenav_width.on('mouseout',sidenavArea_Effect);
     sideMenu_Index.on('mouseover mouseout', SideMenuDetailImg_Effect);
     navi_Link_Event.on('mouseenter mouseleave', navi_Effect);
     product_Link.on('click', productClick_Effect);
@@ -123,7 +138,7 @@
 // sidemenu a 마우스오버시 디테일 상품 보여줌
 
 var sideMenu_detail = $('[data-side-ui="side_menu_detail_product"]'); //side의 a
-var side_menu_detail = $('[data-side-ui="side_menu_area"]');// a마우스오버시 넓어질 영역
+// a마우스오버시 넓어질 영역
 
 function sideMenuDetail_Effect(e){
     
