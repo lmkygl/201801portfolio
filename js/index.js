@@ -124,21 +124,22 @@
 
 
 
-    var sidenav_width = $('[data-side-ui="side_nav"]');
+    var sidenav_width = $('[data-ui-side="side_menu"]');
     
     function sidenavArea_Effect(e){
         var sidenav_width_taget = $(e.target);
         var sidenav_width_taget_type = e.type;
         console.log(sidenav_width_taget);
-        sidenav_width_taget.css('background-color','gray');
-        var side_menu_detail_area = $('[data-side-ui="side_menu_area"]');
+       
+        var side_menu_detail_area = $('[data-ui="side_menu_close"]');
 
         if(sidenav_width_taget_type === 'mouseout'){
-            side_menu_detail_area.animate({width:0}, .3); 
+            TweenMax.to(side_menu_detail_area, .3, {opacity:0});
+            // side_menu_detail_area.animate({width:0, opacity:0}, .3); 
         }
     
     }
-    //sidenav_width.on('mouseout',sidenavArea_Effect);
+    sidenav_width.on('mouseout',sidenavArea_Effect);
     
     
     sideMenu_Index.on('mouseover mouseout', SideMenuDetailImg_Effect);
