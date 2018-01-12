@@ -8,11 +8,6 @@
         var naviEvnet_target =$(e.target);
         var naviEvnet_type = e.type;
         var naviEvent_line = naviEvnet_target.find('.underline');
-        //  var naviEvent_line_width = naviEvent_line.width();
-        
-        //  console.log(naviEvnet_target);
-        //  console.log(naviEvnet_type);
-        //  console.log(naviEvent_line_width);
        
         if(naviEvnet_type === 'mouseenter'){
             naviEvent_line.animate({width:"100%"}, .3);
@@ -37,28 +32,7 @@
         TweenMax.to(side_menu, .4, {left:"-800px"});
     }
     
-    // sidemenu a 마우스오버시 디테일 상품 보여줌
-
-    var sideMenu_detail = $('[data-side-ui="side_menu_detail_product"]'); //side의 a
-    var side_menu_detail = $('[data-side-ui="side_menu_area"]');// a마우스오버시 넓어질 영역
-
-    function sideMenuDetail_Effect(e){
-        
-
-        var sideMenu_detail_target =$(e.target);
-        var sideMenu_detail_type = e.type;        
-       // var side_menu_inner_detail = $('[data-side-ui="side_menu_area"]');
-       
-       //  console.log(sideMenu_detail_target);
-       //  console.log(sideMenu_detail_type);
-       
-        if(sideMenu_detail_type === 'mouseenter'){
-            TweenMax.to(side_menu_detail, .5, {width:'100%'});
-        }
-        else if(sideMenu_detail_type === 'mouseleave'){
-            TweenMax.to(side_menu_detail, 1, {width:0,});
-       }    
-    }
+    
     
     var sideMenu_Index = $('[data-side-ui="findDetail"]');
 
@@ -66,63 +40,85 @@
         
         var sideMenu_Detail_target = $(e.target);
         var sideMenu_Detail_type = e.type;
-        var sideMenu_target_Index = sideMenu_Detail_target.index();
+        var sideMenu_Detail_target_Index = sideMenu_Detail_target.index();
+       // var targetNode = sideMenu_Detail_target.nodeName;
+        
         var datil_layout0 = $('.datail_layout0');
         var datil_layout1 = $('.datail_layout1');
         var datil_layout2 = $('.datail_layout2');
         var datil_layout3 = $('.datail_layout3');
-        var datil_layout4 = $('.datail_layout4');
         var datil_all = $('.side_menu_inner_detail');
 
+        console.log(sideMenu_Detail_target);
+        console.log(sideMenu_Detail_target_Index);
         
         if(sideMenu_Detail_type === 'mouseover'){
-           
-            if(sideMenu_target_Index == 0){
-                TweenMax.to(datil_layout0, .5, {opacity:1});
+            TweenMax.to(side_menu_detail, .5, {width:'100%'});
+            if (e.target.nodeName === 'LI') {
+                targetNode = e.target;
+
+                if(sideMenu_Detail_target_Index == 0) {
+                    TweenMax.to(datil_layout0, .5, {right:0, opacity:1});
+                }
+                if(sideMenu_Detail_target_Index == 1) {
+                    TweenMax.to(datil_layout1, .5, {right:0, opacity:1});
+                }
+                if(sideMenu_Detail_target_Index == 2) {
+                    TweenMax.to(datil_layout2, .5, {right:0, opacity:1});
+                }
+                if(sideMenu_Detail_target_Index == 3) {
+                    TweenMax.to(datil_layout3, .5, {right:0, opacity:1});
+                }
+               
+               
+            } else {
+                targetNode = e.target.parentNode
             }
-            else if(sideMenu_target_Index == 1){
-                TweenMax.to(datil_layout1, .5, {opacity:1});
-            }
-            else if(sideMenu_target_Index == 2){
-                TweenMax.to(datil_layout2, .5, {opacity:1});
-            }
-            else if(sideMenu_target_Index == 3){
-                TweenMax.to(datil_layout3, .5, {opacity:1});
-            }
-            else if(sideMenu_target_Index == 4){
-                TweenMax.to(datil_layout4, .5, {opacity:1});
-            }
-            else{
-                TweenMax.to(datil_all, .5, {opacity:0});
-            }
+          
         }
         else if(sideMenu_Detail_type === 'mouseout'){
-            TweenMax.to(datil_all, .5, {opacity:0});
+            TweenMax.to(side_menu_detail, 1, {width:0,});
+            TweenMax.to(datil_all, .3, {left:0, opacity:0});
         }
 
     }
+    
+    
     sideMenu_Index.on('mouseover mouseout', SideMenuDetailImg_Effect);
-
-
-    // function findindex_i(e){
-    //     var findindextraget = $(e.target);
-    //     var findIndexsEvent = $(e.currentTarget);
-    //     var findInd = findindextraget.index();
-    //     console.log(findInd);
-
-    //     //var sideMenu_detail_num = findIndexs.index();
-    //     //var side_menu_detail_num = $('.side_menu_detail').index();
-       
-    // }
-    // findIndexs.on('click', findindex_i);
-
-
     navi_Link_Event.on('mouseenter mouseleave', navi_Effect);
     product_Link.on('click', productClick_Effect);
     side_menu_close.on('click', sideMenuClose_Effect);
-    sideMenu_detail.on('mouseenter mouseleave', sideMenuDetail_Effect);
+  
+  
+  
+  
+  
+  
+  
+    //  sideMenu_detail.on('mouseenter mouseleave', sideMenuDetail_Effect);
 
+// sidemenu a 마우스오버시 디테일 상품 보여줌
 
+var sideMenu_detail = $('[data-side-ui="side_menu_detail_product"]'); //side의 a
+var side_menu_detail = $('[data-side-ui="side_menu_area"]');// a마우스오버시 넓어질 영역
+
+function sideMenuDetail_Effect(e){
+    
+
+    var sideMenu_detail_target =$(e.target);
+    var sideMenu_detail_type = e.type;        
+   // var side_menu_inner_detail = $('[data-side-ui="side_menu_area"]');
+   
+   //  console.log(sideMenu_detail_target);
+   //  console.log(sideMenu_detail_type);
+   
+    if(sideMenu_detail_type === 'mouseenter'){
+        TweenMax.to(side_menu_detail, .5, {width:'100%'});
+    }
+    else if(sideMenu_detail_type === 'mouseleave'){
+        TweenMax.to(side_menu_detail, 1, {width:0,});
+   }    
+}
    
 
 
