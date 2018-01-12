@@ -93,8 +93,8 @@
           
         }
         else if(sideMenu_Detail_type === 'mouseout'){
-            TweenMax.to(side_menu_detail, 1, {width:0});
-            //TweenMax.to(datil_all, .3, {left:0, opacity:0});
+            // TweenMax.to(side_menu_detail, 1, {width:0});
+            // TweenMax.to(datil_all, .3, {left:0, opacity:0});
            
         }
 
