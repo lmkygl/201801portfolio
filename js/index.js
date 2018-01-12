@@ -54,7 +54,7 @@
     //   console.log(sideMenu_Detail_target_Index);
         
         if(sideMenu_Detail_type === 'mouseover'){
-            TweenMax.to(side_menu_detail, .5, {width:'100%'});
+            TweenMax.to(side_menu_detail, .5, {width:'100%', opacity:1});
             
             if (e.target.nodeName === 'LI') {
                 targetNode = e.target;
@@ -116,7 +116,7 @@
 
         var sideMenu_detail_Area = $('[data-side-ui="side_menu_area"]');
         if(backBtn_type === 'click'){
-            sideMenu_detail_Area.animate({width:0}, .3);
+            sideMenu_detail_Area.animate({width:0,opacity: 0}, .3);
         }
     }
 
