@@ -71,27 +71,23 @@ nav{
     top:0;
     background-color:#fff;
     position: fixed;
-    width:25%;
+    width:20%;
     padding-top: 250px!important;
     box-shadow:2px 2px 5px rgb(224, 232, 236);
     nav{
         li{
             width:100%;
             height:100px;
-           // margin-bottom: 40px;
             cursor: pointer;
-            text-align: center;s
         }
         
         font-weight: 400;
         position: relative;
         width:100%;
         a{
-            margin-left:20px;
+            margin-left:40px;
             float:none;
-            //padding:20px;
-            //padding-right:20px;
-            font-size: 2.10084rem;
+            font-size: 30px;
             text-align:center;
             transition:all .3s ease;
             display:inline-block;

@@ -61,15 +61,15 @@
 
                 if(sideMenu_Detail_target_Index == 0) {
                     sideMenu_Detail_target_line.animate({width:"100%"}, .3);
-                    TweenMax.to(datil_layout0, .5, {right:0, opacity:1});
+                    TweenMax.to(datil_layout0, .5,  {opacity:1});
                 }
                 else{
-                    TweenMax.to(datil_layout0, .3, {left:0, opacity:0});
+                    TweenMax.to(datil_layout0, .3, {opacity:0});
                 }
         
                 if(sideMenu_Detail_target_Index == 1) {
                     sideMenu_Detail_target_line.animate({width:"100%"}, .3);
-                    TweenMax.to(datil_layout1, .5, {right:0, opacity:1});
+                    TweenMax.to(datil_layout1, .5, {opacity:1});
                 }
                 else{
                     TweenMax.to(datil_layout1, .3, {left:0, opacity:0});
@@ -77,17 +77,17 @@
 
                 if(sideMenu_Detail_target_Index == 2) {
                     sideMenu_Detail_target_line.animate({width:"100%"}, .3);
-                    TweenMax.to(datil_layout2, .5, {right:0, opacity:1});
+                    TweenMax.to(datil_layout2, .5, {opacity:1});
                 }
                 else{
-                    TweenMax.to(datil_layout2, .3, {left:0, opacity:0});
+                    TweenMax.to(datil_layout2, .3, {opacity:0});
                 }
                 if(sideMenu_Detail_target_Index == 3) {
                     sideMenu_Detail_target_line.animate({width:"100%"}, .3);
-                    TweenMax.to(datil_layout3, .5, {right:0, opacity:1});
+                    TweenMax.to(datil_layout3, .5, {opacity:1});
                 }
                 else{
-                    TweenMax.to(datil_layout3, .3, {left:0, opacity:0});
+                    TweenMax.to(datil_layout3, .3, {opacity:0});
                 }
                
                
@@ -99,19 +99,38 @@
         }
         else if(sideMenu_Detail_type === 'mouseout'){
             sideMenu_Detail_target_line.animate({width:0}, .3);
-            TweenMax.to(side_menu_detail, .5, {width:0});
-            TweenMax.to(datil_all, .3, {left:0, opacity:0});
+           // TweenMax.to(side_menu_detail, .5, {width:0});
+           // TweenMax.to(datil_all, .3, {left:0, opacity:0});
         }
 
     }
+
+
+    // back 누르고 다시 product버튼 클릭시 사이드메뉴 디테일 없어짐 구현
+
+    var backBtn = $('[data-side-ui="beginAfresh"]');
     
-   // var sidenav_width = $('[data-side-ui="findDetail"]');
+    function backBtn_Effect(e){
+        var backBtn_target = $(e.target);
+        var backBtn_type = e.type;
+
+        var sideMenu_detail_Area = $('[data-side-ui="side_menu_area"]');
+        if(backBtn_type === 'click'){
+            sideMenu_detail_Area.animate({width:0}, .3);
+        }
+    }
+
+    backBtn.on('click', backBtn_Effect);
+
+
+
+    var sidenav_width = $('[data-side-ui="side_nav"]');
     
     function sidenavArea_Effect(e){
         var sidenav_width_taget = $(e.target);
         var sidenav_width_taget_type = e.type;
-       // console.log(sidenav_width_taget);
-       sidenav_width_taget.css('background-color','gray');
+        console.log(sidenav_width_taget);
+        sidenav_width_taget.css('background-color','gray');
         var side_menu_detail_area = $('[data-side-ui="side_menu_area"]');
 
         if(sidenav_width_taget_type === 'mouseout'){
@@ -119,9 +138,9 @@
         }
     
     }
-
-
-   // sidenav_width.on('mouseout',sidenavArea_Effect);
+    //sidenav_width.on('mouseout',sidenavArea_Effect);
+    
+    
     sideMenu_Index.on('mouseover mouseout', SideMenuDetailImg_Effect);
     navi_Link_Event.on('mouseenter mouseleave', navi_Effect);
     product_Link.on('click', productClick_Effect);
