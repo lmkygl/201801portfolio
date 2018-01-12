@@ -41,8 +41,8 @@
         var sideMenu_Detail_target = $(e.target);
         var sideMenu_Detail_type = e.type;
         var sideMenu_Detail_target_Index = sideMenu_Detail_target.index();
-       // var targetNode = sideMenu_Detail_target.nodeName;
-        
+        var sidenav_width = $('[data-side-ui="side_nav"]');
+
         var datil_layout0 = $('.datail_layout0');
         var datil_layout1 = $('.datail_layout1');
         var datil_layout2 = $('.datail_layout2');
@@ -54,21 +54,37 @@
         
         if(sideMenu_Detail_type === 'mouseover'){
             TweenMax.to(side_menu_detail, .5, {width:'100%'});
+            
             if (e.target.nodeName === 'LI') {
                 targetNode = e.target;
 
                 if(sideMenu_Detail_target_Index == 0) {
                     TweenMax.to(datil_layout0, .5, {right:0, opacity:1});
                 }
+                else{
+                    TweenMax.to(datil_layout0, .3, {left:0, opacity:0});
+                }
+        
                 if(sideMenu_Detail_target_Index == 1) {
                     TweenMax.to(datil_layout1, .5, {right:0, opacity:1});
                 }
+                else{
+                    TweenMax.to(datil_layout1, .3, {left:0, opacity:0});
+                }
+
                 if(sideMenu_Detail_target_Index == 2) {
                     TweenMax.to(datil_layout2, .5, {right:0, opacity:1});
+                }
+                else{
+                    TweenMax.to(datil_layout2, .3, {left:0, opacity:0});
                 }
                 if(sideMenu_Detail_target_Index == 3) {
                     TweenMax.to(datil_layout3, .5, {right:0, opacity:1});
                 }
+                else{
+                    TweenMax.to(datil_layout3, .3, {left:0, opacity:0});
+                }
+               
                
                
             } else {
@@ -77,8 +93,9 @@
           
         }
         else if(sideMenu_Detail_type === 'mouseout'){
-            TweenMax.to(side_menu_detail, 1, {width:0,});
-            TweenMax.to(datil_all, .3, {left:0, opacity:0});
+            TweenMax.to(side_menu_detail, 1, {width:0});
+            //TweenMax.to(datil_all, .3, {left:0, opacity:0});
+           
         }
 
     }
