@@ -1,9 +1,4 @@
 (function(){
-
-   
-
-
-
     // product 클릭시 
     var product_Link = $('[data-ui-side="product_Link"]');
     var side_menu = $('[data-ui-side="side_menu"]');
@@ -18,92 +13,24 @@
     }
     
 
-
-    
-    var sideMenu_Index = $('[data-side-ui="findDetail"]');
-
-    function SideMenuDetailImg_Effect(e){
-        var sideMenu_Detail_target = $(e.target);
-        var sideMenu_Detail_type = e.type;
-        var side_menu_detail = $('[data-side-ui="side_menu_area"]');
-       // var sideMenu_Detail_target_line = sideMenu_Detail_target.find('.underline');
-        var sideMenu_Detail_target_Index = sideMenu_Detail_target.index();
-
-        var datil_layout0 = $('.datail_layout0');
-        var datil_layout1 = $('.datail_layout1');
-        var datil_layout2 = $('.datail_layout2');
-        var datil_layout3 = $('.datail_layout3');
-        var datil_all = $('.side_menu_inner_detail');
-
-    //   console.log(sideMenu_Detail_target);
-    //   console.log(sideMenu_Detail_target_Index);
-        
-        if(sideMenu_Detail_type === 'mouseover'){
-            //TweenMax.to(side_menu_detail, .5, {width:'100%', opacity:1});
-            
-            if (e.target.nodeName === 'LI') {
-                targetNode = e.target;
-
-                if(sideMenu_Detail_target_Index == 0) {
-                    //sideMenu_Detail_target_line.animate({width:"100%"}, .3);
-                    TweenMax.to(datil_layout0, 0.5,  {opacity:1});
-                }
-                else{
-                    TweenMax.to(datil_layout0, 0.3, {opacity:0});
-                }
-        
-                if(sideMenu_Detail_target_Index == 1) {
-                    //sideMenu_Detail_target_line.animate({width:"100%"}, .3);
-                    TweenMax.to(datil_layout1, 0.5, {opacity:1});
-                }
-                else{
-                    TweenMax.to(datil_layout1, 0.3, {left:0, opacity:0});
-                }
-
-                if(sideMenu_Detail_target_Index == 2) {
-                    //sideMenu_Detail_target_line.animate({width:"100%"}, .3);
-                    TweenMax.to(datil_layout2, 0.5, {opacity:1});
-                }
-                else{
-                    TweenMax.to(datil_layout2, 0.3, {opacity:0});
-                }
-                if(sideMenu_Detail_target_Index == 3) {
-                   // sideMenu_Detail_target_line.animate({width:"100%"}, .3);
-                    TweenMax.to(datil_layout3, 0.5, {opacity:1});
-                }
-                else{
-                    TweenMax.to(datil_layout3, 0.3, {opacity:0});
-                }
-            } else {
-                targetNode = e.target.parentNode;
-            }
-          
-        } else if (sideMenu_Detail_type === 'mouseout'){
-           // sideMenu_Detail_target_line.animate({width:0}, .3);
-           // TweenMax.to(side_menu_detail, .5, {width:0});
-           // TweenMax.to(datil_all, .3, {left:0, opacity:0});
-        }
-    }
-
     // 사이드 메뉴 영역 벗어나면 디테일 영역 없어짐 
     
-    var sidenav_width = $('[data-side-ui="side_nav"]');
+    // var sidenav_width = $('[data-side-ui="side_nav"]');
     
-    function sidenavArea_Effect(e){
-        var sidenav_width_taget = $(e.target);
-        var sidenav_width_taget_type = e.type;
-        console.log(sidenav_width_taget);
+    // function sidenavArea_Effect(e){
+    //     var sidenav_width_taget = $(e.target);
+    //     var sidenav_width_taget_type = e.type;
+    //    // console.log(sidenav_width_taget);
        
-        var side_menu_detail_area = $('[data-ui="side_menu_close"]');
+    //     var side_menu_detail_area = $('[data-ui="side_menu_close"]');
 
-        if(sidenav_width_taget_type === 'mouseleave'){
-            //TweenMax.to(side_menu_detail_area, .3, {opacity:0});
-             side_menu_detail_area.animate({width:0, opacity:0}, .3); 
-        }
-    }
+    //     if(sidenav_width_taget_type === 'mouseleave'){
+    //         //TweenMax.to(side_menu_detail_area, .3, {opacity:0});
+    //          side_menu_detail_area.animate({width:0, opacity:0}, 0.3); 
+    //     }
+    // }
     
-    sidenav_width.on('mouseleave',sidenavArea_Effect);
-    sideMenu_Index.on('mouseover mouseout', SideMenuDetailImg_Effect);
+   // sidenav_width.on('mouseleave',sidenavArea_Effect);
     product_Link.on('click', productClick_Effect);
     side_menu_close.on('click', sideMenuClose_Effect);
         
@@ -121,5 +48,5 @@
         }
     }
 
-    backBtn.on('click', backBtn_Effect);
+   // backBtn.on('click', backBtn_Effect);
 }());

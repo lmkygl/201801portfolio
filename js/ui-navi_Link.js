@@ -1,7 +1,16 @@
-(function(){
 
- // navi a 밑줄 효과
-    
+// navi a 밑줄 효과
+
+/*
+<li  data-ui="navi_Link">
+    <a href="#" title="jante" data-side-ui="side_menu_detail_product">
+        jante
+        <span class="underline"></span>
+    </a>
+</li>
+*/
+
+(function(){
     var $navi_Link_Event = $('[data-ui="navi_Link"]');
 
     function navi_Effect(e) {
@@ -23,11 +32,3 @@
     $navi_Link_Event.on('mouseenter mouseleave', navi_Effect);
 }());
 
-/*
-<li  data-ui="navi_Link">
-    <a href="#" title="jante" data-side-ui="side_menu_detail_product">
-        jante
-        <span class="underline"></span>
-    </a>
-</li>
-*/
