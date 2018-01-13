@@ -106,10 +106,39 @@
     }
 
 
+    // 사이드 메뉴 영역 벗어나면 디테일 영역 없어짐 
+    
+    var sidenav_width = $('[data-side-ui="side_nav"]');
+    
+    function sidenavArea_Effect(e){
+        var sidenav_width_taget = $(e.target);
+        var sidenav_width_taget_type = e.type;
+        console.log(sidenav_width_taget);
+       
+        var side_menu_detail_area = $('[data-ui="side_menu_close"]');
+
+        if(sidenav_width_taget_type === 'mouseleave'){
+            //TweenMax.to(side_menu_detail_area, .3, {opacity:0});
+             side_menu_detail_area.animate({width:0, opacity:0}, .3); 
+        }
+    
+    }
+    
+    
+    sidenav_width.on('mouseleave',sidenavArea_Effect);
+    
+    sideMenu_Index.on('mouseover mouseout', SideMenuDetailImg_Effect);
+    
+    navi_Link_Event.on('mouseenter mouseleave', navi_Effect);
+    
+    product_Link.on('click', productClick_Effect);
+    
+    side_menu_close.on('click', sideMenuClose_Effect);
+        
     // back 누르고 다시 product버튼 클릭시 사이드메뉴 디테일 없어짐 구현 <- 마우스아웃 기능 아직 미구현으로 구현함
 
     var backBtn = $('[data-side-ui="beginAfresh"]');
-    
+
     function backBtn_Effect(e){
         var backBtn_target = $(e.target);
         var backBtn_type = e.type;
@@ -120,65 +149,8 @@
         }
     }
     backBtn.on('click', backBtn_Effect);
-   
-
-    // 사이드 메뉴 영역 벗어나면 디테일 영역 없어짐 
-    
-    var sidenav_width = $('[data-ui-side="side_menu"]');
-    
-    function sidenavArea_Effect(e){
-        var sidenav_width_taget = $(e.target);
-        var sidenav_width_taget_type = e.type;
-        console.log(sidenav_width_taget);
-       
-        var side_menu_detail_area = $('[data-ui="side_menu_close"]');
-
-        if(sidenav_width_taget_type === 'mouseout'){
-            TweenMax.to(side_menu_detail_area, .3, {opacity:0});
-            // side_menu_detail_area.animate({width:0, opacity:0}, .3); 
-        }
-    
-    }
-    sidenav_width.on('mouseout',sidenavArea_Effect);
-    
-    
-    sideMenu_Index.on('mouseover mouseout', SideMenuDetailImg_Effect);
-    navi_Link_Event.on('mouseenter mouseleave', navi_Effect);
-    product_Link.on('click', productClick_Effect);
-    side_menu_close.on('click', sideMenuClose_Effect);
-    
   
   
-  
-  
-  
-  
-    //  sideMenu_detail.on('mouseenter mouseleave', sideMenuDetail_Effect);
-
-// sidemenu a 마우스오버시 디테일 상품 보여줌
-
-var sideMenu_detail = $('[data-side-ui="side_menu_detail_product"]'); //side의 a
-// a마우스오버시 넓어질 영역
-
-function sideMenuDetail_Effect(e){
-    
-
-    var sideMenu_detail_target =$(e.target);
-    var sideMenu_detail_type = e.type;        
-   // var side_menu_inner_detail = $('[data-side-ui="side_menu_area"]');
-   
-   //  console.log(sideMenu_detail_target);
-   //  console.log(sideMenu_detail_type);
-   
-    if(sideMenu_detail_type === 'mouseenter'){
-        TweenMax.to(side_menu_detail, .5, {width:'100%'});
-    }
-    else if(sideMenu_detail_type === 'mouseleave'){
-        TweenMax.to(side_menu_detail, 1, {width:0,});
-   }    
-}
-   
-
 
    
 
