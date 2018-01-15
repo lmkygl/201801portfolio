@@ -1,9 +1,10 @@
 
 /**z-index:2 container Area에 content 겹침***/
-.section1{
+.section1 {
     overflow:hidden;
-    .box{
-         position: absolute;
+    
+    .box {
+        position: absolute;
         left:0;
         height:300px;
         margin-top:100px;  
@@ -13,46 +14,50 @@
         background-size:cover;
         background-position:right;
     }
-    .center_box{
+    
+    .center_box {
        
-        .main_imgArea{
+        .main_imgArea {
             height:500px;
             background-color:rgb(63, 150, 150);
             background-image: url("../img/main_side_jante2.jpg");
             background-size:cover;
             background-position:bottom;
         }
-        .main_name_price{
+        .main_name_price {
             width:95%;
             margin:30px auto 0;
-            .main_name{
+            
+            .main_name {
                 width:70%;
                 float:left;
-                h3{
+                
+                h3 {
                     font-size:35px;
                     font-weight:bold;
                     line-height:60px;
                 }
-                p{
+                p {
                     font-size:14px;
                     line-height:30px;
                 }
             }
-            .main_price{
+            .main_price {
                 width:30%;
                 height:90px;
                 line-height:90px;
                 float:left;
                 text-align:right;
                 font-size:14px;
-                .monetaryUnit{
+               
+                .monetary_Unit {
                     font-size:15px;
                     font-weight:bold;
                 }
             }
         }
     }
-    .box2{
+    .box2 {
         position: absolute;
         right:0;
         height:450px; 
@@ -64,9 +69,9 @@
     }
 }
 
-.section2{
-
-    .box{
+.section2 {
+    
+    .box {
         position: absolute;
         left:0;
         height:400px; 
@@ -76,8 +81,8 @@
         background-size:cover;
         background-position:right;
     }
-    .center_box2{
-        .main_imgArea{
+    .center_box2 {
+        .main_imgArea {
             height:700px;
             background-color:rgb(34, 139, 143);        
             background-image: url("../img/main_side_atelier2.jpg");
@@ -85,7 +90,7 @@
             background-position:center;
             z-index:2;
         }
-        .main_name_price{
+        .main_name_price {
             width:95%;
             margin:30px auto 0;
             .main_name{
@@ -108,7 +113,7 @@
                 float:left;
                 text-align:right;
                 font-size:14px;
-                .monetaryUnit{
+                .monetary_Unit{
                     font-size:15px;
                     font-weight:bold;
                 }
@@ -116,7 +121,7 @@
         }
        
     }
-    .box2{
+    .box2 {
         position: absolute;
         right:0;
         margin-top:350px;
@@ -128,9 +133,9 @@
     }
 }
 
-.section3{
+.section3 {
 
-    .box{
+    .box {
         position: absolute;
         left:0;
         height:200px;
@@ -141,38 +146,38 @@
         background-size:cover;
         background-position:left;
     }
-    .center_box{
-        .main_imgArea{
+    .center_box {
+        .main_imgArea {
             height:500px;
             background-color:rgb(63, 150, 150);
             background-image: url("../img/main_hygge.jpg");
             background-size:cover;
             background-position:left;
         }
-        .main_name_price{
+        .main_name_price {
             width:95%;
             margin:30px auto 0;
-            .main_name{
+            .main_name {
                 width:70%;
                 float:left;
-                h3{
+                h3 {
                     font-size:35px;
                     font-weight:bold;
                     line-height:60px;
                 }
-                p{
+                p {
                     font-size:14px;
                     line-height:30px;
                 }
             }
-            .main_price{
+            .main_price {
                 width:30%;
                 height:90px;
                 line-height:90px;
                 float:left;
                 text-align:right;
                 font-size:14px;
-                .monetaryUnit{
+                .monetary_Unit {
                     font-size:15px;
                     font-weight:bold;
                 }
@@ -180,7 +185,7 @@
         }
         
     }
-    .box2{
+    .box2 {
         position: absolute;
         right:0;
         height:430px; 
@@ -191,9 +196,9 @@
     }
 }
 
-.section4{
+.section4 {
 
-    .box{
+    .box {
         position: absolute;
         left:0;
         margin-top:100px;
@@ -203,38 +208,38 @@
         background-size:cover;
         background-position:center; 
     }
-    .center_box2{
-        .main_imgArea{
+    .center_box2 {
+        .main_imgArea {
             height:700px;
             background-color:rgb(34, 139, 143);       
             background-image: url("../img/main_platingcook.jpg");
             background-size:cover;
             background-position:35%;
         }
-        .main_name_price{
+        .main_name_price {
             width:95%;
             margin:30px auto 0;
-            .main_name{
+            .main_name {
                 width:70%;
                 float:left;
-                h3{
+                h3 {
                     font-size:35px;
                     font-weight:bold;
                     line-height:60px;
                 }
-                p{
+                p {
                     font-size:14px;
                     line-height:30px;
                 }
             }
-            .main_price{
+            .main_price {
                 width:30%;
                 height:90px;
                 line-height:90px;
                 float:left;
                 text-align:right;
                 font-size:14px;
-                .monetaryUnit{
+                .monetary_Unit {
                     font-size:15px;
                     font-weight:bold;
                 }
@@ -242,7 +247,8 @@
         }
          
     }
-    .box2{
+    
+    .box2 {
         position: absolute;
         right:40px;
         top:500px;
@@ -251,7 +257,6 @@
         background-color:rgb(20, 82, 82);
         background-image: url("../img/main_side_platingcook.jpg");
         background-size:cover;
-        background-position:center;
-        
+        background-position:center; 
     }
 }

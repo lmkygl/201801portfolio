@@ -1,70 +1,79 @@
 /* header */
-#header{
+#header {
     width:100%;
     position:relative;
     top:40px;
 }
-.nav_bar{
+
+.nav_bar {
     padding:48px 68px;
     margin:0 auto;
     width:1180px;
 }
-.nav_bar::after{
+
+.nav_bar::after {
     clear:both;
     display:block;
     content:'';
 }
-.mobile_menu{
+
+.mobile_menu {
     position: absolute;
     display:none;
 }
 
-.logo_Area{
+.logo_Area {
     width:20%;
     float:left;
     text-align:center;
     overflow:hidden;
-}
-.logo_Area img{
-    vertical-align: top;
+    img {
+        vertical-align: top;
+    }
 }
 
-.left_gnb{
+.left_gnb {
     width:40%;
     float:left;
     overflow:hidden;
 }
-.right_gnb{ 
+.right_gnb { 
     width:40%;
     float:left;
     overflow:hidden;
     text-align: center;
 }
 
-nav{
-    a{
+nav {
+    a {
         display:inline-block;    
     } 
-    span{
+    span {
         width:0;
         height:1px;
         display:block;
         margin-top:10px;
    }
-  
 }
 
-.left_gnb nav a{
-    margin-left:50px;
-}
-.right_gnb  nav a{
-   margin-right:40px;
+.left_gnb {
+    nav {
+        a {
+            margin-left:50px;
+        }
+    }
 }
 
+.right_gnb {
+    nav {
+        a {
+            margin-right:40px;
+        }
+    }
+} 
 
 /* product 클릭시 맨상위에 있어야 하기 때문에 사이드메뉴에 z-index:1 사용 */
-.side_menu{
-  // display:block;
+.side_menu {
     z-index:3;
     height:100%;
     left:-800px;
@@ -74,17 +83,17 @@ nav{
     width:25%;
     padding-top: 250px!important;
     box-shadow:2px 2px 5px rgb(224, 232, 236);
-    nav{
-        li{
+    nav {
+        font-weight: 400;
+        position: relative;
+        width:100%;
+
+        li {
             width:100%;
             height:100px;
             cursor: pointer;
         }
-        
-        font-weight: 400;
-        position: relative;
-        width:100%;
-        a{
+        a {
             margin-left:40px;
             float:none;
             font-size: 25px;
@@ -92,13 +101,10 @@ nav{
             transition:all .3s ease;
             display:inline-block;
         }
-       
     }
-   
-
 }
-.side_menu_detail{
-    //opacity: 0;
+
+.side_menu_detail {
     padding-top: 250px!important;
     width: 100%; 
     background-color:#fff;
@@ -108,29 +114,28 @@ nav{
     height: 100%;
     text-align: left;
     box-shadow:2px 2px 5px rgb(224, 232, 236);
-    .side_menu_inner_detail{
-       // opacity:0;
+    .side_menu_inner_detail {
         width:100%;
         margin:0 auto;
         position: absolute;
         left:0;
-        .side_menu_product_name{
+        .side_menu_product_name {
             width:90%;
             height:40px;
             line-height:40px;
             margin-left:5px;
             margin-top:20px;
-            a{
+            a {
                 font-size:25px;
                 font-weight:bold;
             }
         }
-        .side_menu_product_price{
+        .side_menu_product_price {
             text-align:right;
             margin-right:5px;
         }
     }
-    .janteproduct{
+    .janteproduct {
         display:block;
         height:360px;
         width:100%;
@@ -138,7 +143,7 @@ nav{
         background-size:cover;
         background-position:bottom;
     }
-    .atelierproduct{
+    .atelierproduct {
         display:block;
         height:360px;
         width:100%;
@@ -146,7 +151,7 @@ nav{
         background-size:cover;
         background-position:bottom;
     }
-    .hyggeproduct{
+    .hyggeproduct {
         display:block;
         height:360px;
         width:100%;
@@ -154,7 +159,7 @@ nav{
         background-size:cover;
         background-position:bottom;
     }
-    .platingproduct{
+    .platingproduct {
         display:block;
         height:360px;
         width:100%;
@@ -165,7 +170,7 @@ nav{
  }
 
 
-.side_backBtn{
+.side_backBtn {
     position: absolute;
     top: 50px;
     right:35px;
