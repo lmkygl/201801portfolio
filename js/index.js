@@ -1,17 +1,5 @@
 (function(){
-    // product 클릭시 
-    var product_Link = $('[data-ui-side="product_Link"]');
-    var side_menu = $('[data-ui-side="side_menu"]');
-    var side_menu_close = $('[data-ui="sidemenu_close"]');
-    
-    function productClick_Effect(e){
-        TweenMax.to(side_menu, 0.4, {left:0});
-    }
 
-    function sideMenuClose_Effect(){
-        TweenMax.to(side_menu, 0.4, {left:"-800px"});
-    }
-    
 
     // 사이드 메뉴 영역 벗어나면 디테일 영역 없어짐 
     
