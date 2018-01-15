@@ -4,10 +4,10 @@
     var animating = false;
     
     function animate_effect($dom) {
-        $ul.css('opacity','1');
-        $ul.animate({
-            width:'100%'
-        },300);
+        // $ul.animate({
+        //     width:'100%',
+        //     opacity:1
+        // },300);
 
         $dom.siblings().hide();
         $dom.show();
@@ -30,13 +30,14 @@
     }
 
     function sideMenuhide_effect(e){
-        $ul.animate({
-            width:0
-        },300);
-        console.log($ul);
+        // $ul.animate({
+        //     width:0,
+        //     opacity:0
+        // },300);
+        
 
     }
 
     $('[data-side-ui="side_nav"]').on('mouseout', sideMenuhide_effect);
-    sideMenu_Index.on('mouseover mouseout', sideMenuDetailImg_effect);
+    //sideMenu_Index.on('mouseover mouseout', sideMenuDetailImg_effect);
 }());
