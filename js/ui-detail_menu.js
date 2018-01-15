@@ -1,3 +1,5 @@
+// 인덱스를 이용한 사이드메뉴의 디테일메뉴 보기
+
 (function(){
     var sideMenu_Index = $('[data-side-ui="findDetail"]');
     var $ul = $('[data-side-ui="side_menu_area"]');

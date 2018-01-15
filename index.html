@@ -58,37 +58,37 @@
                 </div>
                 <div class="side_menu" data-ui-side="side_menu">
                     <a class="side_backBtn" data-ui-side="sideMenu_close">＜ Back</a>
-                    <nav data-side-ui="side_nav" >
+                    <nav>
                         <ul data-side-ui="findDetail" >
                             <li  data-ui="navi_underline" data-tab-id="id1">
-                                <a href="#" title="jante" data-side-ui="side_menu_detail_product">
+                                <a href="#" title="jante">
                                     jante
                                     <span class="underline"></span>
                                 </a>
                             </li>
                             <li  data-ui="navi_underline" data-tab-id="id2">
-                                <a href="#" title="atelier" data-side-ui="side_menu_detail_product">
+                                <a href="#" title="atelier">
                                     atelier
                                     <span class="underline"></span>
                                 </a>
                             </li>
                             <li data-ui="navi_underline" data-tab-id="id3">
-                                <a href="#" title="hygge"  data-side-ui="side_menu_detail_product">
+                                <a href="#" title="hygge" >
                                     hygge
                                     <span class="underline"></span>
                                 </a>
                             </li>
                             <li data-ui="navi_underline" data-tab-id="id4">
-                                <a href="#" title="plating cook"  data-side-ui="side_menu_detail_product">
+                                <a href="#" title="plating cook" >
                                     plating cook
                                     <span class="underline"></span>
                                 </a>
                             </li>
                         </ul>
                     </nav>
-                    <ul class="side_menu_detail"  data-ui="side_menu_close" data-side-ui="side_menu_area">
+                    <ul class="side_menu_detail">
                         <li class="side_menu_inner_detail" data-pannel-id="id1">
-                            <a herf="#" title="jante" class="janteproduct"></a>
+                            <a herf="#" title="jante" class="jante_product"></a>
                             <div class="side_menu_product_name">
                                 <h3><a href="#" title="jante">jante</a></h3>
                             </div>
@@ -99,7 +99,7 @@
                             </div>
                         </li>
                         <li class="side_menu_inner_detail" data-pannel-id="id2">
-                            <a class="atelierproduct"></a>
+                            <a class="atelier_product"></a>
                             <div class="side_menu_product_name">
                                 <h3><a href="#" title="atelier">atelier</a></h3>
                             </div>
@@ -110,7 +110,7 @@
                             </div>
                         </li>
                         <li class="side_menu_inner_detail" data-pannel-id="id3">
-                            <a class="hyggeproduct"></a>
+                            <a class="hygge_product"></a>
                             <div class="side_menu_product_name">
                                 <h3><a href="#" title="hygge">hygge</a></h3>
                             </div>
@@ -121,7 +121,7 @@
                             </div>
                         </li> 
                         <li class="side_menu_inner_detail" data-pannel-id="id4">
-                            <a class="platingproduct"></a>
+                            <a class="plating_product"></a>
                             <div class="side_menu_product_name">
                                 <h3><a href="#" title="plating cook">plating cook</a></h3>
                             </div>
@@ -138,10 +138,12 @@
         <div class="container">
             <div class="container_width">
                 <section class="inner_padding section1">
-                    <div class=" grid_6 box">
+                    <div class="grid_6 box">
                     </div>
-                    <div class="grid_10 push_4  center_box">
-                        <div class="main_imgArea"></div>
+                    <div class="grid_10 push_4 center_box">
+                        <div class="main_imgArea">
+
+                        </div>
                         <div class="main_name_price">
                             <div class="main_name">
                                 <h3>jante</h3>
@@ -152,12 +154,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="grid_4  box2">
+                    <div class="grid_4 box2">
 
                     </div>
                 </section>
                 <section class="inner_padding section2">
-                    <div class="grid_5  box">
+                    <div class="grid_5 box">
                     </div>
                     <div class="grid_10 push_4 center_box2">
                         <div class="main_imgArea"></div>
@@ -172,16 +174,18 @@
                         </div>
 
                     </div>
-                    <div class="grid_4  box2">
+                    <div class="grid_4 box2">
 
                     </div>
                 </section>
                 <section class="inner_padding section3">
-                    <div class="grid_6  box">
+                    <div class="grid_6 box">
 
                     </div>
                     <div class="grid_10 push_4 center_box">
-                        <div class="main_imgArea"></div>
+                        <div class="main_imgArea">
+
+                        </div>
                         <div class="main_name_price">
                             <div class="main_name">
                                 <h3>hygge</h3>
@@ -193,12 +197,12 @@
                         </div>
 
                     </div>
-                    <div class="grid_4  box2">
+                    <div class="grid_4 box2">
 
                     </div>
                 </section>
                 <section class="inner_padding section4">
-                    <div class="grid_5  box">
+                    <div class="grid_5 box">
 
                     </div>
                     <div class="grid_10 push_4 center_box2">
@@ -213,12 +217,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="grid_6 box2" >
+                    <div class="grid_6 box2">
 
                     </div>
                 </div>
             </section>
-
         </div>
         <footer id="footer" class="footer">
             <div class=".container_width">
@@ -244,14 +247,12 @@
                     <div class="copyright">
                         COPYRIGHT ⓒ LIM GEUN YOUNG ALL RIGHTS RESERVED.
                     </div>
-                   
                 </div>
             </div>
         </footer>
     </div>
     <script src="./js/ui-navi_underline.js"></script>
     <script src="./js/ui-side_open_close.js"></script>  
-    <script src="./js/ui-detail_menu.js"></script>
     <script src="./js/ui-tab-id.js"></script>    
     <script src="./js/index.js"></script>
 </body>

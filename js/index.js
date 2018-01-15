@@ -19,8 +19,8 @@
     // }
     
    // sidenav_width.on('mouseleave',sidenavArea_Effect);
-    product_Link.on('click', productClick_Effect);
-    side_menu_close.on('click', sideMenuClose_Effect);
+    // product_Link.on('click', productClick_Effect);
+    // side_menu_close.on('click', sideMenuClose_Effect);
         
     // back 누르고 다시 product버튼 클릭시 사이드메뉴 디테일 없어짐 구현 <- 마우스아웃 기능 아직 미구현으로 구현함 추가
 
