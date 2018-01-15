@@ -1,7 +1,7 @@
 (function(){
     
     var data_tab = $('[data-tab-id]');
-    var sideMenu_detailAera = $('[data-side-ui="sideMenu_detail_area"]');
+    var sideMenu_detailAera = $('[data-ui-side="sideMenu_detail_area"]');
     var side_navi = $('[data-ui-side="side_menu"]');
     
     function show_panel(e){
@@ -31,7 +31,7 @@
         });
         
         TweenMax.to($('[data-pannel-id]'), 0.3, {
-            width:0,
+            //width:0,
             opacity:0
         });
         
@@ -44,7 +44,7 @@
     }
 
     function sideMenu_deatilClose(e){
-        TweenMax.to(sideMenu_detailAera, 1, {
+        TweenMax.to(sideMenu_detailAera, 0.4, {
             width:0,
             opacity:0
         });

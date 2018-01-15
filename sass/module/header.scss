@@ -81,7 +81,7 @@ nav {
     background-color:#fff;
     position: fixed;
     width:25%;
-    padding-top: 250px!important;
+    padding-top: 350px!important;
     box-shadow:2px 2px 5px rgb(224, 232, 236);
     nav {
         font-weight: 400;
@@ -90,14 +90,13 @@ nav {
 
         li {
             width:100%;
-            height:80px;
+            height:50px;
             cursor: pointer;
-            margin-bottom:30px;
         }
         a {
             margin-left:40px;
             float:none;
-            font-size: 25px;
+            font-size: 20px;
             text-align:center;
             transition:all .3s ease;
             display:inline-block;
@@ -139,33 +138,33 @@ nav {
     }
     .jante_product {
         display:block;
-        height:360px;
+        height:400px;
         width:100%;
-        background-image: url('../img/main_side_jante3.jpg');
+        background-image: url('../img/main_detail_jante.jpg');
         background-size:cover;
         background-position:bottom;
     }
     .atelier_product {
         display:block;
-        height:360px;
+        height:400px;
         width:100%;
-        background-image: url('../img/main_side_atelier4.jpg');
+        background-image: url('../img/main_detail_atelier.jpg');
         background-size:cover;
         background-position:bottom;
     }
     .hygge_product {
         display:block;
-        height:360px;
+        height:400px;
         width:100%;
-        background-image: url('../img/main_side_hygge4.jpg');
+        background-image: url('../img/main_detail_hygge.jpg');
         background-size:cover;
         background-position:bottom;
     }
     .plating_product {
         display:block;
-        height:360px;
+        height:400px;
         width:100%;
-        background-image: url('../img/main_side_platingcook3.jpg');
+        background-image: url('../img/main_detail_platingcook.jpg');
         background-size:cover;
         background-position:bottom;
     }
