@@ -22,7 +22,7 @@ a {
 }
 
 .inner_padding {
-    padding-top:200px;
+    padding-top:150px;
     padding-bottom:150px;
     overflow:hidden;
     position:relative;
@@ -44,4 +44,45 @@ a {
 
 .opcity {
     opacity:0;
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }   
+    100% {
+        opacity: 1;
+    }
+}
+
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+@keyframes fadeInUp{
+    0% {
+        opacity: 0;
+       // margin-top:100px;
+    }
+    100% {
+        opacity: 1;
+       //margin-top:0;
+    }
+}
+
+
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
 }

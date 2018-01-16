@@ -1,71 +1,71 @@
 
 /**z-index:2 container Area에 content 겹침***/
 .section1 {
-    overflow:hidden;
-    
+    overflow: hidden;
+
     .box {
         position: absolute;
-        left:0;
-        height:300px;
-        margin-top:100px;  
-        z-index:2;
-        background-color:rgb(95, 161, 161);
+        left: 0;
+        height: 300px;
+        margin-top: 100px;  
+        z-index: 2;
+        background-color: rgb(95, 161, 161);
         background-image: url("../img/main_side_jante.jpg");
-        background-size:cover;
-        background-position:right;
+        background-size: cover;
+        background-position: right;
     }
     
     .center_box {
-       
+        
         .main_imgArea {
-            height:500px;
-            background-color:rgb(63, 150, 150);
+            height: 500px;
+            background-color: rgb(63, 150, 150);
             background-image: url("../img/main_side_jante2.jpg");
-            background-size:cover;
-            background-position:bottom;
+            background-size: cover;
+            background-position: bottom;
         }
         .main_name_price {
-            width:95%;
-            margin:30px auto 0;
+            width: 95%;
+            margin: 30px auto 0;
             
             .main_name {
-                width:70%;
-                float:left;
+                width: 70%;
+                float: left;
                 
                 h3 {
-                    font-size:35px;
-                    font-weight:bold;
-                    line-height:60px;
+                    font-size: 35px;
+                    font-weight: bold;
+                    line-height: 60px;
                 }
                 p {
-                    font-size:14px;
-                    line-height:30px;
+                    font-size: 14px;
+                    line-height: 30px;
                 }
             }
             .main_price {
-                width:30%;
-                height:90px;
-                line-height:90px;
+                width: 30%;
+                height: 90px;
+                line-height: 90px;
                 float:left;
-                text-align:right;
-                font-size:14px;
-               
+                text-align: right;
+                font-size: 14px;
+
                 .monetary_Unit {
-                    font-size:15px;
-                    font-weight:bold;
+                    font-size: 15px;
+                    font-weight: bold;
                 }
             }
         }
     }
     .box2 {
         position: absolute;
-        right:0;
-        height:450px; 
-        background-color:rgb(36, 107, 107);
+        right: 0;
+        height: 450px; 
+        background-color: rgb(36, 107, 107);
         background-image: url("../img/main_jante.jpg");
-        background-size:cover;
+        background-size: cover;
         background-repeat: no-repeat;
-        background-position:45%;;
+        background-position: 45%;;
     }
 }
 
@@ -258,5 +258,54 @@
         background-image: url("../img/main_side_platingcook.jpg");
         background-size:cover;
         background-position:center; 
+    }
+}
+
+
+.section1_leftbox{
+    -webkit-animation-name: section1_leftbox;
+    animation-name: section1_leftbox;
+    animation-delay: 1.5s;
+}
+@keyframes section1_leftbox{
+    0% {
+        opacity: 0;
+        margin-top: 200px;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 100px;
+    }
+}
+
+.section1_centerbox{
+    -webkit-animation-name: section1_centerbox;
+    animation-name: section1_centerbox;
+    animation-delay: 1.7s;
+}
+@keyframes section1_centerbox{
+    0% {
+        opacity: 0;
+        margin-top: 100px;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+
+.section1_rightbox{
+    -webkit-animation-name: section1_rightbox;
+    animation-name: section1_rightbox;
+    animation-delay: 1s;
+}
+@keyframes section1_rightbox{
+    0% {
+        opacity: 0;
+        margin-top: 100px;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 0;
     }
 }
