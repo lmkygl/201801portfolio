@@ -1,18 +1,24 @@
 // 인덱스를 이용한 사이드메뉴의 디테일메뉴 보기
 
 (function(){
-    var sideMenu_Index = $('[data-side-ui="findDetail"]');
-    var $ul = $('[data-side-ui="side_menu_area"]');
-    var animating = false;
+    var sideMenu_Index = $('[data-ui-side="findDetail"]');
+    var $ul = $('[data-ui-side="sideMenu_detail_area"]');
+    
     
     function animate_effect($dom) {
-        // $ul.animate({
-        //     width:'100%',
-        //     opacity:1
-        // },300);
+        var animating = false;
+        $ul.animate({
+            width:'100%',
+            opacity:1
+        },300,false);
 
-        $dom.siblings().hide();
         $dom.show();
+        $dom.siblings().hide();
+       
+
+
+       
+        
     }
 
     function sideMenuDetailImg_effect(e){
@@ -32,14 +38,16 @@
     }
 
     function sideMenuhide_effect(e){
-        // $ul.animate({
-        //     width:0,
-        //     opacity:0
-        // },300);
+        $ul.animate({
+            width:0,
+            //opacity:0
+        },300, function(){
+
+        });
         
 
     }
 
-    $('[data-side-ui="side_nav"]').on('mouseout', sideMenuhide_effect);
-    //sideMenu_Index.on('mouseover mouseout', sideMenuDetailImg_effect);
+    $('[data-ui-side="side_menu"]').on('mouseout', sideMenuhide_effect);
+    sideMenu_Index.on('mouseover mouseout', sideMenuDetailImg_effect);
 }());

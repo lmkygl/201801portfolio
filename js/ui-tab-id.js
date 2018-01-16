@@ -1,3 +1,15 @@
+//data- 를 이용하여 value 값이 같을 경우 디테일 메뉴 보여짐.
+/* 
+    // javascript dom
+    tab_id = etarget.dataset.tabId;
+    
+    // data()
+    // tab_id = $(e.target).data('tabId');
+
+    // attr()
+    // tab_id = $(e.target).attr('data-tab-id');
+*/
+
 (function(){
     
     var data_tab = $('[data-tab-id]');
@@ -19,19 +31,12 @@
         // javascript dom
         tab_id = etarget.dataset.tabId;
 
-        // data()
-        // tab_id = $(e.target).data('tabId');
-
-        // attr()
-        // tab_id = $(e.target).attr('data-tab-id');
-        
         TweenMax.to(sideMenu_detailAera, 0.3, {
-            width:'120%',
+            width:'110%',
             opacity:1
         });
         
         TweenMax.to($('[data-pannel-id]'), 0.3, {
-            //width:0,
             opacity:0
         });
         
