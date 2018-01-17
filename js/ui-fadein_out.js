@@ -1,37 +1,50 @@
 //fadeIn, fadeOut 효과
-/* 
- 효과 
 
- 페이지 로드시 천천히 나타나면서 객체가 아래에서 위로 객체가 붙음
- 오른쪽객체가 제일 먼저 나타나고 왼쪽 센터는 같이 나타나는데, 왼쪽보다 센터 박스가 늦게 나타남.
- 스크롤시 오른쪽 왼쪽 객체가 옆으로붙으면서 올라감
-
- 객체가 모두 뜨고나면, section의 중간보다 끝지점에서 상품이름과 가격나옴
-
-*/
 
 (function(){
 
     var opacity = $('[data-ui-fade]');
+    // 공통으로 딜레이 시간 적용되고, 마진값이 0 
+    var $fadeIn_up_center = $('[data-ui-fade="fadeIn_up_center"]');
+    var $fadeIn_up_name = $('[data-ui-fade="fadeIn_up_name"]');
+    var $fadeIn_up_name_ex = $('[data-ui-fade="fadeIn_up_name_ex"]');
+    var $fadeIn_up_price = $('[data-ui-fade="fadeIn_up_price"]');
+    
 
-    var test1 = $('[data-ui-fade="test1"]');
-    var test2 = $('[data-ui-fade="test2"]');
-    var test3 = $('[data-ui-fade="test3"]');
-    var test4 = $('[data-ui-fade="test4"]');
-    var test5 = $('[data-ui-fade="test5"]');
-    var test6 = $('[data-ui-fade="test6"]');
+    var $fadeIn_up_left = $('[data-ui-fade="fadeIn_up_left"]');
+    var $fadeIn_up_right = $('[data-ui-fade="fadeIn_up_right"]');
+
+    var $fadeIn_up_left2 = $('[data-ui-fade="fadeIn_up_left2"]');
+    var $fadeIn_up_right2 = $('[data-ui-fade="fadeIn_up_right2"]');
+    
+    var $fadeIn_up_left3 = $('[data-ui-fade="fadeIn_up_left3"]');
+    var $fadeIn_up_right3 = $('[data-ui-fade="fadeIn_up_right3"]');
+    
+    var $fadeIn_up_left4 = $('[data-ui-fade="fadeIn_up_left4"]');
+    var $fadeIn_up_right4 = $('[data-ui-fade="fadeIn_up_right4"]');
+   
     
     function fadeIn_effect(){
 
-        TweenMax.to(opacity, 1,{css:{marginTop:0, opacity:1}});
+        // TweenMax.to(opacity, 0.5,{css:{marginTop:0, opacity:1}});
 
 
-        TweenMax.to(test1, 1,{css:{marginTop:'100px'}});
-        TweenMax.to(test2, 1.5,{css:{marginTop:0, opacity:1}});
-        TweenMax.to(test3, 0.5);
-        TweenMax.to(test4, 2);
-        TweenMax.to(test5, 2.2);
-        TweenMax.to(test6, 2.4);
+        TweenMax.to($fadeIn_up_left, 1,{css:{marginTop:'100px' , opacity:1}});
+        TweenMax.to($fadeIn_up_right, 0.5,{css:{marginTop:0 , opacity:1}} );
+
+        TweenMax.to($fadeIn_up_left2, 0.5,{css:{marginTop:'130px' , opacity:1}});
+        TweenMax.to($fadeIn_up_right2,1,{css:{marginTop:'350px' , opacity:1}});
+
+        TweenMax.to($fadeIn_up_left3,1,{css:{marginTop:'200px' , opacity:1}});
+        TweenMax.to($fadeIn_up_right3,0.5,{css:{marginTop:'70px' , opacity:1}});
+
+        TweenMax.to($fadeIn_up_left4,0.5,{css:{marginTop:'100px' , opacity:1}});
+        TweenMax.to($fadeIn_up_right4,1,{css:{marginTop:'300px' , opacity:1}});
+
+        TweenMax.to($fadeIn_up_center, 1.5,{css:{marginTop:0, opacity:1}});
+        TweenMax.to($fadeIn_up_name, 2,{css:{marginTop:0, opacity:1}} );
+        TweenMax.to($fadeIn_up_name_ex, 2.3, {css:{marginTop:0, opacity:1}});
+        TweenMax.to($fadeIn_up_price, 2.3, {css:{marginTop:0, opacity:1}});
 
     }
     
