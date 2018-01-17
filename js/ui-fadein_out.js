@@ -48,7 +48,8 @@
 
 
 
-    // 스크롤 이벤트
+
+    // 스크롤 이벤트 버그 발생
     $(window).scroll(function(){
         var $scrollTop = $(window).height();
         var $section1_offset = $('.section1').offset().top;
