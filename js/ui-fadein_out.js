@@ -12,10 +12,27 @@
 
 (function(){
 
-    var $container = $('.container');
+    var opacity = $('[data-ui-fade]');
 
+    var test1 = $('[data-ui-fade="test1"]');
+    var test2 = $('[data-ui-fade="test2"]');
+    var test3 = $('[data-ui-fade="test3"]');
+    var test4 = $('[data-ui-fade="test4"]');
+    var test5 = $('[data-ui-fade="test5"]');
+    var test6 = $('[data-ui-fade="test6"]');
+    
     function fadeIn_effect(){
-        //$container.children().addClass('fadeInUp');
+
+        TweenMax.to(opacity, 1,{css:{marginTop:0, opacity:1}});
+
+
+        TweenMax.to(test1, 1,{css:{marginTop:'100px'}});
+        TweenMax.to(test2, 1.5,{css:{marginTop:0, opacity:1}});
+        TweenMax.to(test3, 0.5);
+        TweenMax.to(test4, 2);
+        TweenMax.to(test5, 2.2);
+        TweenMax.to(test6, 2.4);
+
     }
     
     window.onload = fadeIn_effect();
