@@ -1,8 +1,10 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
 body,html {
     color: #0D364C;
     width: 100%;
     height: 100%;
-    font-family:notosanskr,sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 a {
@@ -14,7 +16,12 @@ a {
 .wrap {
     margin:0 auto;  
 }
-
+.arrow_icon{
+    margin:0;
+    padding:0;
+    display:inline;
+    font-size:11px;
+}
 .container {
     overflow:hidden;
     padding:40px 60px;

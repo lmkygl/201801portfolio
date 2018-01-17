@@ -3,7 +3,6 @@
 
 (function(){
 
-    var opacity = $('[data-ui-fade]');
     // 공통으로 딜레이 시간 적용되고, 마진값이 0 
     var $fadeIn_up_center = $('[data-ui-fade="fadeIn_up_center"]');
     var $fadeIn_up_name = $('[data-ui-fade="fadeIn_up_name"]');
@@ -26,9 +25,6 @@
     
     function fadeIn_effect(){
 
-        // TweenMax.to(opacity, 0.5,{css:{marginTop:0, opacity:1}});
-
-
         TweenMax.to($fadeIn_up_left, 1,{css:{marginTop:'100px' , opacity:1}});
         TweenMax.to($fadeIn_up_right, 0.5,{css:{marginTop:0 , opacity:1}} );
 
@@ -49,6 +45,52 @@
     }
     
     window.onload = fadeIn_effect();
+
+
+
+    // 스크롤 이벤트
+    $(window).scroll(function(){
+        var $scrollTop = $(window).height();
+        var $section1_offset = $('.section1').offset().top;
+        var $section2_offset = $('.section2').offset().top;
+        var $section3_offset = $('.section3').offset().top;
+        var $section4_offset = $('.section4').offset().top;
+
+        
+        if ($section1_offset >= 974) {
+            // console.log($section1_offset);
+            TweenMax.to($fadeIn_up_left, 1,{left:'0'});
+            TweenMax.to($fadeIn_up_right, 0.5,{right:0} );
+        }
+
+
+        if($section1_offset <= $scrollTop){
+            TweenMax.to($fadeIn_up_left, 1,{css:{left:'60px' , opacity:1}});
+            TweenMax.to($fadeIn_up_right, 0.5,{css:{right:'15px' , opacity:1}} );
+        }
+
+        if($section2_offset >= $scrollTop + $section1_offset){
+            TweenMax.to($fadeIn_up_left2, 1,{css:{left:'50px' , opacity:1}});
+            TweenMax.to($fadeIn_up_right2, 0.5,{css:{right:'40px' , opacity:1}} );
+        }
+        
+
+        if($section3_offset <= $scrollTop  + $section1_offset+ $section2_offset ){
+            TweenMax.to($fadeIn_up_left3, 1,{css:{left:'80px' , opacity:1}});
+            TweenMax.to($fadeIn_up_right3, 0.5,{css:{right:'10px' , opacity:1}} );
+        }
+    
+       
+        if($section4_offset <= $scrollTop + $section1_offset+ $section2_offset + $section3_offset){
+            TweenMax.to($fadeIn_up_left4, 1,{css:{left:'20px' , opacity:1}});
+            TweenMax.to($fadeIn_up_right4, 0.5,{css:{right:'80px' , opacity:1}} );
+        }
+       
+    
+    });
+
+    
+
 }());
 /*
 jQuery(function($) {
