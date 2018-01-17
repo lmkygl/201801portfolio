@@ -56,7 +56,10 @@
         var $section3_offset = $('.section3').offset().top;
         var $section4_offset = $('.section4').offset().top;
 
-        
+        var $section1  = $('.section1');
+        var $section2 = $('.section2');
+        var $section3 = $('.section3');
+        var $section4 = $('.section4');
         if ($section1_offset >= 974) {
             // console.log($section1_offset);
             TweenMax.to($fadeIn_up_left, 1,{left:'0'});
@@ -65,25 +68,32 @@
 
 
         if($section1_offset <= $scrollTop){
-            TweenMax.to($fadeIn_up_left, 1,{css:{left:'60px' , opacity:1}});
-            TweenMax.to($fadeIn_up_right, 0.5,{css:{right:'15px' , opacity:1}} );
+            TweenMax.to($fadeIn_up_left, 2,{left:'60px'});
+
+            TweenMax.to($fadeIn_up_right, 2,{right:'15px'} );
+            
         }
 
-        if($section2_offset >= $scrollTop + $section1_offset){
+        if($section2_offset + $section1_offset  >= $scrollTop ){
             TweenMax.to($fadeIn_up_left2, 1,{css:{left:'50px' , opacity:1}});
             TweenMax.to($fadeIn_up_right2, 0.5,{css:{right:'40px' , opacity:1}} );
+           
         }
         
 
-        if($section3_offset <= $scrollTop  + $section1_offset+ $section2_offset ){
+        if($section3_offset >= $scrollTop  + $section1_offset+ $section2_offset ){
             TweenMax.to($fadeIn_up_left3, 1,{css:{left:'80px' , opacity:1}});
             TweenMax.to($fadeIn_up_right3, 0.5,{css:{right:'10px' , opacity:1}} );
+
+           
         }
     
        
         if($section4_offset <= $scrollTop + $section1_offset+ $section2_offset + $section3_offset){
             TweenMax.to($fadeIn_up_left4, 1,{css:{left:'20px' , opacity:1}});
             TweenMax.to($fadeIn_up_right4, 0.5,{css:{right:'80px' , opacity:1}} );
+           
+        
         }
        
     
