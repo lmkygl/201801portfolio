@@ -12,26 +12,26 @@
 
 (function(){
     
-    var data_tab = $('[data-tab-id]');
-    var sideMenu_detailAera = $('[data-ui-side="sideMenu_detail_area"]');
-    var side_navi = $('[data-ui-side="side_menu"]');
+    var $data_tab = $('[data-tab-id]');
+    var $sideMenu_detailAera = $('[data-ui-side="sideMenu_detail_area"]');
+    var $side_navi = $('[data-ui-side="side_menu"]');
     
     function show_panel(e){
         var etarget;
         var tab_id;
         var data_pannel;
 
-        if(e.target.nodeName === 'A'){
+        if (e.target.nodeName === 'A') {
             etarget = e.target.parentNode;
         }
-        else{
+        else {
             etarget = e.target;
         }
 
         // javascript dom
         tab_id = etarget.dataset.tabId;
 
-        TweenMax.to(sideMenu_detailAera, 0.3, {
+        TweenMax.to($sideMenu_detailAera, 0.3, {
             width:'110%',
             opacity:1
         });
@@ -49,13 +49,13 @@
     }
 
     function sideMenu_deatilClose(e){
-        TweenMax.to(sideMenu_detailAera, 0.4, {
+        TweenMax.to($sideMenu_detailAera, 0.4, {
             width:0,
             opacity:0
         });
 
     }
 
-    side_navi.on('mouseleave', sideMenu_deatilClose);
-    data_tab.on('mouseenter mousleave', show_panel);
+    $side_navi.on('mouseleave', sideMenu_deatilClose);
+    $data_tab.on('mouseenter mousleave', show_panel);
 }());
