@@ -14,11 +14,6 @@
 
         $dom.show();
         $dom.siblings().hide();
-       
-
-
-       
-        
     }
 
     function sideMenuDetailImg_effect(e){
@@ -44,8 +39,6 @@
         },300, function(){
 
         });
-        
-
     }
 
     $('[data-ui-side="side_menu"]').on('mouseout', sideMenuhide_effect);
