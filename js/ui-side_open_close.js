@@ -13,23 +13,21 @@
 
 (function(){
 
-    var sideMenu_open = $('[data-ui-side="sideMenu_open"]');
-    var side_menu = $('[data-ui-side="side_menu"]');
-    var side_menu_close = $('[data-ui-side="sideMenu_close"]');
+    var $sideMenu_open = $('[data-ui-side="sideMenu_open"]');
+    var $side_menu = $('[data-ui-side="side_menu"]');
+    var $side_menu_close = $('[data-ui-side="sideMenu_close"]');
 
     // product 클릭시
-    function productClick_effect(e){
-        TweenMax.to(side_menu, 0.4, {left:0});
+    function productClick_effect() {
+        TweenMax.to($side_menu, 0.4, {left:0});
     }
-    
-    sideMenu_open.on('click', productClick_effect);
+
+    $sideMenu_open.on('click', productClick_effect);
 
     // back 클릭시
-    function backClick_effect(){
-        TweenMax.to(side_menu, 0.4, {left:"-800px"});
+    function backClick_effect() {
+        TweenMax.to($side_menu, 0.4, {left:"-800px"});
     }
     
-    side_menu_close.on('click', backClick_effect);
-
-
+    $side_menu_close.on('click', backClick_effect);
 }());
