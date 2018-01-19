@@ -1,13 +1,122 @@
 .platingRecipe_head {
+    margin-top:50px;
     overflow:hidden;
-    
-    .platingRecipe_head {
+
+    .platingRecipe_head_title {
         position: relative;
         padding-bottom: 22px;
-        font-size: 48px;
+        font-size: 45px;
         font-weight: 200;
-        color: #333;
         text-align: center;
         letter-spacing: -1px;
+    }
+    .platingRecipe_head_explanation {
+        text-align: center;
+        padding-top: 18px;
+        padding-bottom: 18px;
+        color: #808080;
+    }
+}
+
+.platingcontent {
+    margin-top: 50px;
+    .platingRecipe_todayRecipe {
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        .platingRecipe_imageArea {
+            width: 70%;
+            height: 500px;
+            float: left;
+        }
+        .platingRecipe_explanation {
+            width: 30%;
+            height: 500px;
+            float: left;
+            h4{
+                margin-top: 58px;
+            }
+            .platingRecipe_title{
+                display: -webkit-box;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                margin-top: 6px;
+                font-weight: 400;
+                font-size: 34px;
+                line-height: 48px;
+            }
+            .platingRecipe_sub_explanation{
+                margin-top: 40px;
+                font-size: 13px;
+                line-height: 24px;
+                color: #999;
+            }
+            .view_detail_button_wrap{
+                margin-top: 70px;
+                button{
+                    width: 200px;
+                    height: 40px;
+                    font-size: 14px;
+                    color: #333;
+                    text-align: center;
+                    line-height: 37px;
+                    border: 1px solid #cccccc;
+                    color: #808080;
+                    background-color: #fff;
+                    transition: 0.5s;
+                    letter-spacing: 1px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .platingRecipe_list{
+        margin-top: 50px;
+        overflow: hidden;
+        li{
+            margin-top: 40px;
+            height: 384px;
+            overflow: hidden;
+            width:380px;
+            img {
+                height:243px;
+                margin-bottom:10px;
+            }
+            a{
+                display:inline-block;
+            }
+            .desc{
+                overflow:hidden;
+                .upload_day{
+                    height:20px;
+                    padding: 0 10px;
+                }
+                .title{
+                    padding: 0 10px;
+                    display: block;
+                    margin-top: 7px;
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+                .explanation{
+                    height: 40px;
+                    padding: 0 10px;
+                    margin-top: 15px;
+                    color: #999;
+                    font-size: 14px;
+                    line-height: 20px;
+                    display: -webkit-box;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                }
+            }
+
+            
+        }
     }
 }

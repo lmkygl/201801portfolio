@@ -59,15 +59,25 @@ nav {
 .left_gnb {
     nav {
         a {
-            margin-left:50px;
+            text-align:left;
+            margin-left:90px;
+        }
+        
+        a.left_first_margin{
+          margin-left:0;   
         }
     }
 }
 
 .right_gnb {
     nav {
+        text-align:right;
         a {
-            margin-right:40px;
+            
+            margin-left:80px;
+        }
+        a.right_first_margin{
+            margin-left:0;
         }
     }
 } 
