@@ -1,8 +1,144 @@
-.cookingBook_content{
+.cookingBook_content {
     margin-top: 50px;
-    .cookingbook_recipe{
+    .cookingbook_recipe {
         width: 100%;
         margin: 0 auto;
         overflow: hidden;
+        .cookingbookRecipe_imageArea {
+            width: 70%;
+            height: 500px;
+            float: left;
+        }
+        .cookingbookRecipe_explanation {
+            width: 30%;
+            height: 500px;
+            float: left;
+            h4{
+                margin-top:50px;
+            }
+            .cookingbookRecipe_ex {
+                font-size: 16px;
+                height:30px;
+                font-weight: 400;
+                color: #be9673;  
+            }
+            .cookingbookRecipe_title {
+                display: -webkit-box;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                margin-top: 6px;
+                font-weight: 400;
+                font-size: 34px;
+                line-height: 48px;
+            }
+            .cookingbookRecipe_sub_explanation {
+                margin-top: 30px;
+                font-size: 13px;
+                line-height: 24px;
+                color: #999;
+            }
+            .cookingbook_info {
+                height: 34px;
+                margin-top: 30px;
+                padding-top: 7px;
+                border-top: 1px solid #e6e6e6;
+                border-bottom: 1px solid #e6e6e6;
+                color: #be9673;
+                font-weight: 700;
+                strong{
+                    display:inline-block;
+                    margin-right: 5px;
+                    margin-left: 20px;
+                    color: #808080;
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+            }
+            .cooking_foodingredients_wrap {
+                .cooking_foodingredients_title {
+                    margin-top: 10px;
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: #666;
+                    line-height: 20px;
+                }
+                .cooking_foodingredients {
+                    font-size: 12px;
+                    font-weight: 400;
+                    color: #999;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+    .Related_item_wrap{
+        margin-top: 50px;
+        overflow: hidden;
+        .related_product {
+            margin: 80px 0 20px 0;
+            font-size: 28px;
+            font-weight: 400;
+            letter-spacing: -1px;
+        }
+        ul {
+            width: 100%;
+            overflow: hidden;
+            text-align: center;
+            li {
+                width:25%;
+                height:240px;
+                float:left;
+                margin-right:10px;
+                border:1px solid #e6e6e6;
+                img {
+                    width:80%;
+                    height:80%;
+                }
+                .odense_product {
+                    display:block;
+                    font-weight:500;
+                }
+            }
+        }
+
+    }
+    .cookingmethod_wrap {
+        margin-top: 30px;
+        overflow: hidden;
+        .cooking_step {
+            margin: 80px 0 40px 0;
+            font-size: 28px;
+            font-weight: 400;
+            letter-spacing: -1px;
+        }
+        ol{
+            overflow:hidden;
+        }
+        li {
+            width: 40%;
+            height: 500px;
+            float:left;
+            overflow:hidden;
+            position: relative;
+            .stepimg {
+                width:90%;
+                //margin: 0 auto;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .step_explanation{
+                width: 90%;
+                font-size:14px;
+                margin-top: 20px;
+                line-height:28px;
+            }
+            em{
+                color:#be9673;
+            }
+        }
     }
 }
