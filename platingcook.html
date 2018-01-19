@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/html5shiv/dist/html5shiv.js"></script>
+    <script src="./node_modules/gsap/src/minified/TweenMax.min.js"></script>
+    <title>odense</title>
+</head>
+<body>
+    <div class="wrap">
+        <header  id="header" class="header">
+            <div class="nav_bar">
+                <div class="left_gnb">
+                    <div class="mobile_menu">Menu</div>
+                    <nav>
+                        <a href="#" title="Product" data-ui="navi_underline" data-ui-side="sideMenu_open"  class="fontbold">
+                            Product <strong class="arrow_icon">∨</strong> 
+                            <span class="underline"></span>
+                        </a>
+                        <a href="#" title="About us" data-ui="navi_underline">
+                            About us 
+                            <span class="underline"></span>
+                        </a>
+                        <a href="#" title="plating Recipe" data-ui="navi_underline">
+                            plating Recipe
+                            <span class="underline"></span>
+                        </a>
+                    </nav>
+                </div>
+                <div class="logo_Area">
+                    <h1>
+                        <a href="#" title="odense"><img src="img/logo.png"/></a>
+                    </h1>
+                </div>
+                <div class="right_gnb">
+                    <nav>
+                        <a href="#" title="Cooking Book" data-ui="navi_underline">
+                            Cooking Book 
+                            <span class="underline"></span>
+                        </a>
+                        <a href="#" title="News" data-ui="navi_underline">
+                            News 
+                            <span class="underline"></span>
+                        </a>
+                        <a href="#" title="On TV" data-ui="navi_underline">
+                            On TV 
+                            <span class="underline"></span>
+                        </a>
+                        <a href="#" title="Store" data-ui="navi_underline">
+                            Store 
+                            <span class="underline"></span>
+                        </a>
+                    </nav>
+                </div>
+                <div class="side_menu" data-ui-side="side_menu">
+                    <a class="side_backBtn" data-ui-side="sideMenu_close"><span class="arrow_icon">＜</span> Back</a>
+                    <nav>
+                        <ul data-ui-side="findDetail">
+                            <li  data-ui="navi_underline" data-tab-id="id1">
+                                <a href="#" title="jante">
+                                    jante
+                                    <span class="underline"></span>
+                                </a>
+                            </li>
+                            <li  data-ui="navi_underline" data-tab-id="id2">
+                                <a href="#" title="atelier">
+                                    atelier
+                                    <span class="underline"></span>
+                                </a>
+                            </li>
+                            <li data-ui="navi_underline" data-tab-id="id3">
+                                <a href="#" title="hygge" >
+                                    hygge
+                                    <span class="underline"></span>
+                                </a>
+                            </li>
+                            <li data-ui="navi_underline" data-tab-id="id4">
+                                <a href="#" title="plating cook" >
+                                    plating cook
+                                    <span class="underline"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <ul class="side_menu_detail" data-ui-side="sideMenu_detail_area">
+                        <li class="side_menu_inner_detail" data-pannel-id="id1">
+                            <a href="#" title="jante" class="jante_product"></a>
+                        </li>
+                        <li class="side_menu_inner_detail" data-pannel-id="id2">
+                            <a href="#" title="atelier" class="atelier_product"></a>
+                        </li>
+                        <li class="side_menu_inner_detail" data-pannel-id="id3">
+                            <a href="#" title="hygge" class="hygge_product"></a>
+                        </li> 
+                        <li class="side_menu_inner_detail" data-pannel-id="id4">
+                            <a href="#" title="platingcook" class="plating_product"></a>
+                        </li>                        
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <div class="container_width">
+                <div class="platingRecipe_head">
+                    <h2 class="platingRecipe_head_title">
+                        Plating Recipe
+                    </h2>
+                    <p class="platingRecipe_head_explanation">
+                        오덴세의 Plating Recipe로 일상이 특별함으로 변하는 순간을 경험하세요
+                    </p>
+                </div>
+                <div class="platingcontent">
+                    <div class="platingRecipe_todayRecipe">
+                        <div class="platingRecipe_image">
+
+                        </div>
+                        <div class="platingRecipe_explanation">
+                            <h4 class="upload_day">2018.01.09</h4>
+                            <h2 class="platingRecipe_title">나만을 위한 소박한 한 끼</h2>
+                            <p class="platingRecipe_sub_explanation">
+                                혼자 먹는 식사라도 오늘만큼은 플레이팅에 조금만 더 신경써 보면 어떨까요 ?
+                                반찬이 필요 없는 가벼운 덮밥, 냉장고에 있던 피클, 후루룩 끓여 낸 달걀국만으로도
+                                오롯이 나를 위한 작은 호사가 담긴 식탁이 완성됩니다.
+                            </p>
+                        </div>
+                    </div>
+                    <ul class="platingRecipe_list">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                        <li>8</li>
+                    </ul>
+                </div>
+                
+                
+            </div>
+        </div>
+        <footer id="footer" class="footer">
+            <div class=".container_width">
+                <h2>
+                    <img src="img/logo_footer.png" alt="footer_logo"/>
+                </h2>
+                <div>
+                    <div class="footer_menu">
+                        <a href="#" title="product">Product</a> 
+                        <a href="#" title="Instagram">Instagram</a> 
+                        <a href="#" title="facebook">facebook</a> 
+                        <a href="#" title="Naver Post">Naver Post</a>
+                    </div>
+                    <address>
+                        <p>
+                            (주)씨제이오쇼핑 대표이사:허민회 주소:06761 서울시 서초구 과천대로 870-13
+                        </p>
+                        <p>
+                            사업자등록번호 : 106-81-51510 호스팅제공자:(주)CJ오쇼핑 고객센터 TEL:1577-0103
+                        </p>
+                        <p>
+                            <a>개인청보처리방침</a> <a>법적고지</a> 개인정보관리책임자 : IT담당 양희영
+                        </p>
+                    </address>
+                    <div class="copyright">
+                        COPYRIGHT ⓒ LIM GEUN YOUNG ALL RIGHTS RESERVED.
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="./js/ui-navi_underline.js"></script>
+    <script src="./js/ui-side_open_close.js"></script>  
+    <script src="./js/ui-tab-id.js"></script>
+    <script src="./js/ui-scrollevent.js"></script>
+</body>
+</html>

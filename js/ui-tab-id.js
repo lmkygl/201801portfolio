@@ -48,12 +48,11 @@
         });
     }
 
-    function sideMenu_deatilClose(e){
+    function sideMenu_deatilClose(e) {
         TweenMax.to($sideMenu_detailAera, 0.4, {
             width:0,
             opacity:0
         });
-
     }
 
     $side_navi.on('mouseleave', sideMenu_deatilClose);

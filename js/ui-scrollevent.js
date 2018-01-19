@@ -1,10 +1,12 @@
 (function(){
-    // var $dom = $('.inner_padding');
+    var $dom = $('.inner_padding');
 
-    // $dom.each(function(){
-    //     console.log($(this).offset().top);
-    //     console.log($(this)[0].scrollHeight);
-    // });
+    $dom.each(function(){
+        console.log($(this)); // 객체
+        console.log($(this).offset().top); // 0에서 객체와 스크롤사이 
+        console.log($(this)[0].scrollHeight); // 객체의 높이
+        console.log($(this).height());
+    });
 
 
 
@@ -71,7 +73,7 @@
         });
     }
 
-    function section1_playAnimation(e){
+     function section1_playAnimation(e){
         section1_setAnimation();
         common_Animation();
     }
@@ -210,13 +212,14 @@
             opacity: 0
         });
     }
+
     function section4_playAnimation(e){
         section4_setAnimation();
         common_Animation();
     }
 
-    section1.on('click', section1_playAnimation);
-    section2.on('click', section2_playAnimation);
-    section3.on('click', section3_playAnimation);
-    section4.on('click', section4_playAnimation);
+    // section1.on('click', section1_playAnimation);
+    // section2.on('click', section2_playAnimation);
+    // section3.on('click', section3_playAnimation);
+    // section4.on('click', section4_playAnimation);
 }());
