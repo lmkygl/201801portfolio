@@ -58,3 +58,23 @@ a {
     color: #be9673;
     height:30px;
 }
+
+.subpage_head {
+    margin-top:50px;
+    overflow:hidden;
+
+    .subpage_head_title {
+        position: relative;
+        padding-bottom: 22px;
+        font-size: 45px;
+        font-weight: 200;
+        text-align: center;
+        letter-spacing: -1px;
+    }
+    .subpage_head_explanation {
+        text-align: center;
+        padding-top: 18px;
+        padding-bottom: 18px;
+        color: #808080;
+    }
+}
