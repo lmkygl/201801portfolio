@@ -115,8 +115,8 @@
                 </div>
                 <div class="list_tvBox">
                     <div class="sponsorship_wrap">
-                        <div class="sponsorship_slide_wrap">
-                            <ul>
+                        <div class="sponsorship_slide_wrap" data-slid-ui="out_frame">
+                            <ul data-slide-ui="inner_frame">
                                 <li class="silde_list"><img src="./img/ontv_list10.jpg" alt="tvN 윤식당 시즌2"/></li>
                                 <li class="silde_list"><img src="./img/ontv_list9.jpg" alt="tvN 윤식당 시즌2"/></li>
                                 <li class="silde_list"><img src="./img/ontv_list8.jpg" alt="tvN 윤식당 시즌2"/></li>
@@ -124,15 +124,15 @@
                                 <li class="silde_list"><img src="./img/ontv_list6.jpg" alt="tvN 윤식당 시즌2"/></li>
                             </ul>
                             <div class="slide_btn">
-                                <img src="./img/btn_ontv_prev.png" alt="이전버튼" class="slide_prevBtn"/>
-                                <img src="./img/btn_ontv_next.png" alt="다음버튼" class="slide_nextBtn"/>
+                                <img src="./img/btn_ontv_prev.png" alt="이전버튼" class="slide_prevBtn" data-click-ui="prev_btn"/>
+                                <img src="./img/btn_ontv_next.png" alt="다음버튼" class="slide_nextBtn" data-click-ui="next_btn"/>
                             </div>
                             <div class="indicator">
-                                <span >1</span>
-                                <span class="indicator_line">2</span>
-                                <span class="indicator_line">3</span>
-                                <span class="indicator_line">4</span>
-                                <span class="indicator_line">5</span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
                             </div>
                         </div>
                         <div class="sponsorship_slide_infoWrap">
@@ -214,11 +214,11 @@
                                 <img src="./img/btn_ontv_next.png" alt="다음버튼" class="slide_nextBtn"/>
                             </div>
                             <div class="indicator">
-                                <span >1</span>
-                                <span class="indicator_line">2</span>
-                                <span class="indicator_line">3</span>
-                                <span class="indicator_line">4</span>
-                                <span class="indicator_line">5</span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
                             </div>
                         </div>
                         <div class="sponsorship_slide_infoWrap">
@@ -321,5 +321,7 @@
     <script src="./js/ui-side_open_close.js"></script>  
     <script src="./js/ui-tab-id.js"></script>
     <script src="./js/ui-scrollevent.js"></script>
+    <script src="./js/ui-slide_event.js"></script>
+    
 </body>
 </html>

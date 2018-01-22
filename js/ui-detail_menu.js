@@ -17,6 +17,8 @@
     }
 
     function sideMenuDetailImg_effect(e){
+
+        var target = $(e.target);
         var etarget;
         var index;
 

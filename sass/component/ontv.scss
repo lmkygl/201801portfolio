@@ -10,17 +10,24 @@
         position: relative;
         float: left;
         width: 48%;
-        height:299px;
-        .silde_list {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 570px;
-            height: 299px;
-            // display: none;
+        height: 299px;
+        overflow: hidden;
+        ul {
+            width: 500%;
+            height: 100%;
+            overflow: hidden;
         }
-        .slide_btn{
-            img{
+        ul:after {
+            clear: both;
+            content: '';
+            display: block;
+        }
+        .silde_list {
+            width:20%;
+            float:left;
+        }
+        .slide_btn {
+            img {
                 display: block;
                 width: 22px;
                 height: 42px;
@@ -29,14 +36,14 @@
                 z-index: 10;
                 cursor: pointer;  
             }
-            .slide_prevBtn{
+            .slide_prevBtn {
                 left:25px;
             }
-            .slide_nextBtn{
+            .slide_nextBtn {
                 right: 25px;
             }
         }
-        .indicator{
+        .indicator {
             position: absolute;
             bottom: 10px;
             left: 0;
@@ -44,7 +51,8 @@
             text-align: center;
             z-index: 10;
             font-size: 0;
-            span{
+            span {
+                cursor: pointer;
                 display: inline-block;
                 background-color: #fff;
                 width: 10px;
@@ -52,7 +60,10 @@
                 margin: 0 5px;
                 border-radius: 10px;
             }
-            .indicator_line{
+            .indicator_select{
+                background-color: #fff;
+            }
+            .indicator_line {
                 border: 1px solid #fff;
                 background-color: transparent;
             }
@@ -120,22 +131,22 @@
        border-top: none;
        opacity: 0;
        display:none;
-    li{
+    li {
         width: 25%;
         height: 280px;
         float: left;
         text-align: center;
         position: relative;
-        img{
+        img {
             width: 245px;
             height: 190px;
         }
-        .product_name{
+        .product_name {
             margin-top:20px;
             font-size: 14px;
             font-weight: 400;
             color: #999;
-            .product_sort{
+            .product_sort {
                 display: block;
                 font-size: 14px;
                 font-weight: 500;
