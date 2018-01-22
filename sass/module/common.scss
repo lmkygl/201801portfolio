@@ -81,3 +81,20 @@ em{
         color: #808080;
     }
 }
+.view_detail_button_wrap{
+    margin-top: 70px;
+    button{
+        width: 200px;
+        height: 40px;
+        font-size: 14px;
+        color: #333;
+        text-align: center;
+        line-height: 37px;
+        border: 1px solid #cccccc;
+        color: #808080;
+        background-color: #fff;
+        transition: 0.5s;
+        letter-spacing: 1px;
+        cursor: pointer;
+    }
+}
