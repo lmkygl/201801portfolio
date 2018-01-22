@@ -1,9 +1,11 @@
+.list_tvBox{
+    height: auto;
+}
 .sponsorship_wrap {
     position: relative;
     margin-top: 50px;
-    height: 299px;
     border:1px solid #e6e6e6;
-    // overflow:hidden;
+    overflow:hidden;
     .sponsorship_slide_wrap {
         position: relative;
         float: left;
@@ -59,7 +61,6 @@
     .sponsorship_slide_infoWrap {
         display: table;
         position: relative;
-        // z-index: 100;
         float: left;
         width: 52%;
         dl {
@@ -115,10 +116,10 @@
        width:99.8%;
        overflow:hidden;
        margin-bottom: 30px;
-       //background-color:rosybrown;
        border: 1px solid #e6e6e6;
        border-top: none;
-       opacity: 1;
+       opacity: 0;
+       display:none;
     li{
         width: 25%;
         height: 280px;
