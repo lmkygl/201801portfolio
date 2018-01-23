@@ -1,49 +1,45 @@
-.list_tvBox{
-    height: auto;
-}
-.sponsorship_wrap {
+.list_Box {
+    overflow: hidden;
+    margin: 50px auto 40px;
+    padding-bottom:20px;
     position: relative;
-    margin-top: 50px;
-    border:1px solid #e6e6e6;
+}
+
+.sponsorship_slide_wrap {
+    width: 46%;
+    height: 300px;
+    float: left;
+    z-index: 5;
+    position: relative;
     overflow:hidden;
-    .sponsorship_slide_wrap {
+    .slide_wrap {
         position: relative;
-        float: left;
-        width: 48%;
-        height: 299px;
         overflow: hidden;
-        ul {
+        .inner_frame {
             width: 500%;
-            height: 100%;
-            overflow: hidden;
+            li{
+                width: 20%;
+                float: left;
+            }
         }
-        ul:after {
-            clear: both;
-            content: '';
+    }
+    .slide_control {
+        img {
             display: block;
+            width: 22px;
+            height: 42px;
+            position: absolute;
+            top: 130px;
+            z-index: 10;
+            cursor: pointer;
         }
-        .silde_list {
-            width:20%;
-            float:left;
+        .slide_prevBtn {
+            left: 25px;
         }
-        .slide_btn {
-            img {
-                display: block;
-                width: 22px;
-                height: 42px;
-                position: absolute;
-                top: 130px;
-                z-index: 10;
-                cursor: pointer;  
-            }
-            .slide_prevBtn {
-                left:25px;
-            }
-            .slide_nextBtn {
-                right: 25px;
-            }
+        .slide_nextBtn {
+            right: 25px;
         }
-        .indicator {
+        .indicator{
             position: absolute;
             bottom: 10px;
             left: 0;
@@ -54,36 +50,39 @@
             span {
                 cursor: pointer;
                 display: inline-block;
-                background-color: #fff;
                 width: 10px;
                 height: 10px;
                 margin: 0 5px;
-                border-radius: 10px;
-            }
-            .indicator_select{
-                background-color: #fff;
-            }
-            .indicator_line {
+                border-radius: 5px;
                 border: 1px solid #fff;
                 background-color: transparent;
             }
+            .indicator_select {
+                background-color: #fff;
+            }
         }
     }
-    .sponsorship_slide_infoWrap {
-        display: table;
-        position: relative;
-        float: left;
-        width: 52%;
-        dl {
-            width: 90%;
-            margin: 50px auto 11px;
-        }
-        dt {
+}
+.sponsorship_info_wrap { 
+    width: 53.5%;
+    height: 300px;
+    float: left;
+    z-index: 5;
+    .sponsorship_info {
+        width: 100%;
+        border:1px solid #e6e6e6;
+        border-left: none;
+        box-sizing: border-box;
+    }
+    dl{
+        width: 90%;
+        margin: 50px auto 22px;
+        dt{
             position: relative;
             margin-bottom: 16px;
             padding-bottom: 18px;
             font-size:14px;
-            em {
+            em{
                 display: -webkit-box;
                 height: 36px;
                 overflow: hidden;
@@ -108,53 +107,114 @@
                 color: #666;
                 margin-right: 14px;
             }
-        }
-        .info_detail {
-            padding-top: 10px;
-        }
-        .sponsorship_product_list_btn {
-            text-align: right;
-            button {
-                border: 1px solid #e6e6e6;
-                border-width: 1px 0 0 1px;
-                width: 49px;
-                height: 49px;
-            }
+        }    
+    }
+    .sponsorship_product_list_btn {
+        text-align: right;
+        button {
+            border: 1px solid #e6e6e6;
+            border-width: 1px 0 0 1px;
+            width: 49px;
+            height: 49px;
         }
     }
 }
-.sponsorship_product {
-       width:99.8%;
-       overflow:hidden;
-       margin-bottom: 30px;
-       border: 1px solid #e6e6e6;
-       border-top: none;
-       opacity: 0;
-       display:none;
-    li {
+.sponsorship_product{
+    width:99.64%;
+    border: 1px solid #e6e6e6;
+    box-sizing: border-box;
+    border-top: none;
+    overflow: hidden;
+    top: -200px;
+    display: none;
+    opacity: 0;
+    position: relative;
+    z-index: 4;
+    li{
         width: 25%;
-        height: 280px;
         float: left;
+        height: 280px;
         text-align: center;
         position: relative;
-        img {
-            width: 245px;
-            height: 190px;
+        img{
+            width:80%;
+            margin-left: 10px;
         }
-        .product_name {
-            margin-top:20px;
+        .product_name{
+            margin-top: 20px;
             font-size: 14px;
             font-weight: 400;
             color: #999;
-            .product_sort {
+            .product_sort{
                 display: block;
-                font-size: 14px;
                 font-weight: 500;
                 line-height: 25px;
-                color: #0D364C;
+                color: #0d364c;
             }
-           
         }
     }
 }
+
+
+.sponsorship_slide_wrap::after{
+    clear: both;
+    content: '';
+    display: block;
+}
+.sponsorship_info_wrap::after{
+    clear: both;
+    content: '';
+    display: block;
+}
+.inner_frame::after{
+    clear: both;
+    content: '';
+    display: block;
+}
+.sponsorship_product::before{
+    clear: both;
+    content: '';
+    display: block;
+}
+
+.sponsorship_product::after{
+    clear: both;
+    content: '';
+    display: block;
+}
+
+// .sponsorship_product {
+//        width:100%;
+//        overflow:hidden;
+//        margin-bottom: 30px;
+//        border: 1px solid #e6e6e6;
+//        border-top: none;
+//        opacity: 0;
+//        display:none;
+//     li {
+//         width: 25%;
+//         height: 280px;
+//         float: left;
+//         text-align: center;
+//         position: relative;
+//         img {
+//             width: 245px;
+//             height: 190px;
+//         }
+//         .product_name {
+//             margin-top:20px;
+//             font-size: 14px;
+//             font-weight: 400;
+//             color: #999;
+//             .product_sort {
+//                 display: block;
+//                 font-size: 14px;
+//                 font-weight: 500;
+//                 line-height: 25px;
+//                 color: #0D364C;
+//             }
+           
+//         }
+//     }
+// }
 
