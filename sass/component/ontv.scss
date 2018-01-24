@@ -9,7 +9,7 @@
     width: 46%;
     height: 300px;
     float: left;
-    z-index: 5;
+    z-index: 50;
     position: relative;
     overflow:hidden;
     .slide_wrap {
@@ -67,7 +67,7 @@
     width: 53.5%;
     height: 300px;
     float: left;
-    z-index: 5;
+    z-index: 50;
     .sponsorship_info {
         width: 100%;
         border:1px solid #e6e6e6;
@@ -112,6 +112,7 @@
     .sponsorship_product_list_btn {
         text-align: right;
         button {
+            z-index: 50;
             border: 1px solid #e6e6e6;
             border-width: 1px 0 0 1px;
             width: 49px;
@@ -120,16 +121,16 @@
     }
 }
 .sponsorship_product{
-    width:99.64%;
+    width:99.5%;
     border: 1px solid #e6e6e6;
     box-sizing: border-box;
     border-top: none;
     overflow: hidden;
-    top: -200px;
-    display: none;
+    bottom: 0;
     opacity: 0;
-    position: relative;
-    z-index: 4;
+    position: absolute;
+    transition: height 1s;
+    z-index: -50;
     li{
         width: 25%;
         float: left;
