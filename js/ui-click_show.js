@@ -32,18 +32,14 @@
         if (!toggled) {
             toggled = true;
             $sponsorship_box.animate({"height":"550px"});
-            TweenMax.to($product_area, 0.3, {
-                opacity:1
-            });
+            $product_area.animate({opacity:1});
             $target.text("▲");
             return;
         }
         if (toggled) {
             toggled = false;
             $sponsorship_box.animate({"height":"300px"});
-            TweenMax.to($product_area, 0.3, {
-                opacity:0
-            });
+            $product_area.animate({"opacity":"0"});
             $target.text("▼");
             return;
         }
