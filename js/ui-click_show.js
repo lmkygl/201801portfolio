@@ -26,23 +26,23 @@
 
     function clickhandle(e){
         var $target = $(e.target);
-        var $list = $(e.target).parents('[data-ui="sponsorship_box"]');
-        var $btn = $(e.target).parents('[data-ui="sponsorship_show"]').siblings('[data-ui="sponsorship_product_area"]');
-
+        var $sponsorship_box = $(e.target).parents('[data-ui="sponsorship_box"]');
+        var $product_area = $(e.target).parents('[data-ui="sponsorship_show"]').siblings('[data-ui="sponsorship_product_area"]');
+        console.log($btn);
         if (!toggled) {
             toggled = true;
-            $list.animate({"height":"550px"});
-            TweenMax.to($btn, 0.3, {
-                opacity:1,
+            $sponsorship_box.animate({"height":"550px"});
+            TweenMax.to($product_area, 0.3, {
+                opacity:1
             });
             $target.text("▲");
             return;
         }
         if (toggled) {
             toggled = false;
-            $list.animate({"height":"300px"});
-            TweenMax.to($btn, 0.3, {
-                opacity:0,
+            $sponsorship_box.animate({"height":"300px"});
+            TweenMax.to($product_area, 0.3, {
+                opacity:0
             });
             $target.text("▼");
             return;
