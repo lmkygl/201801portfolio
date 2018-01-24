@@ -28,16 +28,32 @@
             display: block;
             width: 22px;
             height: 42px;
+           
+            
+        }
+        .slide_prevBtn {
+            background-image: url('../img/btn_ontv_prev.png');
             position: absolute;
             top: 130px;
             z-index: 10;
             cursor: pointer;
-        }
-        .slide_prevBtn {
             left: 25px;
+            width: 22px;
+            height: 42px;
+            background-color: transparent;
+            border: none;
         }
         .slide_nextBtn {
             right: 25px;
+            background-image: url('../img/btn_ontv_next.png');
+            position: absolute;
+            top: 130px;
+            z-index: 10;
+            cursor: pointer;
+            width: 22px;
+            height: 42px;
+            background-color: transparent;
+            border: none;
         }
         .indicator{
             position: absolute;

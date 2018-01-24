@@ -21,14 +21,14 @@
 */
 
 (function(){
-    var $button = $('[data-ui="sponsorship_box"]').find('button');
+    var $button = $('[data-ui="sponsorship_show"]').find('button');
     var toggled = false;
 
     function clickhandle(e){
         var $target = $(e.target);
         var $sponsorship_box = $(e.target).parents('[data-ui="sponsorship_box"]');
         var $product_area = $(e.target).parents('[data-ui="sponsorship_show"]').siblings('[data-ui="sponsorship_product_area"]');
-        console.log($btn);
+        
         if (!toggled) {
             toggled = true;
             $sponsorship_box.animate({"height":"550px"});
