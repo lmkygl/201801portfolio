@@ -43,7 +43,6 @@
             $target.text("▼");
             return;
         }
-
     }
     
     $button.on('click', clickhandle);

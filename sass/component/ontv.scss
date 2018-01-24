@@ -6,7 +6,7 @@
 }
 
 .sponsorship_slide_wrap {
-    width: 46%;
+    width: 47%;
     height: 300px;
     float: left;
     z-index: 50;
@@ -15,11 +15,22 @@
     .slide_wrap {
         position: relative;
         overflow: hidden;
+        height:300px;
         .inner_frame {
             width: 500%;
+            //position: relative;
+            height:300px;
+            position: absolute;
+            top: 0;
+            left: 0;
             li{
+                width:100%;
+                //opacity: 0;
                 width: 20%;
                 float: left;
+                img {
+                    width: 100%;
+                }
             }
         }
     }
@@ -28,8 +39,6 @@
             display: block;
             width: 22px;
             height: 42px;
-           
-            
         }
         .slide_prevBtn {
             background-image: url('../img/btn_ontv_prev.png');
@@ -80,7 +89,7 @@
     }
 }
 .sponsorship_info_wrap { 
-    width: 53.5%;
+    width: 53%;
     height: 300px;
     float: left;
     z-index: 50;
