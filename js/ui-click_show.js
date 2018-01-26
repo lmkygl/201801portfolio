@@ -21,13 +21,13 @@
 */
 
 (function() {
-    var $button = $('[data-ui="sponsorship_show"]').find('button');
+    var $button = $('[data-ui="list_box"]').find('button');
     var toggled = false;
 
-    function clickhandle(e){
+    function toggle_effect(e){
         var $target = $(e.target);
-        var $sponsorship_box = $(e.target).parents('[data-ui="sponsorship_box"]');
-        var $product_area = $(e.target).parents('[data-ui="sponsorship_show"]').siblings('[data-ui="sponsorship_product_area"]');
+        var $sponsorship_box = $(e.target).parents('[data-ui="list_box"]');
+        var $product_area = $(e.target).parents('[data-ui="list_box"]').siblings('[data-ui="sponsorship_product_area"]');
         
         if (!toggled) {
             toggled = true;
@@ -38,7 +38,7 @@
                 'opacity':'1'
             });
             $target.text("▲");
-            return;
+            return ;
         }
         if (toggled) {
             toggled = false;
@@ -53,7 +53,7 @@
         }
     }
     
-    $button.on('click', clickhandle);
+    $button.on('click', toggle_effect);
 }());
 
 // $('[data-ui="sponsorship_show"]') 대한 이름 ui이름으로 맞춰서 주기  ui명이랑 맞춰줌
