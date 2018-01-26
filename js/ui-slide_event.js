@@ -10,10 +10,7 @@
         var $inner_frame = $parents.find('[data-ui="inner_frame"]');
         var $scene = $inner_frame.find('.scene');
         var $out_width = $parents.find('[data-ui="out_frame"]').width();
-
-        var inner =  $inner_frame.find('li').index();
-        console.log(inner);
-
+        var $indcator = $parents.find('.slide_indicator_btn');
 
         $inner_frame.animate({
             left: -$out_width
