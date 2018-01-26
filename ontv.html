@@ -114,9 +114,9 @@
                     </p>
                 </div>
                 <div class="list_Box" data-ui="list_box">
-                    <div class="sponsorship_slide_wrap">
-                        <div class="slide_wrap" data-slide-ui="out_frame">
-                            <ul data-slide-ui="inner_frame" class="inner_frame">
+                    <div class="sponsorship_slide_wrap" data-ui="slider">
+                        <div class="slide_wrap" data-ui="out_frame">
+                            <ul data-ui="inner_frame" class="inner_frame">
                                 <li class="scene"><img src="./img/ontv_list10.jpg" alt="tvN 윤식당 시즌2"/></li>
                                 <li class="scene"><img src="./img/ontv_list9.jpg" alt="tvN 윤식당 시즌2"/></li>
                                 <li class="scene"><img src="./img/ontv_list8.jpg" alt="tvN 윤식당 시즌2"/></li>
@@ -126,19 +126,19 @@
                         </div>
                         <div class="slide_control" data-ui="slide_control">
                             <div class="slide_btn">
-                                <button class="slide_prev_btn" data-ui="prev_btn"></button>
-                                <button class="slide_next_btn" data-ui="next_btn"></button>
+                                <button class="slide_prev_btn btns" data-ui="slide_btn"></button>
+                                <button class="slide_next_btn btns" data-ui="slide_btn"></button>
                             </div>
                             <div class="indicator">
-                                <span class="indicator_select">1</span>
-                                <span>2</span>
-                                <span>3</span>
-                                <span>4</span>
-                                <span>5</span>
+                                <span class="indicator_select btns slide_indicator_btn">1</span>
+                                <span class="btns slide_indicator_btn">2</span>
+                                <span class="btns slide_indicator_btn">3</span>
+                                <span class="btns slide_indicator_btn">4</span>
+                                <span class="btns slide_indicator_btn">5</span>
                             </div>
                         </div>
                     </div>
-                    <div class="sponsorship_info_wrap"  data-ui="sponsorship_show">
+                    <div class="sponsorship_info_wrap"  data-ui="toggle_box">
                         <div class="sponsorship_info">
                             <dl>
                                <dt>
@@ -203,10 +203,10 @@
                         </li>
                     </ul>
                 </div>
-                <div class="list_Box" data-ui="sponsorship_box">
-                    <div class="sponsorship_slide_wrap">
-                        <div data-slide-ui="out_frame" class="slide_wrap">
-                            <ul data-slide-ui="inner_frame" class="inner_frame">
+                <div class="list_Box" data-ui="list_box">
+                    <div class="sponsorship_slide_wrap" data-ui="slider">
+                        <div data-ui="out_frame" class="slide_wrap">
+                            <ul data-ui="inner_frame" class="inner_frame">
                                 <li class="scene"><img src="./img/ontv_list5.jpg" alt="tvN 신혼일기 시즌2"/></li>
                                 <li class="scene"><img src="./img/ontv_list4.jpg" alt="tvN 신혼일기 시즌2"/></li>
                                 <li class="scene"><img src="./img/ontv_list3.jpg" alt="tvN 신혼일기 시즌2"/></li>
@@ -216,19 +216,21 @@
                         </div>
                         <div class="slide_control">
                             <div class="slide_btn">
-                                <button class="slide_prev_btn" data-ui="prev_btn"></button>
-                                <button class="slide_next_btn" data-ui="next_btn"></button>
+                                <button class="slide_prev_btn btns" data-ui="prev_btn"></button>
+                                <button class="slide_next_btn btns" data-ui="next_btn"></button>
                             </div>
-                            <div class="indicator" data-ui="indicator_wrap">
-                                <span class="indicator_select"></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
+                            <div class="indicator">
+                                <span class="btns indicator_select slide_indicator_btn"
+                                data-ui="indicator_id">
+                                </span>
+                                <span class="btns slide_indicator_btn"></span>
+                                <span class="btns slide_indicator_btn"></span>
+                                <span class="btns slide_indicator_btn"></span>
+                                <span class="btns slide_indicator_btn"></span>
                             </div>
                         </div>
                     </div>
-                    <div class="sponsorship_info_wrap" data-ui="sponsorship_show">
+                    <div class="sponsorship_info_wrap" data-ui="toggle_box">
                         <div class="sponsorship_info">
                             <dl>
                                 <dt>
@@ -329,7 +331,7 @@
     <script src="./js/ui-side_open_close.js"></script>  
     <script src="./js/ui-tab-id.js"></script>
     <script src="./js/ui-scrollevent.js"></script>
-    <script src="./js/ui-click_show.js"></script>
+    <script src="./js/ui-toggle_box.js"></script>
     <script src="./js/ui-slide_event.js"></script>
 </body>
 </html>
