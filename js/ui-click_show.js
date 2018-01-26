@@ -20,7 +20,7 @@
     </ul>
 */
 
-(function(){
+(function() {
     var $button = $('[data-ui="sponsorship_show"]').find('button');
     var toggled = false;
 
@@ -31,15 +31,23 @@
         
         if (!toggled) {
             toggled = true;
-            $sponsorship_box.animate({"height":"550px"});
-            $product_area.animate({opacity:1});
+            $sponsorship_box.animate({
+                "height":"550px"
+            });
+            $product_area.animate({
+                'opacity':'1'
+            });
             $target.text("▲");
             return;
         }
         if (toggled) {
             toggled = false;
-            $sponsorship_box.animate({"height":"300px"});
-            $product_area.animate({"opacity":"0"});
+            $sponsorship_box.animate({
+                "height":"300px"
+            });
+            $product_area.animate({
+                "opacity":"0"
+            });
             $target.text("▼");
             return;
         }
@@ -47,3 +55,6 @@
     
     $button.on('click', clickhandle);
 }());
+
+// $('[data-ui="sponsorship_show"]') 대한 이름 ui이름으로 맞춰서 주기  ui명이랑 맞춰줌
+// var toggled = false; 밖으로 빼는 이유 정리 하기

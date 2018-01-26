@@ -12,7 +12,9 @@
         var out_frame = $(e.target).parents('.sponsorship_slide_wrap').find('[data-slide-ui="out_frame"]');
         var inner_frame_con = inner_frame.find('.scene');
         var $width = out_frame.width();
-        
+        var indicator_wrap = $(e.target).parents('.slide_control').find('span');
+        console.log(indicator_wrap);
+
         inner_frame.animate({
                 left: -$width
         }, speed, 'swing', function () {
@@ -40,3 +42,4 @@
     $prev_btn.on('click',prev_slide_effect);
 
 }());
+
