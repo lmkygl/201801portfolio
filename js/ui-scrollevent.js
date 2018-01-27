@@ -1,14 +1,5 @@
-(function(){
-    // function handleScroll(){
-    //     var scroll = $(window).scrollTop();
-    //     console.log(scroll);
-    // }
-
-    // $(window).on('scroll',handleScroll);
-
-    
-    // 트윈맥스로 애니메이트 초기값 설정 
-
+(function(){    
+ 
     var section1 = $('.section1');
     var $section1_left = $('[data-ui-animate="section1_leftbox"]');
     var $section1_right = $('[data-ui-animate="section1_right"]');
@@ -207,11 +198,6 @@
     //     console.log($(this).height());
     // });
 
-
-
-
-
-
     
     var $inner_padding = $('.inner_padding');
     
@@ -227,6 +213,19 @@
         });
     }
     
+    function common_Anima(index) { 
+        var $section1_left = $('[data-ui-animate="section2_leftbox"]');
+        var $section1_right = $('[data-ui-animate="section2_right"]');
+        TweenMax.to($section1_left, 1, {
+            x: 100
+        });
+        TweenMax.to($section1_right, 1, {
+            x: -100,
+            y: 0,
+            ease: Circ.easeOut
+        });
+    }
+
     function init() {
         section1_setAnimation();
         section2_setAnimation();
@@ -239,21 +238,45 @@
         });
     }
     
+    var isScrolling;
+    var lastScroll;
     $(window).on('load', init);
     $(window).on('scroll load', function() {
         var scrollTop = $(window).scrollTop();
-        
+        var scrollDiff =  scrollTop - lastScroll;
+
         if(scrollTop >= $inner_padding.eq(0).data('offset') && scrollTop < $inner_padding.eq(1).data('offset')){
-            common_Animation(0);
+            
+            
+            if (scrollDiff < 0) {
+                common_Anima(0);
+            }
+            else{
+                common_Animation(0);
+
+            }
         } else if (scrollTop >= $inner_padding.eq(1).data('offset') && scrollTop < $inner_padding.eq(2).data('offset')) {
-            common_Animation(1);  
+            // common_Animation(1);  
+            if (scrollDiff < 0) {
+                common_Anima(0);
+            }
+            else{
+                common_Animation(1);
+
+            }
         } else if (scrollTop >= $inner_padding.eq(2).data('offset') && scrollTop < $inner_padding.eq(3).data('offset')) {
             common_Animation(2);  
         } else if (scrollTop >= $inner_padding.eq(3).data('offset')) {
             common_Animation(3);  
         }
 
+        clearTimeout(isScrolling);
+        isScrolling = setTimeout(function(){
+            lastScroll = $(window).scrollTop();
+        },300);
+
     });
+
 
 }());
 
