@@ -3,8 +3,6 @@
     var $btn = $list_box.find('.btns');
     var animating = false;
     var animation_speed = 500;
-    currentIndex = 0;
-    currentIndex.max = 4;
 
     function next_slide_effect(e){
         var $target = $(e.target);
@@ -19,16 +17,7 @@
         }, animation_speed, 'swing', function () {
             $scene.eq(0).insertAfter($scene.eq(-1));
             $inner_frame.css('left', 0);
-            if( currentIndex === 4 ){
-                currentIndex = 0;
-            }
-            else{
-                currentIndex +=1;
-            }
-           
-            console.log(currentIndex);
             animating = false;
-            
         });
     }
 
@@ -41,44 +30,13 @@
 
         $inner_frame.css('left', -$out_width);
         $scene.eq(-1).insertBefore($scene.eq(0));
-
         $inner_frame.animate({
             left: 0
         }, animation_speed, 'swing', function(){
-            if (currentIndex === 0 ) {
-                currentIndex = 4;
-            }
-            else {
-                currentIndex -=1;
-            }
-            console.log(currentIndex);
+            
             animating = false;
-
         });
     }
-
-    // function indcator_slide_effect(e){
-    //     var $target = $(e.target);
-    //     var $parents = $target.parents('[data-ui="slider"]');
-    //     var $indcator = $parents.find('.slide_indicator_btn');
-    //     var $indcator_index = $target.index();
-    //     var $out_width = $parents.find('[data-ui="out_frame"]').width();
-    //     var $inner_frame = $parents.find('[data-ui="inner_frame"]');
-       
-    //     $indcator.removeClass('indicator_select');
-    //     $target.addClass('indicator_select');
-
-    //     for(var i = 0; i < $out_width; i++){
-    //         if( $indcator_index == i ){
-    //             $inner_frame.animate({
-    //                 "left":"-"+ $out_width*$indcator_index +"px"
-    //             },
-    //             animation_speed, 'swing', function(){
-    //                 animating = false;
-    //             });
-    //         }
-    //     }
-    // }
 
     function slide_effect(e) {
       var $target = $(e.target);
@@ -94,12 +52,6 @@
             prev_slide_effect(e);
           }
       }
-    //   else if ($target.hasClass('slide_indicator_btn')) {
-    //       if (!animating) {
-    //           animating = true;
-    //           indcator_slide_effect(e);
-    //       }
-    //   }
     }
 
     $btn.on('click', slide_effect);

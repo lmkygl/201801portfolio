@@ -1,15 +1,4 @@
 (function(){
-    var $dom = $('.inner_padding');
-
-    $dom.each(function(){
-        console.log($(this)); // 객체
-        console.log($(this).offset().top); // 0에서 객체와 스크롤사이 
-        console.log($(this)[0].scrollHeight); // 객체의 높이
-        console.log($(this).height());
-    });
-
-
-
     // function handleScroll(){
     //     var scroll = $(window).scrollTop();
     //     console.log(scroll);
@@ -218,8 +207,43 @@
         common_Animation();
     }
 
-    // section1.on('click', section1_playAnimation);
-    // section2.on('click', section2_playAnimation);
+    // $(window).on('load', section1_playAnimation);
+    // $(window).on('load', section2_playAnimation);
     // section3.on('click', section3_playAnimation);
     // section4.on('click', section4_playAnimation);
+    // var $dom = $('.inner_padding');
+
+    // $dom.each(function(){
+    //     console.log($(this)); // 객체
+    //     console.log($(this).offset().top); // 0에서 객체와 스크롤사이 
+    //     console.log($(this)[0].scrollHeight); // 객체의 높이
+    //     console.log($(this).height());
+    // });
+    var $inner_padding = $('.inner_padding');
+    $(window).on('load', function(){
+        
+
+        $inner_padding.each(function(){
+            // $(this).attr('속성 (id, class, src)', 넣고자하는 값);
+            $(this).attr('data-offset', $(this).offset().top);
+        });
+        $inner_padding.each(function(){
+            console.log($(this).data('offset'));
+        });
+    });
+
+    $(window).on('scroll', function() {
+        var scrollTop = $(window).scrollTop();
+        
+        if(scrollTop >= $inner_padding.eq(0).data('offset') && scrollTop < $inner_padding.eq(1).data('offset')){
+            section1_playAnimation();
+        } else if (scrollTop >= $inner_padding.eq(1).data('offset') && scrollTop < $inner_padding.eq(2).data('offset')) {
+            section2_playAnimation();
+        } else if (scrollTop >= $inner_padding.eq(2).data('offset') && scrollTop < $inner_padding.eq(3).data('offset')) {
+            section3_playAnimation();
+        } else if (scrollTop >= $inner_padding.eq(3).data('offset')) {
+            section4_playAnimation();
+        }
+        // console.log($(window).scrollTop());
+    });
 }());
