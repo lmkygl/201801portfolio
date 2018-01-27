@@ -8,19 +8,7 @@
 
     
     // 트윈맥스로 애니메이트 초기값 설정 
-    
-    var $ui_motion = $('[data-ui-animate]');
-    
-    function common_Animation() {
-        TweenMax.to($ui_motion, 1.5 , {
-            opacity: 1,
-        });
-        TweenMax.to($ui_motion, 2 , {
-            x: 0,
-            y: 0,
-        });
-    }
-    
+
     var section1 = $('.section1');
     var $section1_left = $('[data-ui-animate="section1_leftbox"]');
     var $section1_right = $('[data-ui-animate="section1_right"]');
@@ -29,7 +17,7 @@
     var $section1_center_explanation = $('[data-ui-animate="section1_center_explanation"]');
     var $section1_center_price = $('[data-ui-animate="section1_center_price"]');
     
-    function section1_setAnimation(){
+    function section1_setAnimation() {
         TweenMax.set($section1_left, {
             y: 400,
             opacity: 0
@@ -61,11 +49,6 @@
             }
         });
     }
-
-     function section1_playAnimation(e){
-        section1_setAnimation();
-        common_Animation();
-    }
     
     var section2 = $('.section2');
     var $section2_left = $('[data-ui-animate="section2_leftbox"]');
@@ -75,7 +58,7 @@
     var $section2_center_explanation = $('[data-ui-animate="section2_center_explanation"]');
     var $section2_center_price = $('[data-ui-animate="section2_center_price"]');
     
-    function section2_setAnimation(){
+    function section2_setAnimation() {
         
         TweenMax.set($section2_left, {
             y: 250,
@@ -109,12 +92,6 @@
 
     }
 
-    function section2_playAnimation(e){
-        section2_setAnimation();
-        common_Animation();
-    }
-
-
     var section3 = $('.section3');
     var $section3_left = $('[data-ui-animate="section3_leftbox"]');
     var $section3_right = $('[data-ui-animate="section3_right"]');
@@ -123,7 +100,7 @@
     var $section3_center_explanation = $('[data-ui-animate="section3_center_explanation"]');
     var $section3_center_price = $('[data-ui-animate="section3_center_price"]');
 
-    function section3_setAnimation(){
+    function section3_setAnimation() {
 
         TweenMax.set($section3_left, {
             y: 500,
@@ -155,12 +132,7 @@
             opacity: 0
         });
     }
-
-    function section3_playAnimation(e){
-        section3_setAnimation();
-        common_Animation();
-    }
-    
+ 
     var section4 = $('.section4');
     var $section4_left = $('[data-ui-animate="section4_leftbox"]');
     var $section4_right = $('[data-ui-animate="section4_right"]');
@@ -202,10 +174,25 @@
         });
     }
 
-    function section4_playAnimation(e){
-        section4_setAnimation();
-        common_Animation();
-    }
+    // function section1_playAnimation(e){
+    //     section1_setAnimation();
+    //     common_Animation();
+    // }
+
+    // function section2_playAnimation(e){
+    //     section2_setAnimation();
+    //     common_Animation();
+    // }
+
+    // function section3_playAnimation(e){
+    //     section3_setAnimation();
+    //     common_Animation();
+    // }
+
+    // function section4_playAnimation(e){
+    //     section4_setAnimation();
+    //     common_Animation();
+    // }
 
     // $(window).on('load', section1_playAnimation);
     // $(window).on('load', section2_playAnimation);
@@ -219,31 +206,65 @@
     //     console.log($(this)[0].scrollHeight); // 객체의 높이
     //     console.log($(this).height());
     // });
-    var $inner_padding = $('.inner_padding');
-    $(window).on('load', function(){
-        
 
+
+
+
+
+
+    
+    var $inner_padding = $('.inner_padding');
+    
+    function common_Animation(index) {
+        var $ui_motion = $inner_padding.eq(index).find('[data-ui-animate]');
+        TweenMax.to($ui_motion, 1, {
+            opacity: 1
+        });
+        TweenMax.to($ui_motion, 2, {
+            x: 0,
+            y: 0,
+            ease: Circ.easeOut
+        });
+    }
+    
+    function init() {
+        section1_setAnimation();
+        section2_setAnimation();
+        section3_setAnimation();
+        section4_setAnimation();
+        
         $inner_padding.each(function(){
             // $(this).attr('속성 (id, class, src)', 넣고자하는 값);
-            $(this).attr('data-offset', $(this).offset().top);
+            $(this).attr('data-offset', $(this).offset().top - $(window).height() /2);
         });
-        $inner_padding.each(function(){
-            console.log($(this).data('offset'));
-        });
-    });
-
-    $(window).on('scroll', function() {
+    }
+    
+    $(window).on('load', init);
+    $(window).on('scroll load', function() {
         var scrollTop = $(window).scrollTop();
         
         if(scrollTop >= $inner_padding.eq(0).data('offset') && scrollTop < $inner_padding.eq(1).data('offset')){
-            section1_playAnimation();
+            common_Animation(0);
         } else if (scrollTop >= $inner_padding.eq(1).data('offset') && scrollTop < $inner_padding.eq(2).data('offset')) {
-            section2_playAnimation();
+            common_Animation(1);  
         } else if (scrollTop >= $inner_padding.eq(2).data('offset') && scrollTop < $inner_padding.eq(3).data('offset')) {
-            section3_playAnimation();
+            common_Animation(2);  
         } else if (scrollTop >= $inner_padding.eq(3).data('offset')) {
-            section4_playAnimation();
+            common_Animation(3);  
         }
-        // console.log($(window).scrollTop());
+
     });
+
 }());
+
+
+
+// $inner_padding.each(function(i) { //* 
+//         //     $inner_padding.eq(i);
+            
+//         //     if(scrollTop >= $inner_padding.eq(i).data('offset') && scrollTop < $inner_padding.eq(i + 1).data('offset')){
+//         //         common_Animation(i);  
+//         //     } else if (scrollTop >= $inner_padding.eq(3).data('offset')) {
+//         //         common_Animation(3);  
+//         //     }
+//         // });
