@@ -3,10 +3,8 @@
     var $btn = $list_box.find('.btns');
     var animating = false;
     var animation_speed = 500;
-
-    var $ul = $('[data-ui="inner_frame"]');
     currentIndex = 0;
-    
+    currentIndex.max = 4;
 
     function next_slide_effect(e){
         var $target = $(e.target);
@@ -21,10 +19,13 @@
         }, animation_speed, 'swing', function () {
             $scene.eq(0).insertAfter($scene.eq(-1));
             $inner_frame.css('left', 0);
-            currentIndex +=1;
-            if( currentIndex >= currentIndex.max  ){
+            if( currentIndex === 4 ){
                 currentIndex = 0;
             }
+            else{
+                currentIndex +=1;
+            }
+           
             console.log(currentIndex);
             animating = false;
             
@@ -44,9 +45,11 @@
         $inner_frame.animate({
             left: 0
         }, animation_speed, 'swing', function(){
-            currentIndex -=1;
-            if( currentIndex <= -5 ){
-                currentIndex = 0;
+            if (currentIndex === 0 ) {
+                currentIndex = 4;
+            }
+            else {
+                currentIndex -=1;
             }
             console.log(currentIndex);
             animating = false;
