@@ -65,21 +65,28 @@ em{
 .subpage_head {
     margin-top:50px;
     overflow:hidden;
-
+    text-align: center;
     .subpage_head_title {
         position: relative;
         padding-bottom: 22px;
         font-size: 45px;
         font-weight: 200;
-        text-align: center;
         letter-spacing: -1px;
     }
     .subpage_head_explanation {
-        text-align: center;
         padding-top: 18px;
         padding-bottom: 18px;
         color: #808080;
     }
+    .subpage_head_img {
+        margin-top:20px;
+    }
+}
+.sub_text {
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #999;
 }
 
 button {
