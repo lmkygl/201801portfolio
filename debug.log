@@ -17,3 +17,10 @@
 [0129/163449.321:ERROR:process_info.cc(632)] range at 0x3c6a2ba400000000, size 0x1b2 fully unreadable
 [0129/163449.321:ERROR:process_info.cc(632)] range at 0x0, size 0x1b2 fully unreadable
 [0129/163449.504:ERROR:process_info.cc(380)] UncheckedAllocate
+[0129/175325.428:ERROR:process_info.cc(632)] range at 0x934236f800000000, size 0x206 fully unreadable
+[0129/175325.428:ERROR:process_info.cc(632)] range at 0x9342375c00000000, size 0x206 fully unreadable
+[0129/175325.428:ERROR:process_info.cc(632)] range at 0x0, size 0x206 fully unreadable
+[0129/175325.549:ERROR:process_info.cc(380)] UncheckedAllocate
+[0129/175325.674:ERROR:process_info.cc(632)] range at 0x5c692b8400000000, size 0x152 fully unreadable
+[0129/175325.674:ERROR:process_info.cc(632)] range at 0x5c692ba400000000, size 0x152 fully unreadable
+[0129/175325.674:ERROR:process_info.cc(632)] range at 0x0, size 0x152 fully unreadable
