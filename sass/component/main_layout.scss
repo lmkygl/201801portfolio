@@ -1,10 +1,10 @@
 
 /**z-index:2 container Area에 content 겹침***/
 .section1 {
-    overflow: hidden;
+    //overflow: hidden;
     .box {
         position: absolute;
-        left: 0;
+        left: -20px;
         height: 300px;
         margin-top: 100px;  
         z-index: 2;
