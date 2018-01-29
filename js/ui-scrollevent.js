@@ -226,7 +226,6 @@
             y: -150
         });
     }
-
    
     function init() {
         section1_setAnimation();
