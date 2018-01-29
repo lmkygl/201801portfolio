@@ -194,36 +194,44 @@
         var $section4_right = $('[data-ui-animate="section4_right"]');
         
         TweenMax.to($section1_left, 1, {
-            x: 50,
+            x: 40,
             y: -160,
+            ease: Power1.easeOut
         });
         TweenMax.to($section1_right, 1, {
-            x: -50,
+            x: -40,
             y: 70, 
+            ease: Power1.easeOut
         });
         TweenMax.to($section2_left, 1, {
             x: 15,
-            y: 200
+            y: 200,
+            ease: Power1.easeOut
         });
         TweenMax.to($section2_right, 1, {
             x: -50,
-            y: -80
+            y: -80,
+            ease: Power1.easeOut
         });
         TweenMax.to($section3_left, 1, {
             x: 20,
-            y: 100
+            y: 100,
+            ease: Power1.easeOut
         });
         TweenMax.to($section3_right, 1, {
-            x: 0,
-            y: -130
+            x: -30,
+            y: -130,
+            ease: Power1.easeOut
         });
         TweenMax.to($section4_left, 1, {
             x: 0,
-            y: 100
+            y: 100,
+            ease: Power1.easeOut
         });
         TweenMax.to($section4_right, 1, {
             x: -10,
-            y: -150
+            y: -150,
+            ease: Power1.easeOut
         });
     }
    
@@ -261,6 +269,7 @@
             }
         } else if (scrollTop >= $inner_padding.eq(1).data('offset') && scrollTop < $inner_padding.eq(2).data('offset')) { 
             common_Animation(1);
+
             if (scrollDiff < 0) {
                 common_Anima(0);
             }
@@ -270,6 +279,7 @@
             
         } else if (scrollTop >= $inner_padding.eq(2).data('offset') && scrollTop < $inner_padding.eq(3).data('offset')) {
             common_Animation(2);
+            
             if (scrollDiff < 0) {
                 common_Anima(0);
             }
@@ -278,6 +288,7 @@
             }
         } else if (scrollTop >= $inner_padding.eq(3).data('offset')) {
             common_Animation(3);
+
             if (scrollDiff < 0) {
                 common_Anima(0);
             }
@@ -292,18 +303,4 @@
         },300);
 
     });
-
-
 }());
-
-
-
-// $inner_padding.each(function(i) { //* 
-//         //     $inner_padding.eq(i);
-            
-//         //     if(scrollTop >= $inner_padding.eq(i).data('offset') && scrollTop < $inner_padding.eq(i + 1).data('offset')){
-//         //         common_Animation(i);  
-//         //     } else if (scrollTop >= $inner_padding.eq(3).data('offset')) {
-//         //         common_Animation(3);  
-//         //     }
-//         // });
