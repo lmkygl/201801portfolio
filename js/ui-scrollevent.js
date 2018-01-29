@@ -1,5 +1,7 @@
 (function(){    
- 
+
+    // 애니메이션 초기값 세팅 
+
     var section1 = $('.section1');
     var $section1_left = $('[data-ui-animate="section1_leftbox"]');
     var $section1_right = $('[data-ui-animate="section1_right"]');
@@ -53,6 +55,7 @@
         
         TweenMax.set($section2_left, {
             y: 250,
+            x: 0,
             opacity: 0
         });
 
@@ -165,42 +168,9 @@
         });
     }
 
-    // function section1_playAnimation(e){
-    //     section1_setAnimation();
-    //     common_Animation();
-    // }
-
-    // function section2_playAnimation(e){
-    //     section2_setAnimation();
-    //     common_Animation();
-    // }
-
-    // function section3_playAnimation(e){
-    //     section3_setAnimation();
-    //     common_Animation();
-    // }
-
-    // function section4_playAnimation(e){
-    //     section4_setAnimation();
-    //     common_Animation();
-    // }
-
-    // $(window).on('load', section1_playAnimation);
-    // $(window).on('load', section2_playAnimation);
-    // section3.on('click', section3_playAnimation);
-    // section4.on('click', section4_playAnimation);
-    // var $dom = $('.inner_padding');
-
-    // $dom.each(function(){
-    //     console.log($(this)); // 객체
-    //     console.log($(this).offset().top); // 0에서 객체와 스크롤사이 
-    //     console.log($(this)[0].scrollHeight); // 객체의 높이
-    //     console.log($(this).height());
-    // });
-
-    
+    // 스크롤이 해당 영역에 닿았을시 발생되는 공통 애니메이션 
     var $inner_padding = $('.inner_padding');
-    
+
     function common_Animation(index) {
         var $ui_motion = $inner_padding.eq(index).find('[data-ui-animate]');
         TweenMax.to($ui_motion, 1, {
@@ -214,15 +184,15 @@
     }
     
     function common_Anima(index) { 
-        var $section1_left = $('[data-ui-animate="section2_leftbox"]');
-        var $section1_right = $('[data-ui-animate="section2_right"]');
-        TweenMax.to($section1_left, 1, {
-            x: 100
+        var $section1_left = $('[data-ui-animate="section1_leftbox"]');
+        var $section1_right = $('[data-ui-animate="section1_right"]');
+        TweenMax.to($section1_left, 1.5, {
+            x: 50,
+            y: -60
         });
-        TweenMax.to($section1_right, 1, {
-            x: -100,
-            y: 0,
-            ease: Circ.easeOut
+        TweenMax.to($section1_right, 1.5, {
+            x: -50,
+            y: 30
         });
     }
 
@@ -237,23 +207,22 @@
             $(this).attr('data-offset', $(this).offset().top - $(window).height() /2);
         });
     }
+    $(window).on('load', init);
     
     var isScrolling;
     var lastScroll;
-    $(window).on('load', init);
+
     $(window).on('scroll load', function() {
         var scrollTop = $(window).scrollTop();
         var scrollDiff =  scrollTop - lastScroll;
 
         if(scrollTop >= $inner_padding.eq(0).data('offset') && scrollTop < $inner_padding.eq(1).data('offset')){
             
-            
-            if (scrollDiff < 0) {
+            if (scrollDiff > 0) {
                 common_Anima(0);
             }
             else{
                 common_Animation(0);
-
             }
         } else if (scrollTop >= $inner_padding.eq(1).data('offset') && scrollTop < $inner_padding.eq(2).data('offset')) {
             // common_Animation(1);  
