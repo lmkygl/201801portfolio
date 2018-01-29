@@ -195,11 +195,11 @@
         
         TweenMax.to($section1_left, 1, {
             x: 50,
-            y: -160
+            y: -160,
         });
         TweenMax.to($section1_right, 1, {
             x: -50,
-            y: 70
+            y: 70, 
         });
         TweenMax.to($section2_left, 1, {
             x: 15,
@@ -214,40 +214,46 @@
             y: 100
         });
         TweenMax.to($section3_right, 1, {
-            x: -20,
-            y: -100
+            x: 0,
+            y: -130
         });
         TweenMax.to($section4_left, 1, {
             x: 0,
-            y: -30
+            y: 100
         });
         TweenMax.to($section4_right, 1, {
             x: -10,
-            y: 100
+            y: -150
         });
     }
 
+   
     function init() {
         section1_setAnimation();
         section2_setAnimation();
         section3_setAnimation();
         section4_setAnimation();
         
+        common_Animation();
+        
+        
         $inner_padding.each(function(){
             // $(this).attr('속성 (id, class, src)', 넣고자하는 값);
-            $(this).attr('data-offset', $(this).offset().top - $(window).height() /3);
-            console.log($(window).height() /4);
+            $(this).attr('data-offset', $(this).offset().top - $(window).height() /2);
         });
     }
+
     $(window).on('load', init);
     
     var isScrolling;
     var lastScroll;
 
-    $(window).on('scroll load', function() {
+    $(window).on('load scroll', function() {
         var scrollTop = $(window).scrollTop();
         var scrollDiff =  scrollTop - lastScroll;
         if(scrollTop >= $inner_padding.eq(0).data('offset') && scrollTop < $inner_padding.eq(1).data('offset')){
+            common_Animation(0);
+
             if (scrollDiff > 0) {
                 common_Anima(0);
             }
@@ -255,6 +261,7 @@
                 common_Animation(0);
             }
         } else if (scrollTop >= $inner_padding.eq(1).data('offset') && scrollTop < $inner_padding.eq(2).data('offset')) { 
+            common_Animation(1);
             if (scrollDiff < 0) {
                 common_Anima(0);
             }
@@ -263,7 +270,7 @@
             }
             
         } else if (scrollTop >= $inner_padding.eq(2).data('offset') && scrollTop < $inner_padding.eq(3).data('offset')) {
-            
+            common_Animation(2);
             if (scrollDiff < 0) {
                 common_Anima(0);
             }
@@ -271,6 +278,7 @@
                 common_Animation(2);  
             }
         } else if (scrollTop >= $inner_padding.eq(3).data('offset')) {
+            common_Animation(3);
             if (scrollDiff < 0) {
                 common_Anima(0);
             }
