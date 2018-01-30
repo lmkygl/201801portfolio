@@ -168,6 +168,25 @@
         });
     }
 
+
+    var $about_img = $('[data-ui-animate="img_area"]');
+    var $about_text = $('[data-ui-animate="text_area"]');
+    
+    function about_set_animation(){
+        
+        TweenMax.set($about_img, {
+            x: -300,
+            y: 100 ,
+            opacity: 0
+        });
+        
+        TweenMax.set($about_text, {
+            x: 300,
+            y: 100 ,
+            opacity: 0
+        });
+    }
+
     // 스크롤이 해당 영역에 닿았을시 발생되는 공통 애니메이션 
     var $inner_padding = $('.inner_padding');
 
@@ -193,42 +212,42 @@
         var $section4_left = $('[data-ui-animate="section4_leftbox"]');
         var $section4_right = $('[data-ui-animate="section4_right"]');
         
-        TweenMax.to($section1_left, 1, {
+        TweenMax.to($section1_left, 0.8, {
             x: 40,
             y: -160,
             ease: Power1.easeOut
         });
-        TweenMax.to($section1_right, 1, {
+        TweenMax.to($section1_right, 0.8, {
             x: -40,
             y: 70, 
             ease: Power1.easeOut
         });
-        TweenMax.to($section2_left, 1, {
+        TweenMax.to($section2_left, 0.5, {
             x: 15,
             y: 200,
             ease: Power1.easeOut
         });
-        TweenMax.to($section2_right, 1, {
+        TweenMax.to($section2_right, 0.5, {
             x: -50,
             y: -80,
             ease: Power1.easeOut
         });
-        TweenMax.to($section3_left, 1, {
+        TweenMax.to($section3_left, 0.5, {
             x: 20,
             y: 100,
             ease: Power1.easeOut
         });
-        TweenMax.to($section3_right, 1, {
+        TweenMax.to($section3_right, 0.5, {
             x: -30,
             y: -130,
             ease: Power1.easeOut
         });
-        TweenMax.to($section4_left, 1, {
+        TweenMax.to($section4_left, 0.5, {
             x: 0,
             y: 100,
             ease: Power1.easeOut
         });
-        TweenMax.to($section4_right, 1, {
+        TweenMax.to($section4_right, 0.5, {
             x: -10,
             y: -150,
             ease: Power1.easeOut
@@ -240,10 +259,9 @@
         section2_setAnimation();
         section3_setAnimation();
         section4_setAnimation();
-        
-        common_Animation();
-        
-        
+        about_set_animation();
+
+       // common_Animation();
         $inner_padding.each(function(){
             // $(this).attr('속성 (id, class, src)', 넣고자하는 값);
             $(this).attr('data-offset', $(this).offset().top - $(window).height() /2);
@@ -275,6 +293,7 @@
             }
             else{
                 common_Animation(1);
+                
             }
             
         } else if (scrollTop >= $inner_padding.eq(2).data('offset') && scrollTop < $inner_padding.eq(3).data('offset')) {

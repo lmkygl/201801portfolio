@@ -27,13 +27,10 @@
 }
 .about_product_info_container {
     margin-top: 100px;
-    .product_content1{
-        padding: 100px 0;
-    }
     .imgae_area {
         width: 60%;
         float: left;
-        text-align: center;
+        text-align: right;
     }
     .text_area {
         width: 40%;
@@ -44,6 +41,7 @@
             width: 80%;
             position: absolute;
             bottom: 20px;
+            right: 0;
         }
         .year {
             font-size: 16px;
