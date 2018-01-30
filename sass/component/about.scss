@@ -1,0 +1,73 @@
+.about_story_area {
+    position: relative;
+    overflow: hidden;
+    .about_image{
+        width: 60%;
+        height: 800px;
+        float: left;
+        background: url('../img/bg_section01.jpg') no-repeat 30% 0;
+    }
+    .about_text{
+        width: 40%;
+        height: 800px;
+        float: left;
+        .text_wrap{
+            width: 80%;
+            margin: 200px auto 0;
+            .text_explanation {
+                display: block;
+                margin-top: 25px;
+                font-size: 14px;
+                line-height: 20px;
+                color: #666;
+                letter-spacing: -0.5px;
+            }
+        }
+    }
+}
+.about_product_info_container {
+    margin-top: 100px;
+    .product_content1{
+        padding: 100px 0;
+    }
+    .imgae_area {
+        width: 60%;
+        float: left;
+        text-align: center;
+    }
+    .text_area {
+        width: 40%;
+        height: 372px;
+        float: left;
+        position: relative;
+        .txt_wrap{
+            width: 80%;
+            position: absolute;
+            bottom: 20px;
+        }
+        .year {
+            font-size: 16px;
+            font-weight: 400;
+            color: #be9673;
+            .tit {
+                display: -webkit-box;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                margin-top: 6px;
+                font-weight: 400;
+                font-size: 34px;
+                line-height: 48px;
+            }
+        }
+        .text_explan {
+            font-weight: 400;
+            line-height: 1.93277rem;
+            letter-spacing: .04em;
+            color: #425866;
+            max-width: 80%;
+        }
+    }
+}
+
