@@ -1,0 +1,167 @@
+.side_content_wrap{
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+.side_slide_wrap {
+    width: 60%;
+    height: 642px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    .side_slide_out_frame {
+        position: relative;
+        ul {
+            width:300%;
+            overflow: hidden;
+            li {
+                width: 33.3%;
+                float: left;
+                
+            }
+        }
+    }
+    .side_slide_control {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        font-size:0;
+        span{
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 5px;
+            background-color:#fff;
+            margin:0 8px;
+            cursor: pointer;
+            opacity: 0.5;
+        }
+        .select_indicator{
+            opacity: 1;
+        }
+    }
+}
+
+.side_product_info_wrap {
+    width: 40%;
+    height: 642px;
+    float: left;
+    overflow: hidden;
+    .side_product_info {
+        width:70%;
+        overflow: hidden;
+        margin: 200px auto 0;
+        .side_tit {
+            font-size: 25px;
+            height: 40px;
+            color: #0D364C;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .side_ex {
+            font-weight: 400;
+            font-size: 14px;
+            color: #999;
+            line-height:28px;
+        }
+        .side_product_shop {
+            margin-top: 30px;
+            text-align: center;
+            a{
+                display: inline-block;
+                padding: 10px 15px;
+                border: 1px solid #cccccc;
+                color: #808080;
+            }
+        }
+    }
+}
+.side_product_info_wrap::after, .side_slide_wrap::after{
+    clear: both;
+    content: '';
+    display: block;
+}
+.side_prodcut_more_about_wrap {
+    margin-top: 80px;
+    .more_about_btn_area {
+        width: 50%;
+        float: left;
+        .btn_wrap {
+            margin-top: 150px;
+            height: 34px;
+            width: 45%;
+            border-bottom: 1px solid #ccc;
+            a {
+                padding: 0 15px;
+                display: inline-block;
+                font-size: 15px;
+                cursor: pointer;
+                font-weight: 500;
+                color: #ccc;
+                border-right: 1px solid #ccc;
+            }
+            a:last-child{
+                border: none;
+            }
+            .select_a {
+                color:#0D364C;
+            }
+        }
+        .btn_content {
+            margin-top: 20px;
+            color:#be9673;
+            font-size: 25px;
+            margin-left: 15px;
+            .btn_content_txt{
+                color: #0D364C;
+                font-size: 14px;
+                width: 50%;
+                margin-top: 20px;
+                line-height: 21px;
+            }
+            ul{
+                transition: all .5s;
+                li {
+                    display: none;
+                }
+                li:first-child {
+                    display: block;
+                }
+            }
+        }
+    }
+    .btn_image_area {
+        width: 50%;
+        float: left;
+        .btn_image_jant {
+            width: 80%;
+            height: 700px;
+            background: url('../img/odense_jante.jpg') no-repeat left bottom;
+        }
+    }
+}
+.bg_jant {
+    margin-top: 50px;
+    width: 50%;
+    height:500px;
+    background: url('../img/jante.jpg') no-repeat left;
+    overflow:hidden;
+    background-size: cover;
+}
+.bg_jant2{
+    margin-top: 200px;
+    float: right;
+    width: 45%;
+    height: 400px;
+    background: url('../img/jante2.jpg') no-repeat right;
+    overflow:hidden;
+    background-size: cover;
+}
+.bg_jant3{
+    margin-top: 100px;
+    height: 450px;
+    width: 45%;
+    background: url('../img/img_jante2.png') no-repeat left;
+    background-size: cover;
+    overflow:hidden;
+}
+

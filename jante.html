@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/html5shiv/dist/html5shiv.js"></script>
+    <script src="./node_modules/gsap/src/minified/TweenMax.min.js"></script>
+    <title>odense</title>
+</head>
+<body>
+    <div class="wrap">
+        <header  id="header" class="header">
+            <div class="nav_bar">
+                <div class="left_gnb">
+                    <div class="mobile_menu">Menu</div>
+                    <nav>
+                        <a href="#" title="Product" data-ui="navi_underline" data-ui-side="sideMenu_open"  class="fontbold left_first_margin">
+                            Product <strong class="arrow_icon">∨</strong> 
+                            <span class="underline"></span>
+                        </a>
+                        <a href="about.html" title="About us" data-ui="navi_underline">
+                            About us 
+                            <span class="underline"></span>
+                        </a>
+                        <a href="platingRecipe.html" title="plating Recipe" data-ui="navi_underline">
+                            plating Recipe
+                            <span class="underline"></span>
+                        </a>
+                    </nav>
+                </div>
+                <div class="logo_Area">
+                    <h1>
+                        <a href="index.html" title="odense"><img src="img/logo.png"/></a>
+                    </h1>
+                </div>
+                <div class="right_gnb">
+                    <nav>
+                        <a href="cookingbook.html" title="News" data-ui="navi_underline" class="right_first_margin">
+                            cooking book 
+                            <span class="underline"></span>
+                        </a>
+                        <a href="news.html" title="News" data-ui="navi_underline">
+                            News 
+                            <span class="underline"></span>
+                        </a>
+                        <a href="ontv.html" title="On TV" data-ui="navi_underline">
+                            On TV 
+                            <span class="underline"></span>
+                        </a>
+                        <a href="store.html" title="Store" data-ui="navi_underline">
+                            Store 
+                            <span class="underline"></span>
+                        </a>
+                    </nav>
+                </div>
+                <div class="side_menu" data-ui-side="side_menu">
+                    <a class="side_backBtn" data-ui-side="sideMenu_close"><span class="arrow_icon">＜</span> Back</a>
+                    <nav>
+                        <ul data-ui-side="findDetail">
+                            <li  data-ui="navi_underline" data-tab-id="id1">
+                                <a href="jante.html" title="jante">
+                                    jante
+                                    <span class="underline"></span>
+                                </a>
+                            </li>
+                            <li  data-ui="navi_underline" data-tab-id="id2">
+                                <a href="atelier.html" title="atelier">
+                                    atelier
+                                    <span class="underline"></span>
+                                </a>
+                            </li>
+                            <li data-ui="navi_underline" data-tab-id="id3">
+                                <a href="hygge.html" title="hygge" >
+                                    hygge
+                                    <span class="underline"></span>
+                                </a>
+                            </li>
+                            <li data-ui="navi_underline" data-tab-id="id4">
+                                <a href="plating.html" title="plating cook" >
+                                    plating cook
+                                    <span class="underline"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <ul class="side_menu_detail" data-ui-side="sideMenu_detail_area">
+                        <li class="side_menu_inner_detail" data-pannel-id="id1">
+                            <a href="jante.html" title="jante" class="jante_product"></a>
+                        </li>
+                        <li class="side_menu_inner_detail" data-pannel-id="id2">
+                            <a href="atelier.html" title="atelier" class="atelier_product"></a>
+                        </li>
+                        <li class="side_menu_inner_detail" data-pannel-id="id3">
+                            <a href="hygge.html" title="hygge" class="hygge_product"></a>
+                        </li> 
+                        <li class="side_menu_inner_detail" data-pannel-id="id4">
+                            <a href="plating.html" title="platingcook" class="plating_product"></a>
+                        </li>                        
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <div class="container_width">
+               <div class="side_content_wrap">
+                   <div class="side_slide_wrap">
+                       <div class="side_slide_out_frame">
+                           <ul class="side_slide_inner_frame">
+                               <li><img src="./img/main_jante.jpg"/></li>
+                               <li><img src="./img/main_side_jante.jpg"/></li>
+                               <li><img src="./img/main_side_jante2.jpg"/></li>
+                           </ul>
+                       </div>
+                       <div class="side_slide_control">
+                           <div class="indicator">
+                                <span class="select_indicator">1</span>
+                                <span>2</span>
+                                <span>3</span>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="side_product_info_wrap">
+                       <div class="side_product_info">
+                           <h2 class="side_tit">jante</h2>
+                           <div class="side_ex">
+                                얀테는 잔잔한 호수의 물결과 조약돌에서
+                                영감을 얻은 비정형 쉐입에 수채화 같은
+                                물맛나는 색감을 담았습니다.
+                                제품 하나 섬세한 터치를 느낄 수 있는
+                                핸드크래프트 공법과 페블 화이트, 레이크그레이,
+                                딥포레스트, 클라우드핑크의 컬러는 사용하는 사람에게
+                                편안함과 따뜻함을 줍니다.
+                            </div>
+                            <div class="side_product_shop">
+                                <a  href="http://display.cjmall.com/p/exhibition/exhibitionDetail?plnExhbId=2015030706" title="shop" target="_blank">
+                                    shop
+                                </a>
+                            </div>
+                       </div>
+                   </div>
+                   <div class="clear"></div>
+                   <div class="side_prodcut_more_about_wrap">
+                       <div class="more_about_btn_area">
+                           <div class="btn_wrap">
+                               <a class="select_a">design</a>
+                               <a>matter</a>
+                               <a>Emotion</a>
+                            </div>
+                            <div class="btn_content">
+                                <ul>
+                                    <li>
+                                        <p>북유럽 호수에서 <br/>영감을 받은 디자인</p>
+                                        <p class="btn_content_txt">
+                                            얀테는 잔잔한 호수의 물결과 조약돌에서
+                                            영감을 얻은 비정형 쉐입에 
+                                            수채화 같은물맛나는 색감을 담았습니다.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>가벼움에 내구성을 더한 <br/>실크 화이트 소지</p>
+                                        <p class="btn_content_txt">
+                                           실크 화이트(Slik White) 소지를 사용하여
+                                           얇고 가벼우면서 강도가 높습니다.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            음식을 담아내는 사람과<br/> 먹는사람들에 배려
+                                        </p>
+                                        <p class="btn_content_txt">
+                                            한국인의 식습관을 다각도로 연구하여 제품에
+                                            반영 하고자 노력하였습니다.
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                       </div>
+                       <div class="btn_image_area">
+                           <div class="btn_image_jant"></div>
+                       </div>
+                   </div>
+                   <div class="clear"></div>
+                   
+               </div>
+            </div>
+        </div>
+        <footer id="footer" class="footer">
+            <div class=".container_width">
+                <h2>
+                    <img src="img/logo_footer.png" alt="footer_logo"/>
+                </h2>
+                <div>
+                    <div class="footer_menu">
+                        <a href="#" title="product">Product</a> 
+                        <a href="https://www.instagram.com/odense.official" title="Instagram" target="_blank">Instagram</a> 
+                        <a href="https://www.facebook.com/odenseofficial" title="facebook" target="_blank">facebook</a> 
+                        <a href="http://m.post.naver.com/odenseofficial" title="Naver Post" target="_blank">Naver Post</a>
+                    </div>
+                    <address>
+                        <p>
+                            (주)씨제이오쇼핑 대표이사:허민회 주소:06761 서울시 서초구 과천대로 870-13
+                        </p>
+                        <p>
+                            사업자등록번호 : 106-81-51510 호스팅제공자:(주)CJ오쇼핑 고객센터 TEL:1577-0103
+                        </p>
+                        <p>
+                            <a href="http://www.cjmall.com/company/company_personal_info_01.jsp?pic=FOOT0004" title="개인청보처리방침" target="_blank">
+                                개인청보처리방침
+                            </a> 
+                            <a href="http://www.cjmall.com/company/company_privacy.jsp?pic=FOOT0008" title="법적고지" target="_blank">
+                                법적고지
+                            </a> 
+                            개인정보관리책임자 : IT담당 양희영
+                        </p>
+                    </address>
+                    <div class="copyright">
+                        COPYRIGHT ⓒ LIM GEUN YOUNG ALL RIGHTS RESERVED.
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="./js/ui-navi_underline.js"></script>
+    <script src="./js/ui-side_open_close.js"></script>  
+    <script src="./js/ui-tab-id.js"></script>
+    <script src="./js/ui-scrollevent.js"></script>
+</body>
+</html>
