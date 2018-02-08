@@ -3,17 +3,21 @@
 (function(){
 
     var auto_slide;
-    
-    // function slide_start() {
-    //     auto_slide = setInterval(slide_show, 20000);
-    // };
-
     var $indicator = $('.indicator');
     var $indicator_btn = $indicator.find('span');
+    var speed = 20000;
+    
+    function slide_start() {
+        auto_slide = setInterval(slide_show, speed);
+    };
 
     function slide_show(e){
+        var slideCurrent = $(".slide-active");
+        var slideNext = slideCurrent.next();
+        var dotCurrent = $("li.active");
+        var dotNext = dotCurrent.next();
+             
         var target = $(e.target);
-        console.log(target);
         $indicator_btn.removeClass('select_indicator');
         $(this).addClass('select_indicator');
     }
