@@ -33,7 +33,6 @@
         $inner_frame.animate({
             left: 0
         }, animation_speed, 'swing', function(){
-            
             animating = false;
         });
     }

@@ -165,3 +165,7 @@
     overflow:hidden;
 }
 
+.slide-active{
+    transform: translatey(0);
+    opacity: 1;
+}

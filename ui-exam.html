@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <div>
+    <!-- <div>
         <li  data-ui="navi_Link">
             <a href="#" title="jante" data-side-ui="side_menu_detail_product">
                 jante
@@ -34,9 +35,15 @@
                 </p>
             </li>
         </ul>
+    </div> -->
+
+    <div data-ui="counter" data-max="5">
+        <label for="">count</label> <input type="text" value="0" class="current"/>
+        <button class="plus btn">+</button> <button class="minus btn">-</button>
     </div>
     <script src="./js/ui-navi_Link.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/ui-click_show.js"></script>
+    <script src="./js/count.js"></script>
 </body>
 </html>
