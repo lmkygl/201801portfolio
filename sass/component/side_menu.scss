@@ -10,6 +10,7 @@
     overflow: hidden;
     .side_slide_out_frame {
         position: relative;
+        transition: 0.9s ease-in-out transform;
         ul {
             width:300%;
             overflow: hidden;
@@ -163,9 +164,4 @@
     background: url('../img/img_jante2.png') no-repeat left;
     background-size: cover;
     overflow:hidden;
-}
-
-.slide-active{
-    transform: translatey(0);
-    opacity: 1;
 }
