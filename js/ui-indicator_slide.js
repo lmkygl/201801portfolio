@@ -1,14 +1,16 @@
 // indicator 를 이용한 슬라이드
 
 (function () {
-
-    // var slide_start;
+    var slide_start;
     var $indicator = $('.indicator');
     var $indicator_btn = $indicator.find('span');
     var speed = 400;
     var animating = false;
-    var start_slide = setInterval(slide_show, speed);
-    
+
+    function start_slide() {
+        slide_start = setInterval(slide_show, speed);
+    };
+
     function slide_show(e) {
         // indecator index 
         var $target = $(e.target);
@@ -18,11 +20,10 @@
         $(this).addClass('select_indicator');
     
         indecator_animating($target_index);
-
-        var indecator_index = indecator_animating($target_index);
-
-        indecator_index++;
-        
+        $target_index++;
+        if ($target_index >= $target_index.length) {
+            $target_index = 0;
+        }
     }    
 
     function indecator_animating(index) {
@@ -35,6 +36,6 @@
             marginLeft: -$side_out_frame_width * index
         }, speed, 'swing');
     }
-
+    start_slide();
     $indicator_btn.on('click', slide_show);
 }());
