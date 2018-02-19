@@ -36,19 +36,3 @@
     
     $indicator_btn.on('click', slide_show);
 }());
-
-
-    // function indecator_click(e){
-
-    //     clearInterval(start_slide);
-    //     var target = $(e.target);
-    //     var target_index = target.index();
-
-    //     $indicator_btn.removeClass('select_indicator');
-    //     $out_frame.eq(target_index).addClass('select_indicator');
-    //     $(this).addClass('select_indicator');
-
-    //     start_slide();
-
-    // }
-
