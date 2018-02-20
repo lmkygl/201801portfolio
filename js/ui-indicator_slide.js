@@ -21,6 +21,7 @@
         if ($target_index == 4) {
             $target_index = 0;
         }
+        
     }
 
     function indecator_animating(index) {
@@ -32,12 +33,13 @@
         $side_inner_frame.animate({
             marginLeft: -$side_out_frame_width * index
         }, speed, 'swing');
+        
     }
 
     function start_slide() {
-        slide_start = setInterval(slide_show, speed);
+        slide_start = setInterval(indecator_animating, speed);
     };
 
-    start_slide();
+    // start_slide();
     $indicator_btn.on('click', slide_show);
 }());
