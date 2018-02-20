@@ -16,7 +16,12 @@
         $(this).addClass('select_indicator');
 
         indecator_animating($target_index);
-        
+        clearInterval(start_slide);
+
+        $target_index++;
+        if ($target_index >= 3) {
+            $target_index = 0;
+        }
     }
 
     function indecator_animating(index) {
@@ -33,7 +38,7 @@
     function start_slide() {
         slide_start = setInterval(indecator_animating, speed);
     };
-    
+
     start_slide();
     $indicator_btn.on('click', slide_show);
 }());
