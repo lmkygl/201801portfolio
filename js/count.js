@@ -7,7 +7,7 @@
     var input = counter.find('input');
 
     function counter(val) {
-
+        
     }
 
     function handler(e) {
