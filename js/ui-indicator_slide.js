@@ -4,13 +4,14 @@
     var interval;
     var $indicator = $('.indicator');
     var $indicator_btn = $indicator.find('span');
-    var speed = 1000;
+    var speed = 300;
     var animating = false;
     var index = 0;
 
     function slide_show(e, index) {
         // indecator index 
         if (e !== null) {
+            // event 값이 널값이 아닐 경우
             var $target = $(e.target);
             var $target_index = $target.index();
             // clearInterval(interval);
@@ -23,7 +24,7 @@
         } else {
             $indicator_btn.removeClass('select_indicator');
             $indicator_btn.eq(index).addClass('select_indicator');
-            // console.log(index);
+           
         }
     }
 
@@ -39,6 +40,7 @@
     }
     
     interval = setInterval(function() {
+        // var index = 0; 
         index++;
         if (index == 3) {
             index = 0;
