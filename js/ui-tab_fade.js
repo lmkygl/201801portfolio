@@ -7,16 +7,19 @@
 
     function tab_button(e) {
         var $target = $(e.target);
-        var $target_index = $target.index();
         var tab_id;
+        var tab_content;
 
-        tab_id = tab_id = $(e.target).attr('data-id');
-        
+        tab_id = $(e.target).attr('data-id');
+        console.log(tab_id);
+        // tab select
         $tab_btn.removeClass('select_a');
-        $tab_btn.eq($target_index).addClass('select_a');
+        $tab_btn.eq(tab_id).addClass('select_a');
 
+        tab_content = $('[data-content-id="'+ tab_id +'"]');
+        console.log(tab_content);
+        
     }
+
     $tab_btn.on('click', tab_button);
-
-
 }());
