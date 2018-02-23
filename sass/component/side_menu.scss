@@ -120,12 +120,13 @@
                 line-height: 21px;
             }
             ul{
-                transition: all .5s;
+                position: relative;
                 li {
-                    opacity: 0;
+                    position: absolute;
+                    display: none;
                 }
                 li:first-child {
-                    opacity: 1;
+                    display: block;
                 }
             }
         }

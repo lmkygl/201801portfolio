@@ -30,7 +30,7 @@
 
         // javascript dom
         tab_id = etarget.dataset.tabId;
-
+        // console.log(tab_id);
         TweenMax.to($sideMenu_detailAera, 0.3, {
             width:'110%',
             opacity:1
@@ -41,7 +41,7 @@
         });
         
         data_pannel = $('[data-pannel-id="'+ tab_id +'"]');
-        
+        // console.log(data_pannel);
         TweenMax.to(data_pannel, 0.5, {
             width:'100%',
             opacity:1
