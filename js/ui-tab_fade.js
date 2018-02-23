@@ -9,11 +9,11 @@
     function tab_button(e) {
         var $target = $(e.target);
         var tab_id;
-        var tab_content;
+        // var tab_content;
         var $tab_con = $('.btn_content').find('li');
 
         tab_id = $target.attr('data-id');
-        console.log(tab_id);
+        // console.log(tab_id);
         // tab select
         $tab_btn.removeClass('select_a');
         $tab_btn.eq(tab_id).addClass('select_a');
@@ -26,19 +26,17 @@
             $tab_con.fadeOut();
             $tab_con.eq(0).fadeIn();
             return false;
-        }
-        else if (tab_id == 1) {
+        } else if (tab_id == 1) {
             // $tab_con.eq(1).show();
             $tab_con.fadeOut();
             $tab_con.eq(1).fadeIn();
             return false;
-        }
-        else if (tab_id == 2) {
+        } else if (tab_id == 2) {
             // $tab_con.eq(1).show();
             $tab_con.fadeOut();
             $tab_con.eq(2).fadeIn();
             return false;
-        } 
+        }
     }
 
     $tab_btn.on('click', tab_button);
