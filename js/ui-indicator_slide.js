@@ -39,16 +39,26 @@
         }, speed, 'swing');
     }
     
-    interval = setInterval(function() {
-        // var index = 0; 
-        index++;
-        if (index == 3) {
-            index = 0;
-        }
-        indecator_animating(index);
-        slide_show(null, index);
-    }, 2000);
+    function startInterval() {
+        clearInterval(interval);
+        interval = setInterval(function() {
+            // var index = 0; 
+            index++;
+            if (index == 3) {
+                index = 0;
+            }
+            indecator_animating(index);
+            slide_show(null, index);
+        }, 2000);
+    }
 
     $indicator_btn.on('click', slide_show);
 
+    $(window).on('load blur focus', function(e) {
+        if (e.type === 'blur') {
+            clearInterval(interval);
+        } else {
+            startInterval();
+        }
+    });
 }());
