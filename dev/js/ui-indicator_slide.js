@@ -7,7 +7,7 @@
     var speed = 300;
     var animating = false;
     var index = 0;
-
+    
     function slide_show(e, index) {
         // indecator index 
         if (e !== null) {
