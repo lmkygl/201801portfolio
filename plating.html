@@ -107,8 +107,8 @@
             <div class="container_width">
                <div class="side_content_wrap">
                    <div class="side_slide_wrap">
-                       <div class="side_slide_out_frame">
-                           <ul class="side_slide_inner_frame">
+                       <div class="side_slide_out_frame" data-ui="side_slide_out_frame">
+                           <ul class="side_slide_inner_frame" data-ui="side_slide_inner_frame">
                                <li><img src="./img/main_jante.jpg"/></li>
                                <li><img src="./img/main_side_jante.jpg"/></li>
                                <li><img src="./img/main_side_jante2.jpg"/></li>
@@ -142,14 +142,14 @@
                    <div class="clear"></div>
                    <div class="side_prodcut_more_about_wrap">
                        <div class="more_about_btn_area">
-                           <div class="btn_wrap">
-                               <a class="select_a">design</a>
-                               <a>matter</a>
-                               <a>Emotion</a>
+                           <div class="btn_wrap" data-ui="tab_button_wrap">
+                               <a class="select_a" data-id="0">design</a>
+                               <a data-id="1">matter</a>
+                               <a data-id="2">Emotion</a>
                             </div>
                             <div class="btn_content">
                                 <ul>
-                                    <li>
+                                    <li data-content-id="0">
                                         <p>먹을 만큼 요리하기 딱 <br/> 좋은 사이즈의 구성</p>
                                         <p class="btn_content_txt">
                                             그날 조리해서 먹기에 어울리는 쿡웨어로
@@ -157,7 +157,7 @@
                                             않은 구성 입니다.
                                         </p>
                                     </li>
-                                    <li>
+                                    <li data-content-id="1">
                                         <p>다재다능한 사용성</p>
                                         <p class="btn_content_txt">
                                            전 구성 직화 및 오븐 사용이 가능하며
@@ -165,7 +165,7 @@
                                            사용 할 수 있습니다.
                                         </p>
                                     </li>
-                                    <li>
+                                    <li data-content-id="2">
                                         <p>
                                             특허 받은 평굽 기술력 플랫 바텀
                                         </p>
@@ -228,5 +228,6 @@
     <script src="./js/ui-tab-id.js"></script>
     <script src="./js/ui-scrollevent.js"></script>
     <script src-"./js/ui-indicator_slide.js"></script>
+    <script src="./js/ui-tab_fade.js"></script>
 </body>
 </html>

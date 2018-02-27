@@ -107,8 +107,8 @@
             <div class="container_width">
                <div class="side_content_wrap">
                    <div class="side_slide_wrap">
-                       <div class="side_slide_out_frame">
-                           <ul class="side_slide_inner_frame">
+                       <div class="side_slide_out_frame" data-ui="side_slide_out_frame">
+                           <ul class="side_slide_inner_frame" data-ui="side_slide_inner_frame">
                                <li><img src="./img/main_jante.jpg"/></li>
                                <li><img src="./img/main_side_jante.jpg"/></li>
                                <li><img src="./img/main_side_jante2.jpg"/></li>
@@ -141,14 +141,14 @@
                    <div class="clear"></div>
                    <div class="side_prodcut_more_about_wrap">
                        <div class="more_about_btn_area">
-                           <div class="btn_wrap">
-                               <a class="select_a">design</a>
-                               <a>matter</a>
-                               <a>Emotion</a>
+                           <div class="btn_wrap" data-ui="tab_button_wrap">
+                               <a class="select_a" data-id="0">design</a>
+                               <a data-id="1">matter</a>
+                               <a data-id="2">Emotion</a>
                             </div>
                             <div class="btn_content">
                                 <ul>
-                                    <li>
+                                    <li data-content-id="0">
                                         <p>덴마크 디자이너와의 콜라보레이션</p>
                                         <p class="btn_content_txt">
                                             덴마크 대표 라이프스타일 브랜드 HAY 출신 디자이너와
@@ -156,7 +156,7 @@
                                             감성을 정교하게 담았습니다.
                                         </p>
                                     </li>
-                                    <li>
+                                    <li data-content-id="1">
                                         <p>트리링(Tree-ring) 카빙 공법</p>
                                         <p class="btn_content_txt">
                                            나무 나이테의 비규칙 속 평안한 동심원에서 영감을
@@ -165,7 +165,7 @@
                                            표현 하였습니다.
                                         </p>
                                     </li>
-                                    <li>
+                                    <li data-content-id="2">
                                         <p>
                                             덴마크 휘게 문화를<br/> 담은 색감과 디자인
                                         </p>
@@ -226,6 +226,7 @@
     <script src="./js/ui-side_open_close.js"></script>  
     <script src="./js/ui-tab-id.js"></script>
     <script src="./js/ui-scrollevent.js"></script>
-    <script src-"./js/ui-indicator_slide.js"></script>
+    <script src="./js/ui-indicator_slide.js"></script>
+    <script src="./js/ui-tab_fade.js"></script>
 </body>
 </html>

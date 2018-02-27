@@ -107,8 +107,8 @@
             <div class="container_width">
                <div class="side_content_wrap">
                    <div class="side_slide_wrap">
-                       <div class="side_slide_out_frame">
-                           <ul class="side_slide_inner_frame">
+                       <div class="side_slide_out_frame" data-ui="side_slide_out_frame">
+                           <ul class="side_slide_inner_frame" data-ui="side_slide_inner_frame">
                                <li><img src="./img/main_jante.jpg"/></li>
                                <li><img src="./img/main_side_jante.jpg"/></li>
                                <li><img src="./img/main_side_jante2.jpg"/></li>
@@ -141,28 +141,28 @@
                    <div class="clear"></div>
                    <div class="side_prodcut_more_about_wrap">
                        <div class="more_about_btn_area">
-                           <div class="btn_wrap">
-                               <a class="select_a">design</a>
-                               <a>matter</a>
-                               <a>Emotion</a>
+                           <div class="btn_wrap" data-ui="tab_button_wrap">
+                               <a class="select_a" data-id="0">design</a>
+                               <a data-id="1">matter</a>
+                               <a data-id="2">Emotion</a>
                             </div>
                             <div class="btn_content">
                                 <ul>
-                                    <li>
+                                    <li data-content-id="0">
                                         <p>황토와 고령토의 테라피인 소재</p>
                                         <p class="btn_content_txt">
                                             사람에게 좋은 황토와 고령토를 최적의 비율로
                                             배합한 테라파인 소재를 개발하여 사용합니다.
                                         </p>
                                     </li>
-                                    <li>
+                                    <li data-content-id="1">
                                         <p>셀카빙 공법으로 더해지는 깊이감</p>
                                         <p class="btn_content_txt">
                                            장인이 수작업으로 빗살라인을 넣은 느낌의 셀카빙 공법으로 제작되어
                                            라인따라 흐르는 자연스러운 컬러감이 특징입니다.
                                         </p>
                                     </li>
-                                    <li>
+                                    <li data-content-id="2">
                                         <p>
                                             핸드메이드 시유<br/> 공정의 유니크함
                                         </p>
@@ -226,5 +226,6 @@
     <script src="./js/ui-tab-id.js"></script>
     <script src="./js/ui-scrollevent.js"></script>
     <script src-"./js/ui-indicator_slide.js"></script>
+    <script src="./js/ui-tab_fade.js"></script>
 </body>
 </html>
