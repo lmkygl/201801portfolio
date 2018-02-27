@@ -13,13 +13,13 @@ gulp.task('sass', function(){
 });
 
 gulp.task('script', function(){
-    return gulp.src('./dev/js/*.js')
+    return gulp.src('./dev/script/*.js')
     .pipe(sourcemaps.init())
     .pipe(concat({
         path: 'client.js'
     }))
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('./dev/script'));
+    .pipe(gulp.dest('./dev/js'));
 });
 
 gulp.task('vendorjs', function(){
@@ -31,7 +31,7 @@ gulp.task('vendorjs', function(){
     .pipe(concat({
         path: 'vendor.js'
     }))
-    .pipe(gulp.dest('./dev/script'));
+    .pipe(gulp.dest('./dev/js'));
 });
 
 
@@ -43,5 +43,5 @@ gulp.task('deploy', function() {
 
 gulp.task('default', ['sass','script'], function () {
     gulp.watch('./dev/sass/**/*.scss', ['sass']);
-    gulp.watch('./dev/js/*.js', ['script']);
+    gulp.watch('./dev/script/*.js', ['script']);
 });
