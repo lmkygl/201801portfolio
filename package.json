@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "gulp",
-    "deploy":"gulp deploy"
+    "deploy": "gulp deploy"
   },
   "repository": {
     "type": "git",
@@ -25,7 +25,8 @@
     "gulp": "^3.9.1",
     "gulp-gh-pages": "^0.5.4",
     "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.3"
+    "gulp-sourcemaps": "^2.6.3",
+    "gulp-usemin": "^0.3.29"
   },
   "description": ""
 }

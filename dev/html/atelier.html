@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/index.css">
-    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="./node_modules/html5shiv/dist/html5shiv.js"></script>
-    <script src="./node_modules/gsap/src/minified/TweenMax.min.js"></script>
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../node_modules/html5shiv/dist/html5shiv.js"></script>
+    <script src="../../node_modules/gsap/src/minified/TweenMax.min.js"></script>
     <title>odense</title>
 </head>
 
@@ -37,7 +37,7 @@
                 <div class="logo_Area">
                     <h1>
                         <a href="index.html" title="odense">
-                            <img src="img/logo.png" />
+                            <img src="../img/logo.png" />
                         </a>
                     </h1>
                 </div>
@@ -111,127 +111,89 @@
         </header>
         <div class="container">
             <div class="container_width">
-                <section class="inner_padding section1">
-                    <div class="grid_6 box" data-ui-animate="section1_leftbox">
-                    </div>
-                    <div class="grid_10 push_4 center_box">
-                        <div class="main_imgArea" data-ui-animate="section1_center_image">
+                <div class="side_content_wrap">
+                    <div class="side_slide_wrap">
+                        <div class="side_slide_out_frame" data-ui="side_slide_out_frame">
+                            <ul class="side_slide_inner_frame" data-ui="side_slide_inner_frame">
+                                <li class="side_item">
+                                    <img src="../img/main_jante.jpg" />
+                                </li>
+                                <li class="side_item">
+                                    <img src="../img/main_side_jante.jpg" />
+                                </li>
+                                <li class="side_item">
+                                    <img src="../img/main_side_jante2.jpg" />
+                                </li>
+                            </ul>
                         </div>
-                        <div class="main_name_price">
-                            <div class="main_name">
-                                <h3 data-ui-animate="section1_center_product">
-                                    <a href="jante.html" title="jante">
-                                        jante
-                                    </a>
-                                </h3>
-                                <p data-ui-animate="section1_center_explanation">
-                                    <a href="jante.html" title="수채화 같은 물맛나는 색감을 더한 얀테">
-                                        수채화 같은 물맛나는 색감을 더한 얀테
-                                    </a>
-                                </p>
-                            </div>
-                            <div class="main_price" data-ui-animate="section1_center_price">
-                                from
-                                <span class="monetary_Unit">
-                                    ￦23,000
-                                </span>
+                        <div class="side_slide_control">
+                            <div class="indicator">
+                                <span class="select_indicator">1</span>
+                                <span>2</span>
+                                <span>3</span>
                             </div>
                         </div>
                     </div>
-                    <div class="grid_4 box2" data-ui-animate="section1_right">
-
-                    </div>
-                </section>
-                <section class="inner_padding section2">
-                    <div class="grid_5 box" data-ui-animate="section2_leftbox">
-                    </div>
-                    <div class="grid_10 push_4 center_box2">
-                        <div class="main_imgArea" data-ui-animate="section2_center_image"></div>
-                        <div class="main_name_price">
-                            <div class="main_name">
-                                <h3 data-ui-animate="section2_center_product">
-                                    atelier
-                                </h3>
-                                <p data-ui-animate="section2_center_explanation">
-                                    빗살라인의 셀카빙 공법을 적용한 아틀리에
-                                </p>
+                    <div class="side_product_info_wrap">
+                        <div class="side_product_info">
+                            <h2 class="side_tit">atelier</h2>
+                            <div class="side_ex">
+                                아틀리에의 색감은 빛에따라 오묘한 색감을 나타내 질리지 않고 어느 음식에나 잘 어울립니다. 또한 오덴세는 사람에게 좋은 황토와 고령토를 최적의 비율로 배합한 테라파인 소재를 개발하여 사용하고 있습니다.
                             </div>
-                            <div class="main_price" data-ui-animate="section2_center_price">
-                                from
-                                <span class="monetary_Unit">
-                                    ￦22,000
-                                </span>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="grid_4 box2" data-ui-animate="section2_right">
-
-                    </div>
-                </section>
-                <section class="inner_padding section3">
-                    <div class="grid_6 box" data-ui-animate="section3_leftbox">
-
-                    </div>
-                    <div class="grid_10 push_4 center_box">
-                        <div class="main_imgArea" data-ui-animate="section3_center_image">
-
-                        </div>
-                        <div class="main_name_price">
-                            <div class="main_name">
-                                <h3 data-ui-animate="section3_center_product">
-                                    hygge
-                                </h3>
-                                <p data-ui-animate="section3_center_explanation">
-                                    자연의 라인을 그대로 담은 휘게
-                                </p>
-                            </div>
-                            <div class="main_price" data-ui-animate="section3_center_price">
-                                from
-                                <span class="monetary_Unit">
-                                    ￦24,000
-                                </span>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="grid_4 box2" data-ui-animate="section3_right">
-
-                    </div>
-                </section>
-                <section class="inner_padding section4">
-                    <div class="grid_5 box" data-ui-animate="section4_leftbox">
-
-                    </div>
-                    <div class="grid_10 push_4 center_box2">
-                        <div class="main_imgArea" data-ui-animate="section4_center_image"></div>
-                        <div class="main_name_price">
-                            <div class="main_name">
-                                <h3 data-ui-animate="section4_center_product">
-                                    plating cook
-                                </h3>
-                                <p data-ui-animate="section4_center_explanation">
-                                    실용적인 디자인 감성이 담긴 플레이팅 쿡
-                                </p>
-                            </div>
-                            <div class="main_price" data-ui-animate="section4_center_price">
-                                from
-                                <span class="monetary_Unit">
-                                    ￦39,000
-                                </span>
+                            <div class="side_product_shop">
+                                <a href="http://display.cjmall.com/p/exhibition/exhibitionDetail?plnExhbId=2015030706" title="shop" target="_blank">
+                                    shop
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <div class="grid_6 box2" data-ui-animate="section4_right">
-
+                    <div class="clear"></div>
+                    <div class="side_prodcut_more_about_wrap">
+                        <div class="more_about_btn_area">
+                            <div class="btn_wrap" data-ui="tab_button_wrap">
+                                <a class="select_a" data-id="0">design</a>
+                                <a data-id="1">matter</a>
+                                <a data-id="2">Emotion</a>
+                            </div>
+                            <div class="btn_content">
+                                <ul>
+                                    <li data-content-id="0">
+                                        <p>황토와 고령토의 테라피인 소재</p>
+                                        <p class="btn_content_txt">
+                                            사람에게 좋은 황토와 고령토를 최적의 비율로 배합한 테라파인 소재를 개발하여 사용합니다.
+                                        </p>
+                                    </li>
+                                    <li data-content-id="1">
+                                        <p>셀카빙 공법으로 더해지는 깊이감</p>
+                                        <p class="btn_content_txt">
+                                            장인이 수작업으로 빗살라인을 넣은 느낌의 셀카빙 공법으로 제작되어 라인따라 흐르는 자연스러운 컬러감이 특징입니다.
+                                        </p>
+                                    </li>
+                                    <li data-content-id="2">
+                                        <p>
+                                            핸드메이드 시유
+                                            <br/> 공정의 유니크함
+                                        </p>
+                                        <p class="btn_content_txt">
+                                            약 1300도 고온 속에서 불,흙,유약의 조화로 탄생하는 오덴세는 손으로 일일이 작업한 시유 공정을 통해 공방에서 만든듯한 수작업 특유의 색감과 분위기를 담았습니다.
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="btn_image_area">
+                            <div class="btn_image_jant"></div>
+                        </div>
                     </div>
+                    <div class="clear"></div>
+
+                </div>
             </div>
-            </section>
         </div>
         <footer id="footer" class="footer">
             <div class=".container_width">
                 <h2>
-                    <img src="img/logo_footer.png" alt="footer_logo" />
+                    <img src="../img/logo_footer.png" alt="footer_logo" />
                 </h2>
                 <div>
                     <div class="footer_menu">
@@ -264,11 +226,12 @@
             </div>
         </footer>
     </div>
-    <script src="./js/ui-navi_underline.js"></script>
-    <script src="./js/ui-side_open_close.js"></script>
-    <script src="./js/ui-tab-id.js"></script>
-    <script src="./js/ui-scrollevent.js"></script>
-    <!-- <script src="./js/ui-detail_menu.js"></script>     -->
+    <script src="../js/ui-navi_underline.js"></script>
+    <script src="../js/ui-side_open_close.js"></script>
+    <script src="../js/ui-tab-id.js"></script>
+    <script src="../js/ui-scrollevent.js"></script>
+    <script src="../js/ui-indicator_slide.js"></script>
+    <script src="../js/ui-tab_fade.js"></script>
 </body>
 
 </html>
