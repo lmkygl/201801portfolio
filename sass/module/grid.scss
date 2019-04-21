@@ -1,7 +1,12 @@
+@import '../mediaquery.scss';
 .container_width {
 	width: 1200px;
 	margin-left: auto;
-	margin-right: auto
+	margin-right: auto;
+	@include mobile {
+        width : 100%;
+        overflow-x: hidden;
+    }
 }
 .grid_1 {
 	position: relative;
